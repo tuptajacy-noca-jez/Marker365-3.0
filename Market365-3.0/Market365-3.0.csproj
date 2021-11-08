@@ -67,18 +67,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\sklep.jpg" />
+    <Content Include="MojProfil\MojProfil.aspx" />
+    <Content Include="Rejestracja\Rejestracja.aspx" />
     <Content Include="shared\_Head.aspx" />
+    <Content Include="StronaStartowa\stronaStartowa.aspx" />
+    <Content Include="Style\StyleGadomski.css" />
     <Content Include="Web.config" />
     <Content Include="Zamówienia\Zamówienia.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MojProfil\MojProfil.aspx.cs">
+      <DependentUpon>MojProfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MojProfil\MojProfil.aspx.designer.cs">
+      <DependentUpon>MojProfil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rejestracja\Rejestracja.aspx.cs">
+      <DependentUpon>Rejestracja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rejestracja\Rejestracja.aspx.designer.cs">
+      <DependentUpon>Rejestracja.aspx</DependentUpon>
+    </Compile>
     <Compile Include="shared\_Head.aspx.cs">
       <DependentUpon>_Head.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="shared\_Head.aspx.designer.cs">
       <DependentUpon>_Head.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StronaStartowa\stronaStartowa.aspx.cs">
+      <DependentUpon>stronaStartowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StronaStartowa\stronaStartowa.aspx.designer.cs">
+      <DependentUpon>stronaStartowa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Zamówienia\Zamówienia.aspx.cs">
       <DependentUpon>Zamówienia.aspx</DependentUpon>
@@ -97,6 +123,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
