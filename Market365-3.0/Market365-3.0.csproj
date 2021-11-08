@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="shared\_Head.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Zamówienia\Zamówienia.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +79,13 @@
     </Compile>
     <Compile Include="shared\_Head.aspx.designer.cs">
       <DependentUpon>_Head.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zamówienia\Zamówienia.aspx.cs">
+      <DependentUpon>Zamówienia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zamówienia\Zamówienia.aspx.designer.cs">
+      <DependentUpon>Zamówienia.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
