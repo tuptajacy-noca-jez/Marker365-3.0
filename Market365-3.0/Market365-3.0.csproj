@@ -72,6 +72,7 @@
     <Content Include="Rejestracja\Rejestracja.aspx" />
     <Content Include="shared\_Head.aspx" />
     <Content Include="StronaStartowa\stronaStartowa.aspx" />
+    <Content Include="Style\StyleFedorowicz.css" />
     <Content Include="Style\StyleGadomski.css" />
     <Content Include="Web.config" />
     <Content Include="Zamówienia\Zamówienia.aspx" />
