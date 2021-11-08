@@ -6,4 +6,5 @@
 /packages/*
 /Market365-3.0/bin/*
 /Market365-3.0/obj/*
+/Market365-3.0/obj/Debug/*
 /Market365-3.0/Market365-3.0.csproj.user
