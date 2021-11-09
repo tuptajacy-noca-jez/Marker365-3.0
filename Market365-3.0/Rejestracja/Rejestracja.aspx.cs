@@ -11,7 +11,17 @@ namespace projekt
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            loginValidator.Validate();
+            passwordValidator.Validate();
+            nameValidator.Validate();
+            surnameValidator.Validate();
+            zipCodeValidator.Validate();
+            cityValidator.Validate();
+            streetValidator.Validate();
+            houseNumberValidator.Validate();
+            phoneNumberValidator.Validate();
+            emailValidator.Validate();
         }
     }
 }
