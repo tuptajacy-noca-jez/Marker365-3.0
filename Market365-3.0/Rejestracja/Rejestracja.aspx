@@ -65,7 +65,7 @@
                     </td>
                     <td>
                          <asp:TextBox ID="email" runat="server" placeholder="Adres email" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
-                        <asp:RegularExpressionValidator ID="emailValidator" runat="server" ErrorMessage="Nieprawidowy adres email" Font-Size="X-Large" ForeColor="Red" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ControlToValidate="email" ValidationGroup="rejestration">*</asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="emailValidator" runat="server" ErrorMessage="Nieprawidłowy adres email" Font-Size="X-Large" ForeColor="Red" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ControlToValidate="email" ValidationGroup="rejestration">*</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>

@@ -11,7 +11,14 @@ namespace Market365_3._0.MojProfil
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            passwordValidator.Validate();
+            zipCodeValidator.Validate();
+            cityValidator.Validate();
+            streetValidator.Validate();
+            houseNumberValidator.Validate();
+            phoneNumberValidator.Validate();
+            emailValidator.Validate();
         }
     }
 }

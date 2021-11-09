@@ -26,7 +26,7 @@ namespace projekt
 
         protected void zaloguj_Click(object sender, EventArgs e)
         {
-
+            Validacion.Visible = true;
         }
 
         protected void rejestracja_Click(object sender, EventArgs e)

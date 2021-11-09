@@ -6,7 +6,7 @@
 <head runat="server">
     <link href="/Style/StyleGadomski.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Market365</title>
     <style type="text/css">
     
     </style>
@@ -17,14 +17,17 @@
                 <asp:Label ID="Label1" runat="server" Text="Market365" Font-Bold="True"></asp:Label>
             </div>
             <form id="form1" runat="server">
-            <div class ="input">
-                <div class="pad">
-                <asp:TextBox ID="Login" runat="server" Height="30px" placeholder="Login" Width="300px" Font-Size="Large" OnTextChanged="Login_TextChanged"  CssClass="inputText" BorderStyle="Solid" ></asp:TextBox>
+                <div class="input">
+                    <div class="pad">
+                        <asp:TextBox ID="login" runat="server" Height="30px" placeholder="Login" Width="300px" Font-Size="Large" OnTextChanged="Login_TextChanged" CssClass="inputText" BorderStyle="Solid" AutoPostBack="True"></asp:TextBox>
+                    </div>
+                    <div class="pad">
+                        <asp:TextBox ID="password" runat="server" Height="30px" placeholder="Hasło" Width="300px" Font-Size="Large" OnTextChanged="Password_TextChanged" CssClass="inputText" BorderStyle="Solid" AutoPostBack="True"></asp:TextBox>
+                    </div>
+                    <div class="pad">
+                        <asp:Label ID="Validacion" runat="server" Text="Nieprawidłowy login lub hasło" ForeColor="Red" Visible="False" Font-Size="X-Large" Font-Bold="True"></asp:Label>
+                    </div>
                 </div>
-                <div class="pad">
-                <asp:TextBox ID="Password" runat="server" Height="30px" placeholder="Hasło" Width="300px" Font-Size="Large" OnTextChanged="Password_TextChanged" CssClass="inputText" BorderStyle="Solid" ></asp:TextBox>
-                </div> 
-            </div>
                 <div class ="buttons">
                     <div class="pad" >
                         <asp:Button ID="zaloguj" runat="server" onmouseover="this.style.backgroudColor='red'" Text="Zaloguj" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="300px" OnClick="zaloguj_Click" CssClass="button" BorderStyle="Solid" />
