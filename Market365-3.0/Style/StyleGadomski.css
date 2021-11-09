@@ -60,6 +60,15 @@
     border-radius: 15px;
     background-color: #6CCC46;
 }
+.buttonred {
+    border: 2px;
+    border-color: #ff0000;
+    border-radius: 15px;
+    background-color: #ff0000;
+}
+    .buttonred:hover {
+        background-color: #3132b1;
+    }
 .button:hover{
     background-color:#3132b1;
 }
