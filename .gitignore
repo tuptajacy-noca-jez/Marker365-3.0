@@ -4,7 +4,6 @@
 
 
 /.vs/*
-/packages/*
 /Market365-3.0/bin/*
 /Market365-3.0/obj/*
 /Market365-3.0/obj/Debug/*
