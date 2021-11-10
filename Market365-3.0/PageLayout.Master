@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PageLayout.Master.cs" Inherits="Market365_3._0.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="/Style/styleMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="menuBar">
+            <div id="categoryName">
+                <asp:Label runat="server" ID="categoryNameLabel"></asp:Label>
+            </div>
+            <div id="logotype">
+                <a href="/StronaStartowa/stronaStartowa.aspx"><img src="/images/logo.png" alt="logo sklepu" /></a>
+            </div>
+            <div id="navigationButtons">
+                <!--
+                    potrzebne 2 opcje, dla zalogowanego i niezalogowanego
+                    -->
+            </div>
+            <div id="searchBox">
+                <asp:TextBox runat="server" ID="searchTextBox" ToolTip="wpisz szukany produkt ..."></asp:TextBox>
+            </div>
+          <asp:Label ID="Label1" runat="server" ><a href="/StronaStartowa/stronaStartowa.aspx">Market365</a></asp:Label>
+        </div>
+ 
+        <div id="mainContent">
+            <asp:ContentPlaceHolder id="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
