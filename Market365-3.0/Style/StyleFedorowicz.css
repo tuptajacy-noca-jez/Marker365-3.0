@@ -1,2 +1,57 @@
-﻿body {
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: #6CCC46;
+}
+
+.def {
+    text-align: center;
+    font-size: 8vh;
+    color: #ffffff;
+}
+
+td {
+    padding: 30px 0px 0px 30px
+}
+
+.button {
+    margin:5px;
+    border: 2px;
+    border-color: #6CCC46;
+    border-radius: 15px;
+    background-color: #6CCC46;
+}
+
+    .button:hover {
+        background-color: #3132b1;
+    }
+
+.buttonred {
+    margin: 5px;
+    border: 2px;
+    border-color: #ff0000;
+    border-radius: 15px;
+    background-color: #ff0000;
+}
+
+    .buttonred:hover {
+        background-color: #3132b1;
+    }
+
+.list{
+    max-height:80%;
+}
+
+.label {
+    font-size: 4vh;
+    color: black;
 }
