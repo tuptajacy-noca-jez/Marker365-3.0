@@ -82,10 +82,23 @@
     <Content Include="Koszyk\Koszyk.aspx" />
     <Content Include="MojProfil\MojProfil.aspx" />
     <Content Include="Rejestracja\Rejestracja.aspx" />
+    <Content Include="resources\icons\heart-broken.svg" />
+    <Content Include="resources\icons\heart.svg" />
+    <Content Include="resources\icons\login.svg" />
+    <Content Include="resources\icons\logout.svg" />
+    <Content Include="resources\icons\shopping-cart-discount.svg" />
+    <Content Include="resources\icons\shopping-cart-off.svg" />
+    <Content Include="resources\icons\shopping-cart-plus.svg" />
+    <Content Include="resources\icons\shopping-cart-x.svg" />
+    <Content Include="resources\icons\shopping-cart.svg" />
+    <Content Include="resources\icons\star.svg" />
     <Content Include="shared\_Head.aspx" />
+    <Content Include="StronaProduktu\StronaProduktu.aspx" />
     <Content Include="StronaStartowa\stronaStartowa.aspx" />
+    <Content Include="Style\produktStyle.css" />
     <Content Include="Style\StyleFedorowicz.css" />
     <Content Include="Style\StyleGadomski.css" />
+    <Content Include="Style\styleMaster.css" />
     <Content Include="Web.config" />
     <Content Include="Zamówienia\Zamówienia.aspx" />
   </ItemGroup>
@@ -119,6 +132,20 @@
     <Compile Include="shared\_Head.aspx.designer.cs">
       <DependentUpon>_Head.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PageLayout.Master.cs">
+      <DependentUpon>PageLayout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageLayout.Master.designer.cs">
+      <DependentUpon>PageLayout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StronaProduktu\StronaProduktu.aspx.cs">
+      <DependentUpon>StronaProduktu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StronaProduktu\StronaProduktu.aspx.designer.cs">
+      <DependentUpon>StronaProduktu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StronaStartowa\stronaStartowa.aspx.cs">
       <DependentUpon>stronaStartowa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="PageLayout.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

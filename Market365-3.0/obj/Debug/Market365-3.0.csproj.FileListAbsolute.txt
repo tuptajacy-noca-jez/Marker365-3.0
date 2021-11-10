@@ -16,11 +16,7 @@ D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\Microsoft.CSharp.Core.targets
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.AppContext.dll
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Collections.Immutable.dll
-D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.IO.FileSystem.dll
-D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.IO.FileSystem.Primitives.dll
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Reflection.Metadata.dll
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\vbc.exe
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\vbc.exe.config
@@ -33,6 +29,7 @@ D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.AssemblyRefere
 D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CoreCompileInputs.cache
 D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.dll
 D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.pdb
+<<<<<<< HEAD
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.dll.config
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.dll
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.pdb
@@ -84,3 +81,14 @@ D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramewor
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramework.SqlServer.xml
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
+=======
+D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\csi.exe.config
+D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\Microsoft.Managed.Core.targets
+D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Buffers.dll
+D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Memory.dll
+D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Numerics.Vectors.dll
+D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CopyComplete
+>>>>>>> master
