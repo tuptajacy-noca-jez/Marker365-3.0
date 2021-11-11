@@ -100,6 +100,7 @@
     <Content Include="Style\StyleGadomski.css" />
     <Content Include="Style\styleMaster.css" />
     <Content Include="Web.config" />
+    <Content Include="Zamówienie\Zamówienie.aspx" />
     <Content Include="Zamówienia\Zamówienia.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +153,13 @@
     </Compile>
     <Compile Include="StronaStartowa\stronaStartowa.aspx.designer.cs">
       <DependentUpon>stronaStartowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zamówienie\Zamówienie.aspx.cs">
+      <DependentUpon>Zamówienie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zamówienie\Zamówienie.aspx.designer.cs">
+      <DependentUpon>Zamówienie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Zamówienia\Zamówienia.aspx.cs">
       <DependentUpon>Zamówienia.aspx</DependentUpon>
