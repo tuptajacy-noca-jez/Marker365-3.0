@@ -26,7 +26,7 @@ namespace Market365_3._0.Zamówienie
 
         protected void cancel_Click(object sender, EventArgs e)
         {
-            //Response.Redirect("/koszyk/Rejestracja.aspx");
+            Response.Redirect("/Koszyk/Koszyk.aspx");
         }
     }
 }

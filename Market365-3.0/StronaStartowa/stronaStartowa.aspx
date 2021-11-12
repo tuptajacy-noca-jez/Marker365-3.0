@@ -19,10 +19,10 @@
             <form id="form1" runat="server">
                 <div class="input">
                     <div class="pad">
-                        <asp:TextBox ID="login" runat="server" Height="30px" placeholder="Login" Width="300px" Font-Size="Large" OnTextChanged="Login_TextChanged" CssClass="inputText" BorderStyle="Solid" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="login" runat="server" Height="30px" placeholder="Login" Width="300px" Font-Size="Large"  CssClass="inputText" BorderStyle="Solid"></asp:TextBox>
                     </div>
                     <div class="pad">
-                        <asp:TextBox ID="password" runat="server" Height="30px" placeholder="Hasło" Width="300px" Font-Size="Large" OnTextChanged="Password_TextChanged" CssClass="inputText" BorderStyle="Solid" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="password" runat="server" Height="30px" placeholder="Hasło" Width="300px" Font-Size="Large"  CssClass="inputText" BorderStyle="Solid" TextMode="Password"></asp:TextBox>
                     </div>
                     <div class="pad">
                         <asp:Label ID="Validacion" runat="server" Text="Nieprawidłowy login lub hasło" ForeColor="Red" Visible="False" Font-Size="X-Large" Font-Bold="True"></asp:Label>
