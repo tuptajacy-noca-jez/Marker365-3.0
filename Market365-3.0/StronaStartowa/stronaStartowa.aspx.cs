@@ -28,7 +28,25 @@ namespace projekt
         {
             Validacion.Visible = true;
         }
+        protected void zamowienia_Click(object sender, EventArgs e)
+    {
 
+    }
+
+    protected void mojProfil_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void koszyk_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void sklep_Click(object sender, EventArgs e)
+    {
+
+    }
         protected void rejestracja_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Rejestracja/Rejestracja.aspx");
