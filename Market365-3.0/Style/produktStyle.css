@@ -1,51 +1,102 @@
 ﻿
 
 .leftContent {
-    vertical-align: top;
-    width: 49%;
-    text-align: right;
-    height: 33px;
     display: inline-block;
+    vertical-align: top;
+    width: 35%;
+    text-align: left;
+    height: 33px;
+    margin-left: 64px;
 }
 
 .rightContent {
-    vertical-align: top;
-    width: 51%;
-    text-align: left;
-    vertical-align: 0px;
     display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    text-align: left;
+    vertical-align: top;
 }
 
-.Container {
-    vertical-align: top;
-    width: 100%;
-    height: 500px;
-    display: inline-block;
+
+
+
+
+.icons {
+    stroke-width: 1.25;
 }
+
+.liked {
+    fill: red;
+}
+
+.unliked {
+    fill: none;
+}
+
+
 .Container {
-    text-align: center;
     display: block;
+    vertical-align: top;
+}
+#productNameBlock {
+    margin: 0 0 0 60px;
+}
+
+.leftContentBlock {
+    margin: 0 0 0 60px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.containerElement {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.productNameLabel {
+    font-family: "Open Sams",sans-serif;
+    font-size: 40pt;
+    color: rgb(0 0 0);
+}
+
+.productPriceLabel {
+    font-family: "Open Sams",sans-serif;
+    font-size: 30pt;
+    color: rgb(168 0 0);
+    font-weight: bold;
+    line-height:1.2;
+}
+
+#productDescription {
+    font-family: "Open Sams",sans-serif;
+    font-size: 20pt;
+    font-weight: normal;
+    text-align:left;
+}
+.amountTextBox {
+    width: 154px;
+    height: 66px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0 18 107);
+    border-radius: 5px;
+    font-size: 30px;
 }
 
 .Button {
-    width: 160px;
-    height: 30px;
-    font-size: 16px;
+    color:white;
+    width: 362px;
+    height: 66px;
+    font-size: 30px;
     display: inline-block;
-    margin-top: 10px;
-    vertical-align: middle;
     text-align: center;
+    font-weight: bold;
+    background-color: #6CCC46;
+    border: 2px;
+    border-color: #6CCC46;
+    border-radius: 15px;
+    background-color: #6CCC46;
 }
 
-.icon {
-    color: rgb(255 0 0);
-    width: 24;
-    height: 24;
-    viewBox: 0 0 24 24;
-    stroke-width: 1.25;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
 
 

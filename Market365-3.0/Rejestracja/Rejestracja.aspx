@@ -24,7 +24,7 @@
                         <asp:RegularExpressionValidator ID="loginValidator" runat="server" ErrorMessage="Podany login jest za krótki" ControlToValidate="login" Display="Dynamic" ForeColor="Red" ValidationExpression=".{4,}" Font-Size="X-Large" ValidationGroup="rejestration">*</asp:RegularExpressionValidator>
                     </td>
                     <td>
-                        <asp:TextBox ID="password" runat="server" placeholder="Hasło" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" TextMode="Password" ToolTip="Hasło musi składać się z min. 8 znaków, zawierać małe i duże litery oraz cyfrę"></asp:TextBox>
+                        <asp:TextBox ID="password" runat="server" placeholder="Hasło" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" ToolTip="Hasło musi składać się z min. 8 znaków, zawierać małe i duże litery oraz cyfrę" TextMode="Password"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="passwordValidator" runat="server" ErrorMessage="Hasło nie spełnia wymagań" Display="Dynamic" Font-Size="X-Large" ForeColor="Red" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" ControlToValidate="password" ValidationGroup="rejestration">*</asp:RegularExpressionValidator>
                     </td>
                 </tr>
@@ -76,7 +76,7 @@
             </table>
                 
             <div class="zarejestruj" >
-                        <asp:Button ID="zarejestruj" runat="server"  Text="Zarejestruj" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="300px"  CssClass="button" BorderStyle="Solid" />
+                        <asp:Button ID="zarejestruj" runat="server"  Text="Zarejestruj" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="300px"  CssClass="button" BorderStyle="Solid" OnClick="zarejestruj_Click" />
             </div>
                 </form>
         </div>

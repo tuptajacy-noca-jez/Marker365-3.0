@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-11-10T18:01:54.0098468Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2021-11-10T18:02:27.5107581Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "2379ecc5-da98-4b02-a18e-9ca0ebb12984"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "Market365-3.0_dbResourceGroup"
+    }
+  }
+}
