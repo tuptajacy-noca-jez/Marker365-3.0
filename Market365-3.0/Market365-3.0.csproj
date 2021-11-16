@@ -83,6 +83,7 @@
     <Content Include="images\sklep.jpg" />
     <Content Include="Koszyk\Koszyk.aspx" />
     <Content Include="MojProfil\MojProfil.aspx" />
+    <Content Include="Properties\serviceDependencies.local.json.user" />
     <Content Include="Rejestracja\Rejestracja.aspx" />
     <Content Include="resources\icons\heart-broken.svg" />
     <Content Include="resources\icons\heart.svg" />
@@ -95,9 +96,11 @@
     <Content Include="resources\icons\shopping-cart.svg" />
     <Content Include="resources\icons\star.svg" />
     <Content Include="shared\_Head.aspx" />
+    <Content Include="StronaGlowna\StronaGlowna.aspx" />
     <Content Include="StronaProduktu\StronaProduktu.aspx" />
     <Content Include="StronaStartowa\stronaStartowa.aspx" />
     <Content Include="Style\produktStyle.css" />
+    <Content Include="Style\StyleBrzezinski.css" />
     <Content Include="Style\StyleFedorowicz.css" />
     <Content Include="Style\StyleGadomski.css" />
     <Content Include="Style\styleMaster.css" />
@@ -120,6 +123,7 @@
     <Compile Include="MojProfil\MojProfil.aspx.designer.cs">
       <DependentUpon>MojProfil.aspx</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rejestracja\Rejestracja.aspx.cs">
       <DependentUpon>Rejestracja.aspx</DependentUpon>
@@ -141,6 +145,13 @@
     </Compile>
     <Compile Include="PageLayout.Master.designer.cs">
       <DependentUpon>PageLayout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StronaGlowna\StronaGlowna.aspx.cs">
+      <DependentUpon>StronaGlowna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StronaGlowna\StronaGlowna.aspx.designer.cs">
+      <DependentUpon>StronaGlowna.aspx</DependentUpon>
     </Compile>
     <Compile Include="StronaProduktu\StronaProduktu.aspx.cs">
       <DependentUpon>StronaProduktu.aspx</DependentUpon>
@@ -174,6 +185,8 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="PageLayout.Master" />
+    <Content Include="Properties\serviceDependencies.json" />
+    <Content Include="Properties\serviceDependencies.local.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
