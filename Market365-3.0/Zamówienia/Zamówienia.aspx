@@ -16,9 +16,9 @@
     </div>
     <form id="form1" runat="server">
         <div>
-            <asp:ListView ID="ListView1" runat="server">
+            <asp:ListView ID="ListView1" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSource1">
                 <LayoutTemplate>
-                    <table width="100%" runat="server" id="tblProducts">
+                    <table width="100%" runat="server" id="tblOrders">
                         <tr runat="server">
                             <th runat="server"></th>
                             <th runat="server"></th>
@@ -26,22 +26,31 @@
                         </tr>
                         <tr runat="server" id="itemPlaceholder" />
                     </table>
-                </LayoutTemplate>
+                    <div style="">
+                    </div>
+                </LayoutTemplate>                              
+                <EmptyDataTemplate>
+                    Nie zostały zwrócone żadne dane.
+                </EmptyDataTemplate>                
+                <ItemSeparatorTemplate>
+                    <br />
+                </ItemSeparatorTemplate>
                 <ItemTemplate>
                     <tr runat="server">
                         <td>
-                            <asp:Image ID="obrazZamowienia" runat="server" />
+                            <img id="obrazZamowienia" src='<%# Eval("obraz") %>'  runat="server" />
                         </td>
                         <td class="input">
-                            <asp:Label ID="nazwaZamowienia" runat="server" Text="Przykladowa nazwa zamowienia" Font-Bold="true" /><br>
-                            <asp:Label ID="opisZamowienia" runat="server" Text="Przykladowy tekst zamowienia" />
+                            <asp:Label ID="nazwaZamowienia" runat="server" Text='<%# Eval("Id") %>' Font-Bold="true" />
+                            <asp:Label ID="opisZamowienia" runat="server" Text='<%# Eval("opis") %>' />
                         </td>
                         <td>
-                            <asp:ImageButton ID="edycjaZamowienia" runat="server" ImageUrl="~/images/edit.PNG" />
+                            <asp:ImageButton ID="edycjaZamowienia" runat="server" ImageUrl="~/images/edit.PNG" OnClick="edycjaZamowienia_Click"/>
                         </td>
                     </tr>
                 </ItemTemplate>
             </asp:ListView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Id], [obraz], [opis] FROM [orders]"></asp:SqlDataSource>
         </div>
     </form>
 </body>
