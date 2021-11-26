@@ -33,15 +33,19 @@
                 </table>
             </div>
               <div class ="listaProd">
+                  <div class="produkt">
+                      <table>
+                          <tr>
+                              <td class="zdjecie">ZDJĘCIE</td>
+                              <td class="opis">Opis</td>
+                              <td class="prodSter">Przyciski</td>
+                          </tr>
 
+                      </table>
+
+                  </div>
                   TU JEST LISTA PRODUKTÓW W SKLEPIE</br>
-                  TU JEST LISTA PRODUKTÓW W SKLEPIE</br>
-                  TU JEST LISTA PRODUKTÓW W SKLEPIE</br>
-                  TU JEST LISTA PRODUKTÓW W SKLEPIE</br>
-                  TU JEST LISTA PRODUKTÓW W SKLEPIE</br>
-                  TU JEST LISTA PRODUKTÓW W SKLEPIE</br>
-                  TU JEST LISTA PRODUKTÓW W SKLEPIE</br>
-                  TU JEST LISTA PRODUKTÓW W SKLEPIE</br>
+         
               </div>
 
                 <div class ="przeglad">
