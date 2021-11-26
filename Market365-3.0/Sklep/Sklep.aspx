@@ -43,6 +43,10 @@
                   TU JEST LISTA PRODUKTÓW W SKLEPIE</br>
                   TU JEST LISTA PRODUKTÓW W SKLEPIE</br>
               </div>
+
+                <div class ="przeglad">
+                    <asp:Button ID="doKoszyka" runat="server" Text="Do koszyka" Font-Bold="True" Font-Size="X-Large" ForeColor="White" Height="60px" Width="380px" CssClass="button" BorderStyle="Solid" />
+                </div>
         </div>
     </form>
 </body>

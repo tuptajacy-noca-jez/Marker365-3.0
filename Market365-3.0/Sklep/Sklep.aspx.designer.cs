@@ -40,5 +40,14 @@ namespace Market365_3._0.Sklep
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button wyloguj;
+
+        /// <summary>
+        /// Kontrolka doKoszyka.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button doKoszyka;
     }
 }
