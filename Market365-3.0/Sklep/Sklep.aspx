@@ -38,7 +38,11 @@
                           <tr>
                               <td class="zdjecie">ZDJĘCIE</td>
                               <td class="opis">Opis</td>
-                              <td class="prodSter">Przyciski</td>
+                              <td class="prodSter">
+
+
+
+                              </td>
                           </tr>
 
                       </table>
