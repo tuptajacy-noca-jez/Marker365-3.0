@@ -4,6 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Nazwa Produktu</title>
     <link href="../Style/produktStyle.css" rel="stylesheet" type="text/css">
+    <link href="../Style/styleMaster.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 
@@ -142,10 +143,10 @@
                     <div class="Container"  >
                         <div id="productDescription">
                             <table>
-                                <tr ><td font-weight="bold">Składnik</td><td>Zawartość w 100 [g]</td></tr>
+                                <tr ><td font-weight="bold">Składnik</td><td font-weight="bold">Zawartość w 100 [g]</td></tr>
                                 <tr><td>Kalorie (wartość energetyczna)</td><td>40 kcal / 167 kJ</td></tr>
-                                <tr><td>Białko</td><td>0,002 g</td></tr>
                                 <tr><td>Tłuszcz ogółem</td><td>0,002 g</td></tr>
+                                <tr><td>Białko</td><td>0,002 g</td></tr>
                                 <tr><td>Kwasy tłuszczowe nasycone</td><td>0,002 g</td></tr>
                                 <tr><td>Kwasy tłuszczowe jednonienasycone</td><td>0,002 g</td></tr>
                                 <tr><td>Kwasy tłuszczowe wielonienasycone</td><td>0,002 g</td></tr>

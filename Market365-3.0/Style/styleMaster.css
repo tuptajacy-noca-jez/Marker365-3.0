@@ -10,4 +10,34 @@
 #mainContent {
     display: block;
 }
+#navigationButtons{
+    display:inline-block;
+}
+
+.Container {
+    display: block;
+}
+
+.namep {
+    text-align: center;
+    font-size: 8vh;
+    color: #ffffff;
+}
+
+.leftContent {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+    text-align: left;
+    height: 33px;
+    margin-left: 64px;
+}
+
+.rightContent {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    text-align: left;
+    vertical-align: top;
+}
 

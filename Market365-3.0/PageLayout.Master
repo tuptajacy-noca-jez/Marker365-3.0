@@ -15,16 +15,30 @@
             <div id="categoryName">
                 <asp:Label runat="server" ID="categoryNameLabel"></asp:Label>
             </div>
-            <div id="logotype">
-                <a href="/StronaStartowa/stronaStartowa.aspx"><img src="/images/logo.png" alt="logo sklepu" /></a>
-            </div>
-            <div id="navigationButtons">
-                <!--
-                    potrzebne 2 opcje, dla zalogowanego i niezalogowanego
-                    -->
-            </div>
-            <div id="searchBox">
-                <asp:TextBox runat="server" ID="searchTextBox" ToolTip="wpisz szukany produkt ..."></asp:TextBox>
+            <div class="Containter">
+                <div class="leftContent" width="80%">
+                    <div class="namep">
+                        <asp:Button ID="logoButton" runat="server" Text="Market365" OnClick="logoButton_Click"/>
+                    </div>
+                    <a href="/StronaStartowa/stronaStartowa.aspx"><img src="/images/logo.png" alt="logo sklepu" /></a>
+                </div>
+                <asp:LoginView ID="menu" runat="server">
+                    <AnonymousTemplate>
+                        <div class="Containter" width="100%">
+
+                            <asp:Button runat="server" ID="logOut" text="Wyloguj" CssClass="Button" OnClick="logOut_Click"/>
+                        </div>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <div class="Containter" width="20%">
+
+                            <asp:Button runat="server" ID="logOut" text="Wyloguj" CssClass="Button" OnClick="logOut_Click"/>
+                        </div>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+                <div id="searchBox">
+                    <asp:TextBox runat="server" ID="searchTextBox" ToolTip="wpisz szukany produkt ..."></asp:TextBox>
+                </div>
             </div>
           <asp:Label ID="Label1" runat="server" ><a href="/StronaStartowa/stronaStartowa.aspx">Market365</a></asp:Label>
         </div>
