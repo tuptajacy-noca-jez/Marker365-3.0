@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Zamówienia.aspx.cs" Inherits="Market365_3._0.Zamówienia.Zamówienia" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Zamowienia.aspx.cs" Inherits="Market365_3._0.Zamówienia.Zamówienia" %>
 
 <!DOCTYPE html>
 

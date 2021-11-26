@@ -27,21 +27,21 @@
 
 
 .productNameLabel {
-    font-family: "Open Sams",sans-serif;
+    font-family: "Open Sans",sans-serif;
     font-size: 40pt;
     color: rgb(0 0 0);
 }
 
 .productPriceLabel {
-    font-family: "Open Sams",sans-serif;
+    font-family: "Open Sans",sans-serif;
     font-size: 30pt;
     color: rgb(168 0 0);
     font-weight: bold;
-    line-height:1.2;
+    line-height: 1.2;
 }
 
 #productDescription {
-    font-family: "Open Sams",sans-serif;
+    font-family: "Open Sans",sans-serif;
     font-size: 20pt;
     font-weight: normal;
     text-align:left;
@@ -71,5 +71,95 @@
     background-color: #6CCC46;
 }
 
+#placeholderBootstrap {
+    overflow: auto;
+    height: 380px;
+    margin-bottom: 6pt;
+}
 
+.amountLabelCSS {
+    font-family: "Open Sans",sans-serif;
+    font-size: 13pt;
+    color: rgb(0 0 0);
+    font-weight: normal;
+    line-height: 1.2;
+    text-align:left;
+    font-style:normal;
+}
 
+.listElem {
+    display: inline-flex;
+    align-items:center;
+    vertical-align: middle;
+}
+
+.basicContainer{
+    display:block;
+}
+
+.smallProductNameLabel {
+    font-family: "Open Sams",sans-serif;
+    font-size: 20pt;
+    color: rgb(0 0 0);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    font-style: normal;
+}
+
+.productPricelabel {
+    font-family: "Open Sams",sans-serif;
+    font-size: 18pt;
+    color: rgb(0 0 0);
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+    font-style: normal;
+}
+
+.categoryCSSClass {
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+}
+
+.nameTag{
+    margin: 0 0 0 6pt;
+}
+
+.gridContainer {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 150px auto 150px 150px;
+    grid-template-rows :150px;
+    padding-bottom:6pt;
+    border-bottom:2px solid black;
+    margin-top:6pt;
+}
+
+.gridBox-1{
+    grid-column:1/2;
+    grid-row:1/2;
+}
+
+.gridBox-2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.gridBox-3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    padding-left: 4pt;
+}
+.gridBox-4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    padding-left:4pt;
+}
+
+#returnButtonStyle {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12pt;
+    padding-right:8pt;
+}
