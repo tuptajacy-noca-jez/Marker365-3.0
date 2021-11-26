@@ -16,7 +16,7 @@
     </div>
     <form id="form1" runat="server">
         <div class="list">
-            <asp:ListView ID="ListView1" runat="server">
+            <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
                 <LayoutTemplate>
                     <table width="100%" runat="server" id="tblProducts">
                         <tr runat="server">
@@ -27,15 +27,20 @@
                         </tr>
                         <tr runat="server" id="itemPlaceholder" />
                     </table>
+                    <div style="">
+                    </div>
                 </LayoutTemplate>
+                <EmptyDataTemplate>
+                    <span>Nie zostały zwrócone żadne dane.</span>
+                </EmptyDataTemplate>
                 <ItemTemplate>
-                    <tr runat="server">
+                   <tr runat="server">
                         <td>
-                            <asp:Image ID="obrazZamowienia" runat="server" />
+                            <img id="obrazZamowienia" src='<%# Eval("picture") %>' runat="server" />
                         </td>
                         <td class="input">
-                            <asp:Label ID="nazwaProduktu" runat="server" Text="Przykladowa nazwa produktu" Font-Bold="true" /><br>
-                            <asp:Label ID="cenaProduktu" runat="server" Text="Przykladowa cena produktu" />
+                            <asp:Label ID="nazwaProduktu" runat="server" Text='<%# Eval("name") %>' Font-Bold="true" /><br>
+                            <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />
                         </td>
                         <td>
                             <asp:DropDownList ID="iloscProduktu" runat="server" ItemType="number">
@@ -56,6 +61,7 @@
                     </tr>
                 </ItemTemplate>
             </asp:ListView>  
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [picture], [description], [price] FROM [products]"></asp:SqlDataSource>
             <asp:Label id="cenaSuma" CssClass="label" runat="server" Text="Do zapłaty:"></asp:Label>        
             <asp:Button id="zamowButton" runat="server" Text="Zamów" CssClass="button" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="50px" Width="200px" BorderStyle="Solid" style="float:right" /> 
             <asp:Button id="anulujButton" runat="server" Text="Anuluj" CssClass="buttonred" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="50px" Width="200px" BorderStyle="Solid" style="float:right" OnClick="anulujButton_Click"/>          

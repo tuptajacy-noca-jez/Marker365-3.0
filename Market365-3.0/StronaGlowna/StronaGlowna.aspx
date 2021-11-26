@@ -40,9 +40,57 @@
                     </tr>
                 </table>
             </div>
-            <div class="bestdeals">
 
-                TU BĘDZIE PASEK REKLAM
+            <div class="bestdeals">
+                <div class="produktDeals">
+                     <asp:Image ID="produktDealsImg" runat="server"
+                                      Height="50" Width="50"
+                                      ImageUrl="~/images/50x50.png"
+                                      AlternateText="produktDealsImg"/><br />
+                    Cebula <br />
+                    2,50 zł/kg
+                </div>                
+
+                                <div class="produktDeals">
+                     <asp:Image ID="Image1" runat="server"
+                                      Height="50" Width="50"
+                                      ImageUrl="~/images/50x50.png"
+                                      AlternateText="produktDealsImg"/><br />
+                    Cebula <br />
+                    2,50 zł/kg
+                </div>                
+                <div class="produktDeals">
+                     <asp:Image ID="Image2" runat="server"
+                                      Height="50" Width="50"
+                                      ImageUrl="~/images/50x50.png"
+                                      AlternateText="produktDealsImg"/><br />
+                    Cebula <br />
+                    2,50 zł/kg
+                </div>                
+                <div class="produktDeals">
+                     <asp:Image ID="Image3" runat="server"
+                                      Height="50" Width="50"
+                                      ImageUrl="~/images/50x50.png"
+                                      AlternateText="produktDealsImg"/><br />
+                    Cebula <br />
+                    2,50 zł/kg
+                </div>                
+                <div class="produktDeals">
+                     <asp:Image ID="Image4" runat="server"
+                                      Height="50" Width="50"
+                                      ImageUrl="~/images/50x50.png"
+                                      AlternateText="produktDealsImg"/><br />
+                    Cebula <br />
+                    2,50 zł/kg
+                </div>                
+                <div class="produktDeals">
+                     <asp:Image ID="Image5" runat="server"
+                                      Height="50" Width="50"
+                                      ImageUrl="~/images/50x50.png"
+                                      AlternateText="produktDealsImg"/><br />
+                    Cebula <br />
+                    2,50 zł/kg
+                </div>                
 
             </div>
 

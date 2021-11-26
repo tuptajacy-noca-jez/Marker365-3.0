@@ -28,5 +28,40 @@ table{
 
 .bestdeals{
     height: 100px;
+    display: block;
+}
 
+.produktDeals{
+    display: inline-block;
+    float: left;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.listaProd{
+    height: 400px;
+
+}
+
+.produkt{
+
+    height: 250px;
+    width: 95%;
+}
+
+.zdjecie{
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.opis {
+    width: 70%;
+
+}
+
+.prodSter {
+    width: 10%;
+    align-items: center;
+    justify-content: center;
 }

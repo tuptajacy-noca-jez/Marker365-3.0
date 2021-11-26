@@ -77,6 +77,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="images\150x150.png" />
     <Content Include="images\340x453.png" />
     <Content Include="images\edit.PNG" />
@@ -112,6 +113,9 @@
     <Content Include="Zamowienia\Zamowienia.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Koszyk\Koszyk.aspx.cs">
       <DependentUpon>Koszyk.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -183,6 +187,7 @@
     <Compile Include="StronaStartowa\stronaStartowa.aspx.designer.cs">
       <DependentUpon>stronaStartowa.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="Zamówienie\Zamówienie.aspx.cs">
       <DependentUpon>Zamówienie.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
