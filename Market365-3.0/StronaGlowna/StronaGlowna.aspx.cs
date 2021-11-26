@@ -13,5 +13,25 @@ namespace Market365_3._0.StronaGlowna
         {
 
         }
+
+        protected void sklep_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void zamowienia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void koszyk_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void mojProfil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

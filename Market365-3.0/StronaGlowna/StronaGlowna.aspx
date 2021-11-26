@@ -15,7 +15,7 @@
     <link href="/Style/StyleGadomski.css" rel="stylesheet" />
     <link href="/Style/StyleBrzezinski.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Market365 - Strona Główna</title>
 </head>
 <body>
     <div>
