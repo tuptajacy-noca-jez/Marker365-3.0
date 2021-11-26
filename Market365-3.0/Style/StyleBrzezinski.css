@@ -28,6 +28,13 @@ table{
 
 .bestdeals{
     height: 100px;
+    display: block;
+}
+
+.produktDeals{
+    display: inline-block;
+    float: left;
+    padding: 10px 10px 10px 10px;
 
 }
 

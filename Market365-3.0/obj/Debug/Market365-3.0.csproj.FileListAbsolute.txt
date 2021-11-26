@@ -29,7 +29,6 @@ D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.AssemblyRefere
 D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CoreCompileInputs.cache
 D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.dll
 D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.pdb
-<<<<<<< HEAD
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.dll.config
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.dll
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.pdb
@@ -81,8 +80,6 @@ D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramewor
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramework.SqlServer.xml
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
-=======
->>>>>>> 1b1a74924964ce4fc75c2e938e5c03d762268e29
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\csi.exe.config
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\Microsoft.Managed.Core.targets
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Buffers.dll
@@ -92,8 +89,6 @@ D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Runtime.CompilerServices.Un
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Text.Encoding.CodePages.dll
 D:\GIT\Marker365-3.0\Market365-3.0\bin\roslyn\System.Threading.Tasks.Extensions.dll
 D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CopyComplete
-<<<<<<< HEAD
-=======
 D:\GIT\Marker365-3.0\Market365-3.0\bin\EntityFramework.dll
 D:\GIT\Marker365-3.0\Market365-3.0\bin\EntityFramework.SqlServer.dll
 D:\GIT\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
@@ -102,11 +97,6 @@ D:\GIT\Marker365-3.0\Market365-3.0\bin\EntityFramework.xml
 D:\GIT\Marker365-3.0\Market365-3.0\bin\EntityFramework.SqlServer.xml
 D:\GIT\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
 D:\GIT\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 1b1a74924964ce4fc75c2e938e5c03d762268e29
->>>>>>> 7ce9e5ee277110184d154491b0942fceb02a2fff
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.dll.config
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.dll
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.pdb
@@ -151,17 +141,7 @@ C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\D
 C:\Users\marci\source\repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CopyComplete
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.dll
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.pdb
-<<<<<<< HEAD
-D:\GIT\Marker365-3.0\Market365-3.0\bin\EntityFramework.dll
-D:\GIT\Marker365-3.0\Market365-3.0\bin\EntityFramework.SqlServer.dll
-D:\GIT\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
-D:\GIT\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
-D:\GIT\Marker365-3.0\Market365-3.0\bin\EntityFramework.xml
-D:\GIT\Marker365-3.0\Market365-3.0\bin\EntityFramework.SqlServer.xml
-D:\GIT\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
-D:\GIT\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CopyComplete
-=======
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramework.dll
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramework.SqlServer.dll
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
@@ -170,8 +150,3 @@ C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\E
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramework.SqlServer.xml
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
-<<<<<<< HEAD
-=======
->>>>>>> cfbfc8f573f78b6e90491e336c50a3f115599fce
->>>>>>> 1b1a74924964ce4fc75c2e938e5c03d762268e29
->>>>>>> 7ce9e5ee277110184d154491b0942fceb02a2fff
