@@ -77,12 +77,16 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Finalizacja zamówienia\FinalizacjaZamowienia.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\150x150.png" />
+    <Content Include="images\250x250.png" />
     <Content Include="images\340x453.png" />
+    <Content Include="images\50x50.png" />
     <Content Include="images\edit.PNG" />
     <Content Include="images\placeholder.png" />
     <Content Include="images\sklep.jpg" />
+    <Content Include="images\thanks-man.jpg" />
     <Content Include="Koszyk\Koszyk.aspx" />
     <Content Include="MojProfil\MojProfil.aspx" />
     <Content Include="Properties\serviceDependencies.local.json.user" />
@@ -97,7 +101,6 @@
     <Content Include="resources\icons\shopping-cart-x.svg" />
     <Content Include="resources\icons\shopping-cart.svg" />
     <Content Include="resources\icons\star.svg" />
-    <Content Include="shared\_Head.aspx" />
     <Content Include="StatusZamowienia\StatusZamowienia.aspx" />
     <Content Include="Sklep\Sklep.aspx" />
     <Content Include="StronaGlowna\StronaGlowna.aspx" />
@@ -113,6 +116,13 @@
     <Content Include="Zamowienia\Zamowienia.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Finalizacja zamówienia\FinalizacjaZamowienia.aspx.cs">
+      <DependentUpon>FinalizacjaZamowienia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finalizacja zamówienia\FinalizacjaZamowienia.aspx.designer.cs">
+      <DependentUpon>FinalizacjaZamowienia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -137,13 +147,6 @@
     </Compile>
     <Compile Include="Rejestracja\Rejestracja.aspx.designer.cs">
       <DependentUpon>Rejestracja.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="shared\_Head.aspx.cs">
-      <DependentUpon>_Head.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="shared\_Head.aspx.designer.cs">
-      <DependentUpon>_Head.aspx</DependentUpon>
     </Compile>
     <Compile Include="PageLayout.Master.cs">
       <DependentUpon>PageLayout.Master</DependentUpon>

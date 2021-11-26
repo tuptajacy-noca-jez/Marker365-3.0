@@ -149,8 +149,4 @@ C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\M
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramework.xml
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramework.SqlServer.xml
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
-<<<<<<< HEAD
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
-=======
-C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
->>>>>>> f146d27c0de7771b24176d1afaa9d6d06e34564c
