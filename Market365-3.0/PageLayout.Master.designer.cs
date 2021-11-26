@@ -40,6 +40,24 @@ namespace Market365_3._0 {
         protected global::System.Web.UI.WebControls.Label categoryNameLabel;
 
         /// <summary>
+        /// Kontrolka logoButton.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button logoButton;
+
+        /// <summary>
+        /// Kontrolka menu.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LoginView menu;
+
+        /// <summary>
         /// Kontrolka searchTextBox.
         /// </summary>
         /// <remarks>

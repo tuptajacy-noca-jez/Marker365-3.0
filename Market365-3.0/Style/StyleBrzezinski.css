@@ -30,3 +30,31 @@ table{
     height: 100px;
 
 }
+
+.listaProd{
+    height: 400px;
+
+}
+
+.produkt{
+
+    height: 250px;
+    width: 95%;
+}
+
+.zdjecie{
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.opis {
+    width: 70%;
+
+}
+
+.prodSter {
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}

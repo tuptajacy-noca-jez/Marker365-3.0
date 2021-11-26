@@ -97,6 +97,8 @@
     <Content Include="resources\icons\shopping-cart.svg" />
     <Content Include="resources\icons\star.svg" />
     <Content Include="shared\_Head.aspx" />
+    <Content Include="StatusZamowienia\StronaZamowienia.aspx" />
+    <Content Include="Sklep\Sklep.aspx" />
     <Content Include="StronaGlowna\StronaGlowna.aspx" />
     <Content Include="StronaProduktu\StronaProduktu.aspx" />
     <Content Include="StronaStartowa\stronaStartowa.aspx" />
@@ -149,6 +151,20 @@
     </Compile>
     <Compile Include="PageLayout.Master.designer.cs">
       <DependentUpon>PageLayout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StatusZamowienia\StronaZamowienia.aspx.cs">
+      <DependentUpon>StronaZamowienia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatusZamowienia\StronaZamowienia.aspx.designer.cs">
+      <DependentUpon>StronaZamowienia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sklep\Sklep.aspx.cs">
+      <DependentUpon>Sklep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sklep\Sklep.aspx.designer.cs">
+      <DependentUpon>Sklep.aspx</DependentUpon>
     </Compile>
     <Compile Include="StronaGlowna\StronaGlowna.aspx.cs">
       <DependentUpon>StronaGlowna.aspx</DependentUpon>

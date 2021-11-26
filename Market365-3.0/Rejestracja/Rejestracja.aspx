@@ -13,8 +13,8 @@
         <div class="header">
             <div class="namep">
              <asp:Label ID="Label1" runat="server" Text="Market365"></asp:Label>
-        </div>
             </div>
+        </div>
         <div>
             <form id="form1" runat="server">
             <table>

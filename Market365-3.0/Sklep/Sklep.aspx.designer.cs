@@ -7,11 +7,11 @@
 // </generowane automatycznie>
 //------------------------------------------------------------------------------
 
-namespace Market365_3._0.StronaGlowna
+namespace Market365_3._0.Sklep
 {
 
 
-    public partial class WebForm1
+    public partial class Sklep
     {
 
         /// <summary>
@@ -42,39 +42,12 @@ namespace Market365_3._0.StronaGlowna
         protected global::System.Web.UI.WebControls.Button wyloguj;
 
         /// <summary>
-        /// Kontrolka sklep.
+        /// Kontrolka doKoszyka.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button sklep;
-
-        /// <summary>
-        /// Kontrolka koszyk.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button koszyk;
-
-        /// <summary>
-        /// Kontrolka zamowienia.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button zamowienia;
-
-        /// <summary>
-        /// Kontrolka mojProfil.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button mojProfil;
+        protected global::System.Web.UI.WebControls.Button doKoszyka;
     }
 }
