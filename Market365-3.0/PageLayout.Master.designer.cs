@@ -31,13 +31,22 @@ namespace Market365_3._0 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Kontrolka menu.
+        /// Kontrolka logoButton.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView menu;
+        protected global::System.Web.UI.WebControls.Button logoButton;
+
+        /// <summary>
+        /// Kontrolka logOut.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button logOut;
 
         /// <summary>
         /// Kontrolka MainContent.

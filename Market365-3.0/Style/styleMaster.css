@@ -48,7 +48,7 @@
     padding: 0;
     background: none;
     font-size: 40pt;
-    font-family: Open sans;
+    font-family: 'Open sans';
     color: rgb(255 255 255);
     text-align: center;
     margin-top: 15pt;
@@ -58,4 +58,37 @@
     padding-left: 30pt;
     padding-right: 30pt;
 }
+
+
+.hiddenButton{
+    visibility:hidden;
+}
+
+.loginButton {
+    visibility: visible;
+    color: white;
+    width: auto;
+    height: 33px;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(219 21 21);
+    border: 2px;
+    border-color: #6CCC46;
+    border-radius: 15px;
+    margin-right: 12pt;
+    padding-right: 6pt;
+    position: absolute;
+    right: 12pt;
+    top: auto;
+}
+
+.loginButton:hover {
+    transform: scale(1.05);
+}
+
+
+
+
 

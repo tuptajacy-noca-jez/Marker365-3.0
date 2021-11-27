@@ -7,8 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace Market365_3._0 {
     public partial class Site1 : System.Web.UI.MasterPage {
+
+        User currentUser;
+
         protected void Page_Load(object sender, EventArgs e) {
-            
+            currentUser =(User)Application["user"];
+            logOut.CssClass= "hiddenButton";
+            if (currentUser.IsActive) {
+                logOut.CssClass = "loginButton";
+            }
         }
 
         protected void logowanieButton_Click(object sender, EventArgs e) {
@@ -24,7 +31,7 @@ namespace Market365_3._0 {
         }
 
         protected void logoButton_Click(object sender, EventArgs e) {
-            Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");
+            Response.Redirect("~/StronaGlowna/StronaGlowna.aspx");
         }
     }
 }
