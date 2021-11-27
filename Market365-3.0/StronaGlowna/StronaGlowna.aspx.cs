@@ -16,22 +16,22 @@ namespace Market365_3._0.StronaGlowna
 
         protected void sklep_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer("~/Sklep/Sklep.aspx");
         }
 
         protected void zamowienia_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer("~/Zamowienia/Zamowienia.aspx");
         }
 
         protected void koszyk_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer("~/Koszyk/Koszyk.aspx");
         }
 
         protected void mojProfil_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer("~/MojProfil/MojProfil.aspx");
         }
     }
 }

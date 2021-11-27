@@ -7,18 +7,27 @@
 // </generowany automatycznie>
 //------------------------------------------------------------------------------
 
-namespace Market365_3._0.shared {
+namespace Market365_3._0.Finalizacja_zamówienia {
 
 
-    public partial class _Head {
+    public partial class FinalizacjaZamowienia {
 
         /// <summary>
-        /// Kontrolka form1.
+        /// Kontrolka orders.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button orders;
+
+        /// <summary>
+        /// Kontrolka returnButton.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button returnButton;
     }
 }
