@@ -18,5 +18,13 @@ namespace Market365_3._0.Koszyk
         {
             Response.Redirect("~/stronaGłówna/stronaGłówna.aspx");
         }
+
+        protected static string ReturnEncodedBase64UTF8(object rawImg)
+        {
+            string img = "data:image/jpg;base64,{0}";
+            byte[] toEncodeAsBytes = (byte[])rawImg;
+            string returnValue = System.Convert.ToBase64String(toEncodeAsBytes);
+            return String.Format(img, returnValue);
+        }
     }
 }
