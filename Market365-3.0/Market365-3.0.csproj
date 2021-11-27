@@ -112,8 +112,8 @@
     <Content Include="Style\StyleGadomski.css" />
     <Content Include="Style\styleMaster.css" />
     <Content Include="Web.config" />
-    <Content Include="Zamówienie\Zamówienie.aspx" />
     <Content Include="Zamowienia\Zamowienia.aspx" />
+    <Content Include="Zamowienie\Zamowienie.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Finalizacja zamówienia\FinalizacjaZamowienia.aspx.cs">
@@ -143,19 +143,19 @@
     <Compile Include="ProductField.cs" />
     <Compile Include="Produkt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rejestracja\Rejestracja.aspx.cs">
-      <DependentUpon>Rejestracja.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Rejestracja\Rejestracja.aspx.designer.cs">
-      <DependentUpon>Rejestracja.aspx</DependentUpon>
-    </Compile>
     <Compile Include="PageLayout.Master.cs">
       <DependentUpon>PageLayout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PageLayout.Master.designer.cs">
       <DependentUpon>PageLayout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Rejestracja\Rejestracja.aspx.cs">
+      <DependentUpon>Rejestracja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rejestracja\Rejestracja.aspx.designer.cs">
+      <DependentUpon>Rejestracja.aspx</DependentUpon>
     </Compile>
     <Compile Include="StatusZamowienia\StatusZamowienia.aspx.cs">
       <DependentUpon>StatusZamowienia.aspx</DependentUpon>
@@ -193,19 +193,19 @@
       <DependentUpon>stronaStartowa.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="Zamówienie\Zamówienie.aspx.cs">
-      <DependentUpon>Zamówienie.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Zamówienie\Zamówienie.aspx.designer.cs">
-      <DependentUpon>Zamówienie.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Zamowienia\Zamowienia.aspx.cs">
       <DependentUpon>Zamowienia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Zamowienia\Zamowienia.aspx.designer.cs">
       <DependentUpon>Zamowienia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zamowienie\Zamowienie.aspx.cs">
+      <DependentUpon>Zamowienie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zamowienie\Zamowienie.aspx.designer.cs">
+      <DependentUpon>Zamowienie.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

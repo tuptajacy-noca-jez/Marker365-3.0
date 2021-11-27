@@ -1,22 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Rejestracja.aspx.cs" Inherits="projekt.Rejestracja" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link href="/Style/StyleGadomski.css" rel="stylesheet" />
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PageLayout.Master" AutoEventWireup="true" CodeBehind="Rejestracja.aspx.cs" Inherits="projekt.Rejestracja" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<link href="/Style/StyleGadomski.css" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Rejestracja</title>
-</head>
-<body>
-    <div>
-        <div class="header">
-            <div class="namep">
-             <asp:Label ID="Label1" runat="server" Text="Market365"></asp:Label>
-            </div>
-        </div>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+     <div>
         <div>
-            <form id="form1" runat="server">
+            
             <table>
                 <tr>
                     <td>
@@ -78,8 +69,7 @@
             <div class="zarejestruj" >
                         <asp:Button ID="zarejestruj" runat="server"  Text="Zarejestruj" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="300px"  CssClass="button" BorderStyle="Solid" OnClick="zarejestruj_Click" />
             </div>
-                </form>
+                
         </div>
     </div>
-</body>
-</html>
+</asp:Content>

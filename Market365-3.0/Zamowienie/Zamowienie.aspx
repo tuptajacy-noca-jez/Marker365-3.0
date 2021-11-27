@@ -1,21 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Zamowienie.aspx.cs" Inherits="Market365_3._0.Zamówienie.Zamowienie" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PageLayout.Master" AutoEventWireup="true" CodeBehind="Zamowienie.aspx.cs" Inherits="Market365_3._0.Zamowienie.Zamowienie" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="/Style/StyleGadomski.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Zamówienie</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <div class="header">
-                <div class="namep">
-                    <asp:Label ID="Label1" runat="server" Text="Market365"></asp:Label>
-                </div>
-            </div>
+    <title>Zamowienie</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+     <div>
             <div>
             <table>
                 <tr>
@@ -87,6 +77,4 @@
             
              </div>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>

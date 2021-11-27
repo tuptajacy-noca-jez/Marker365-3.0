@@ -22,9 +22,10 @@ namespace projekt
 
         protected void zaloguj_Click(object sender, EventArgs e)
         {
-            Logowanie(); 
+            if (Logowanie())
+                Response.Redirect("/StronaGlowna/StronaGlowna.aspx");
         }
-        public void Logowanie()
+        public bool Logowanie()
         {
             String Polaczenie;
             Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
@@ -40,21 +41,25 @@ namespace projekt
                 cmd = new SqlCommand("update [customers] set isActive=@isActive WHERE login='" + login.Text + "'", sql);
                 cmd.Parameters.AddWithValue("@isActive", "true");
                 cmd.ExecuteNonQuery();
-                Validacion.Text = "Zalogowano";
-                updateCurrentUser(login.Text.Trim(), password.Text.Trim(),sql);
+                updateCurrentUser(login.Text.Trim(), password.Text.Trim(), sql);
+                return true;
             }
             else
+            {
                 Validacion.Text = "Nieprawidłowy login lub hasło";
-            Validacion.Visible = true;
+                Validacion.Visible = true;
+                return false;
+            }
+
         }
-        public void updateCurrentUser(string login,string password, SqlConnection sql)
+        public void updateCurrentUser(string login, string password, SqlConnection sql)
         {
-            
+
             currentUser.Login = login;
             currentUser.Password = password;
             SqlCommand cmd = new SqlCommand("select * from [customers] WHERE login='" + login + "'", sql);
             SqlDataReader mdr = cmd.ExecuteReader();
-            if(mdr.Read())
+            if (mdr.Read())
             {
                 currentUser.Name = mdr["name"].ToString();
                 currentUser.Surname = mdr["surname"].ToString();
@@ -65,32 +70,38 @@ namespace projekt
                 currentUser.PhoneNumber = mdr["phoneNumber"].ToString();
                 currentUser.Email = mdr["email"].ToString();
                 currentUser.IsActive = true;
+                sql.Close();
             }
 
             Application["user"] = currentUser;
         }
         protected void zamowienia_Click(object sender, EventArgs e)
-    {
+        {
 
-    }
+        }
 
-    protected void mojProfil_Click(object sender, EventArgs e)
-    {
+        protected void mojProfil_Click(object sender, EventArgs e)
+        {
 
-    }
+        }
 
-    protected void koszyk_Click(object sender, EventArgs e)
-    {
+        protected void koszyk_Click(object sender, EventArgs e)
+        {
 
-    }
+        }
 
-    protected void sklep_Click(object sender, EventArgs e)
-    {
+        protected void sklep_Click(object sender, EventArgs e)
+        {
 
-    }
+        }
         protected void rejestracja_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Rejestracja/Rejestracja.aspx");
+        }
+
+        protected void przeglad_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Sklep/Sklep.aspx");
         }
     }
 }
