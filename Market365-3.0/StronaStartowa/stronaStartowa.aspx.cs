@@ -12,20 +12,18 @@ namespace projekt
 {
     public partial class stronaStartowa : System.Web.UI.Page
     {
-        User currentUser;
+        //User currentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
             string Password = password.Text;
             password.Attributes.Add("value", Password);
-            currentUser = new User();
         }
 
         protected void zaloguj_Click(object sender, EventArgs e)
         {
-            if (Logowanie())
-                Response.Redirect("/StronaGlowna/StronaGlowna.aspx");
+            Logowanie(); 
         }
-        public bool Logowanie()
+        public void Logowanie()
         {
             String Polaczenie;
             Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
@@ -36,30 +34,41 @@ namespace projekt
             cmd.Parameters.AddWithValue("@password", password.Text.Trim());
             int count = Convert.ToInt32(cmd.ExecuteScalar());
 
-            if (count == 1)
-            {
+            if (count == 1) {
                 cmd = new SqlCommand("update [customers] set isActive=@isActive WHERE login='" + login.Text + "'", sql);
                 cmd.Parameters.AddWithValue("@isActive", "true");
                 cmd.ExecuteNonQuery();
+                Validacion.Text = "Zalogowano";
                 updateCurrentUser(login.Text.Trim(), password.Text.Trim(), sql);
-                return true;
+                sql.Close();
+                Response.Redirect("/StronaGlowna/StronaGlowna.aspx");
+                
             }
-            else
-            {
+            else {
+                sql.Close();
                 Validacion.Text = "Nieprawidłowy login lub hasło";
-                Validacion.Visible = true;
-                return false;
             }
+                
+            Validacion.Visible = true;
 
+            
         }
-        public void updateCurrentUser(string login, string password, SqlConnection sql)
-        {
 
+        /// <summary>
+        /// Method <c>updateCurrentUser</c> take login and password as strings and already opened SqlConnection;
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="password"></param>
+        /// <param name="sql"></param>
+        public void updateCurrentUser(string login,string password, SqlConnection sql)
+        {
+            User currentUser = new User();
             currentUser.Login = login;
             currentUser.Password = password;
             SqlCommand cmd = new SqlCommand("select * from [customers] WHERE login='" + login + "'", sql);
             SqlDataReader mdr = cmd.ExecuteReader();
-            if (mdr.Read())
+
+            if(mdr.Read())
             {
                 currentUser.Name = mdr["name"].ToString();
                 currentUser.Surname = mdr["surname"].ToString();
@@ -70,38 +79,18 @@ namespace projekt
                 currentUser.PhoneNumber = mdr["phoneNumber"].ToString();
                 currentUser.Email = mdr["email"].ToString();
                 currentUser.IsActive = true;
-                sql.Close();
             }
 
             Application["user"] = currentUser;
         }
-        protected void zamowienia_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void mojProfil_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void koszyk_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void sklep_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         protected void rejestracja_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Rejestracja/Rejestracja.aspx");
         }
 
-        protected void przeglad_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("/Sklep/Sklep.aspx");
+        protected void przeglad_Click(object sender, EventArgs e) {
+            Response.Redirect("/StronaGlowna/StronaGlowna.aspx");
         }
     }
 }

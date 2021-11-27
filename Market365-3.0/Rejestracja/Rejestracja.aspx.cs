@@ -13,7 +13,7 @@ namespace projekt
 
     public partial class Rejestracja : System.Web.UI.Page
     {
-        String Polaczenie;
+        string Polaczenie;
         User currentUser;
         protected void Page_Load(object sender, EventArgs e)
         {

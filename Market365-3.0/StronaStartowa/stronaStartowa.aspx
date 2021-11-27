@@ -1,18 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PageLayout.Master" AutoEventWireup="true" CodeBehind="stronaStartowa.aspx.cs" Inherits="projekt.stronaStartowa" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="/Style/StyleGadomski.css" rel="stylesheet" />
+    <link href="/Style/StyleGadomski.css" rel="stylesheet" type="text/css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
  
     <title>Market365</title>
+
     <style type="text/css">
-
-
-    </style>
-
-    <style>
         body {background-image: url('/images/sklep.jpg');}
     </style>
 </asp:Content>
+
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div>
         <div class="main-header">
@@ -27,6 +26,7 @@
                     <asp:Label ID="Validacion" runat="server" Text="Nieprawidłowy login lub hasło" ForeColor="Red" Visible="False" Font-Size="Large" Font-Bold="True"></asp:Label>
                 </div>
             </div>
+
             <div class ="buttons">
                 <div class="pad" >
                     <asp:Button ID="zaloguj" runat="server" onmouseover="this.style.backgroudColor='red'" Text="Zaloguj" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="300px" OnClick="zaloguj_Click" CssClass="button" BorderStyle="Solid" />
