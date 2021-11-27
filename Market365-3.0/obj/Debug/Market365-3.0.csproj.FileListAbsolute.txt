@@ -141,10 +141,6 @@ C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\D
 C:\Users\marci\source\repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CopyComplete
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.dll
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.pdb
-<<<<<<< HEAD
-=======
-D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CopyComplete
->>>>>>> cb791cea33197ab3b712ae0443f46f001a9bfd50
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramework.dll
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\EntityFramework.SqlServer.dll
 C:\Users\marci\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll

@@ -8,11 +8,11 @@ using System.Configuration;
 using System.Data.SqlClient;
 namespace projekt
 {
-    
+
     public partial class Rejestracja : System.Web.UI.Page
     {
         String Polaczenie;
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
@@ -50,9 +50,10 @@ namespace projekt
                     cmd.Parameters.AddWithValue("@city", city.Text);
                     cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber.Text);
                     cmd.Parameters.AddWithValue("@email", email.Text);
-                    cmd.Parameters.AddWithValue("@isActive", false);
+                    cmd.Parameters.AddWithValue("@isActive",true);
                     cmd.ExecuteNonQuery();
                     sql.Close();
+                    Response.Redirect("/StronaGlowna/StronaGlowna.aspx");
                 }
                 else
                 {
@@ -69,7 +70,7 @@ namespace projekt
             SqlCommand cmd = new SqlCommand("select [login] from [customers]");
             cmd.Connection = sql;
             SqlDataReader rd = cmd.ExecuteReader();
-            while(rd.Read())
+            while (rd.Read())
             {
                 if (rd[0].ToString() == login.Text)
                     return false;

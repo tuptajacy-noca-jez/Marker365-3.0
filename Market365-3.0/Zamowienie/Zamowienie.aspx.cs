@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Market365_3._0.Zamówienie
+namespace Market365_3._0.Zamowienie
 {
     public partial class Zamowienie : System.Web.UI.Page
     {
