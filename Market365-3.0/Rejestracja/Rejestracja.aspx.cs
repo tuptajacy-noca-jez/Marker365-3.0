@@ -6,13 +6,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
+using Market365_3._0;
+
 namespace projekt
 {
 
     public partial class Rejestracja : System.Web.UI.Page
     {
         String Polaczenie;
-
+        User currentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
@@ -53,6 +55,16 @@ namespace projekt
                     cmd.Parameters.AddWithValue("@isActive",true);
                     cmd.ExecuteNonQuery();
                     sql.Close();
+                    currentUser = new User();
+                    currentUser.Name = name.Text;
+                    currentUser.Surname = name.Text;
+                    currentUser.City = city.Text;
+                    currentUser.ZipCode = zipCode.Text;
+                    currentUser.HouseNumber = houseNumber.Text;
+                    currentUser.Street = street.Text;
+                    currentUser.PhoneNumber = phoneNumber.Text;
+                    currentUser.Email = email.Text;
+                    Application["user"] = currentUser;
                     Response.Redirect("/StronaGlowna/StronaGlowna.aspx");
                 }
                 else
@@ -75,6 +87,7 @@ namespace projekt
                 if (rd[0].ToString() == login.Text)
                     return false;
             }
+            sql.Close();
             return true;
         }
     }
