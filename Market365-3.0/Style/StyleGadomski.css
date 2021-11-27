@@ -5,14 +5,19 @@
     height: 100%;
 }
 .main-header {
-    background-image: url('/images/sklep.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
+
+#main-header-containter {
+    background-image: url('/images/sklep.jpg');
+}
+
+
 .name {
     text-align: center;
     font-size: 82px;
