@@ -20,12 +20,12 @@
                         </td>
                         <td class="tdhead">
                             <div class="namep">
-                                <asp:Label ID="Label1" runat="server" Text="Market365"></asp:Label>
+                                <asp:Label ID="Label1" runat="server" Text="Market365" ToolTip="Przejdź do strony głównej"></asp:Label>
                             </div>
                         </td>
                         <td class="tdhead">
                             <div class ="buttonLogout">
-                                <asp:Button CssClass="buttonL" ID="wyloguj" runat="server" Text="Wyloguj"/>
+                                <asp:Button CssClass="buttonL" ID="wyloguj" runat="server" Text="Wyloguj" ToolTip="Wyloguj się z konta"/>
                             </div>
 
                         </td>
@@ -124,7 +124,7 @@
               </div>
 
                 <div class ="przeglad">
-                    <asp:Button ID="doKoszyka" runat="server" Text="Do koszyka" Font-Bold="True" Font-Size="X-Large" ForeColor="White" Height="60px" Width="380px" CssClass="button" BorderStyle="Solid" />
+                    <asp:Button ID="doKoszyka" runat="server" Text="Do koszyka" Font-Bold="True" Font-Size="X-Large" ForeColor="White" Height="60px" Width="380px" CssClass="button" BorderStyle="Solid" ToolTip="Przejdź do swojego koszyka" />
                 </div>
         </div>
     </form>
