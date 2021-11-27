@@ -65,6 +65,7 @@ namespace projekt
                 currentUser.PhoneNumber = mdr["phoneNumber"].ToString();
                 currentUser.Email = mdr["email"].ToString();
                 currentUser.IsActive = true;
+                sql.Close();
             }
 
             Application["user"] = currentUser;
