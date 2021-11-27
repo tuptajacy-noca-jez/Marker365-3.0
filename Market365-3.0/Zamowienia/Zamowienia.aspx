@@ -38,10 +38,10 @@
                 <ItemTemplate>
                     <tr runat="server">
                         <td>
-                            <img id="obrazZamowienia" src='<%# Eval("obraz") %>'  runat="server" />
+                            <img height="200px" ="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" />
                         </td>
                         <td class="input">
-                            <asp:Label ID="nazwaZamowienia" runat="server" Text='<%# Eval("Id") %>' Font-Bold="true" />
+                            <asp:Label ID="nazwaZamowienia" runat="server" Text='<%# Eval("Id") %>' Font-Bold="true" /><br/>
                             <asp:Label ID="opisZamowienia" runat="server" Text='<%# Eval("opis") %>' />
                         </td>
                         <td>
@@ -50,7 +50,7 @@
                     </tr>
                 </ItemTemplate>
             </asp:ListView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Id], [obraz], [opis] FROM [orders]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Id], [image], [opis] FROM [orders]"></asp:SqlDataSource>
         </div>
     </form>
 </body>
