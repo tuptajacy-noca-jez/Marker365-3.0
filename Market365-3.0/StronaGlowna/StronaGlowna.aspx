@@ -35,7 +35,7 @@
                 <span>Nie zostały zwrócone żadne dane.</span>
             </EmptyDataTemplate>
             <ItemTemplate>
-                    <td class ="produktDeals">
+                    <td class ="produktDeals" OnClick="produktDeals_Click">
                         <img height="100px" id="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" /><br />
                         <asp:Label ID="nazwaProduktu" runat="server" Text='<%# Eval("name") %>' Font-Bold="true" /><br />
                         <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />zł
