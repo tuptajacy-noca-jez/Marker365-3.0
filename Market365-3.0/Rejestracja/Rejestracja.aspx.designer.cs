@@ -51,6 +51,42 @@ namespace projekt
         protected global::System.Web.UI.WebControls.RegularExpressionValidator passwordValidator;
 
         /// <summary>
+        /// Kontrolka CompareValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+
+        /// <summary>
+        /// Kontrolka passwordConfirm.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox passwordConfirm;
+
+        /// <summary>
+        /// Kontrolka passwordConfirmValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator passwordConfirmValidator;
+
+        /// <summary>
+        /// Kontrolka CompareValidator2.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator2;
+
+        /// <summary>
         /// Kontrolka name.
         /// </summary>
         /// <remarks>

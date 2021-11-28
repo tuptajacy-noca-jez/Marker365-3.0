@@ -28,13 +28,18 @@ namespace projekt
             houseNumberValidator.Validate();
             phoneNumberValidator.Validate();
             emailValidator.Validate();
+            passwordConfirmValidator.Validate();
+            CompareValidator1.Validate();
+            CompareValidator2.Validate();
             string Password = password.Text;
             password.Attributes.Add("value", Password);
+            string PasswordConfirm = passwordConfirm.Text;
+            passwordConfirm.Attributes.Add("value", PasswordConfirm);
         }
 
         protected void zarejestruj_Click(object sender, EventArgs e)
         {
-            if (loginValidator.IsValid == true && passwordValidator.IsValid == true && nameValidator.IsValid == true && surnameValidator.IsValid == true && streetValidator.IsValid == true && houseNumberValidator.IsValid == true && zipCodeValidator.IsValid == true && cityValidator.IsValid == true && phoneNumberValidator.IsValid == true && emailValidator.IsValid == true)
+            if (loginValidator.IsValid == true && CompareValidator1.IsValid == true && CompareValidator2.IsValid == true && passwordValidator.IsValid == true && passwordConfirmValidator.IsValid == true && nameValidator.IsValid == true && surnameValidator.IsValid == true && streetValidator.IsValid == true && houseNumberValidator.IsValid == true && zipCodeValidator.IsValid == true && cityValidator.IsValid == true && phoneNumberValidator.IsValid == true && emailValidator.IsValid == true)
             {
                 if (checkLogin(login.Text))
                 {

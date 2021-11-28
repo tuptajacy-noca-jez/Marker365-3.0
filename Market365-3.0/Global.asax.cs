@@ -14,7 +14,7 @@ namespace Market365_3._0
         {
             Application.Lock();
             Application["user"] = new User();
-
+            Application["order"] = new Order();
             Application.UnLock();
         }
 
