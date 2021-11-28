@@ -13,6 +13,11 @@ table{
     width: 33%;
 }
 
+.td25 {
+    padding: 0px 0px 0px 0px;
+    width: 25%;
+}
+
 .buttonL {
     border: 2px;
     border-color: #6CCC46;
