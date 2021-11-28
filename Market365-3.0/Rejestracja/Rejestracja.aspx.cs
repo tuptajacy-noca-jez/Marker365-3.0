@@ -36,7 +36,7 @@ namespace projekt
         {
             if (loginValidator.IsValid == true && passwordValidator.IsValid == true && nameValidator.IsValid == true && surnameValidator.IsValid == true && streetValidator.IsValid == true && houseNumberValidator.IsValid == true && zipCodeValidator.IsValid == true && cityValidator.IsValid == true && phoneNumberValidator.IsValid == true && emailValidator.IsValid == true)
             {
-                if (checkLogin())
+                if (checkLogin(login.Text))
                 {
                     Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
                     SqlConnection sql = new SqlConnection(Polaczenie);
@@ -64,6 +64,7 @@ namespace projekt
                     currentUser.Street = street.Text;
                     currentUser.PhoneNumber = phoneNumber.Text;
                     currentUser.Email = email.Text;
+                    currentUser.IsActive = true;
                     Application["user"] = currentUser;
                     Response.Redirect("/StronaGlowna/StronaGlowna.aspx");
                 }
@@ -74,7 +75,12 @@ namespace projekt
                 }
             }
         }
-        bool checkLogin()
+        /// <summary>
+        /// check the availability of the login 
+        /// </summary>
+        /// <param name="login">user login</param>
+        /// <returns>true when login is available </returns>
+        bool checkLogin(string login)
         {
             Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
             SqlConnection sql = new SqlConnection(Polaczenie);
@@ -84,7 +90,7 @@ namespace projekt
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                if (rd[0].ToString() == login.Text)
+                if (rd[0].ToString() == login)
                     return false;
             }
             sql.Close();
