@@ -7,12 +7,30 @@
 // </generowane automatycznie>
 //------------------------------------------------------------------------------
 
-namespace Market365_3._0.Sklep
+namespace Market365_3._0.asd
 {
 
 
     public partial class Sklep
     {
+
+        /// <summary>
+        /// Kontrolka Label1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
+        /// Kontrolka wyloguj.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button wyloguj;
 
         /// <summary>
         /// Kontrolka produktImg.
