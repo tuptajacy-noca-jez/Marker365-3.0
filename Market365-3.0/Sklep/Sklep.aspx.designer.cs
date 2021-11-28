@@ -15,22 +15,22 @@ namespace Market365_3._0.Sklep
     {
 
         /// <summary>
-        /// Kontrolka produktImg.
+        /// Kontrolka ListView1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image produktImg;
+        protected global::System.Web.UI.WebControls.ListView ListView1;
 
         /// <summary>
-        /// Kontrolka Image1.
+        /// Kontrolka SqlDataSource1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
         /// Kontrolka doKoszyka.
