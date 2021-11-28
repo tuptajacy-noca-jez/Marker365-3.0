@@ -7,8 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Market365_3._0.StronaGlowna
 {
-    public partial class WebForm1 : System.Web.UI.Page
-    {
+    public partial class StronaGlowna : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -16,7 +15,10 @@ namespace Market365_3._0.StronaGlowna
 
         protected void sklep_Click(object sender, EventArgs e)
         {
-            Server.Transfer("~/Sklep/Sklep.aspx");
+            
+            //Server.Transfer("~/Sklep/Sklep.aspx");
+            
+            Response.Redirect("~/ Sklep / Sklep.aspx");
         }
 
         protected void zamowienia_Click(object sender, EventArgs e)
