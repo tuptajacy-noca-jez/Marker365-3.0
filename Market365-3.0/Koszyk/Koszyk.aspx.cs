@@ -9,9 +9,11 @@ namespace Market365_3._0.Koszyk
 {
     public partial class Koszyk : System.Web.UI.Page
     {
+        string currentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //currentUser=Application["currentUser"];
+            // TODO: wpisanie danych do wyswietlenia - backend
         }
 
         protected void anulujButton_Click(object sender, EventArgs e)
