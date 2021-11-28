@@ -13,6 +13,13 @@ namespace Market365_3._0 {
             if (currentUser.IsActive) {
                 logOut.CssClass = "loginButton";
             }
+
+            if (Request.Url.ToString().Contains("StronaStartowa")) {
+                menuBand.Style.Add("visibility", "hidden");
+            }
+            else {
+                menuBand.Style.Add("visibility", "visible");
+            }
         }
 
 

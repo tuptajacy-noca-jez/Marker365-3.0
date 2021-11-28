@@ -1,12 +1,22 @@
 ﻿body{
     margin:0;
 }
-#menuBar {
+.menuBarVisible {
+    width: 100%;
+    height: 100px;
+    background-color: #8dc63f;
+    display: block;
+    visibility:visible;
+}
+
+.menuBarHidden {
+    visibility: collapse;
     width: 100%;
     height: 100px;
     background-color: #8dc63f;
     display: block;
 }
+
 #mainContent {
     display: block;
 }
@@ -92,6 +102,8 @@
 .loginButton:hover {
     transform: scale(1.05);
 }
+
+
 
 
 

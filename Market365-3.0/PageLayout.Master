@@ -11,7 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="menuBar">
+        <div id="menuBand" class="menuBarVisible" runat="server">
             <div class="ContainterMain">
                 <asp:Button runat="server" ID="logoButton" text="Market365" class="logoButton" OnClick="logoButton_Click"/>
                 <asp:Button runat="server" ID="logOut" text="Wyloguj" class="Button" OnClick="logOut_Click"/>
