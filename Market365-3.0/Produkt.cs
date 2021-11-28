@@ -7,11 +7,13 @@ using System.Data.SqlClient;
 
 namespace Market365_3._0 {
     public class Produkt {
-        public string image;
-        public string name;
-        public float price;
-        public string unit;
-        public float ocena;
+        public Int32 id { get; set; }
+        public string image { get; set; }
+        public string name { get; set; }
+        public float price { get; set; }
+        public float quantity { get; set; }
+        public string unit { get; set; }
+        public float ocena { get; set; }
 
         private List<ProductField> cechyProduktu;
 
