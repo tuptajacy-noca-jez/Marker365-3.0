@@ -31,6 +31,15 @@ namespace Market365_3._0 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Kontrolka menuBand.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuBand;
+
+        /// <summary>
         /// Kontrolka logoButton.
         /// </summary>
         /// <remarks>
