@@ -77,7 +77,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="asd\Sklep.aspx" />
     <Content Include="Finalizacja zamówienia\FinalizacjaZamowienia.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\150x150.png" />
@@ -117,13 +116,6 @@
     <Content Include="Zamowienie\Zamowienie.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="asd\Sklep.aspx.cs">
-      <DependentUpon>Sklep.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="asd\Sklep.aspx.designer.cs">
-      <DependentUpon>Sklep.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Finalizacja zamówienia\FinalizacjaZamowienia.aspx.cs">
       <DependentUpon>FinalizacjaZamowienia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
