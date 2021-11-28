@@ -18,22 +18,25 @@ namespace Market365_3._0.StronaGlowna
             
             //Server.Transfer("~/Sklep/Sklep.aspx");
             
-            Response.Redirect("~/ Sklep / Sklep.aspx");
+            Response.Redirect("~/Sklep/Sklep.aspx");
         }
 
         protected void zamowienia_Click(object sender, EventArgs e)
         {
-            Server.Transfer("~/Zamowienia/Zamowienia.aspx");
+            //Server.Transfer("~/Zamowienia/Zamowienia.aspx");
+            Response.Redirect("~/Zamowienia/Zamowienia.aspx");
         }
 
         protected void koszyk_Click(object sender, EventArgs e)
         {
-            Server.Transfer("~/Koszyk/Koszyk.aspx");
+            //Server.Transfer("~/Koszyk/Koszyk.aspx");
+            Response.Redirect("~/Koszyk/Koszyk.aspx");
         }
 
         protected void mojProfil_Click(object sender, EventArgs e)
         {
-            Server.Transfer("~/MojProfil/MojProfil.aspx");
+            //Server.Transfer("~/MojProfil/MojProfil.aspx");
+            Response.Redirect("~/MojProfil/MojProfil.aspx");
         }
     }
 }
