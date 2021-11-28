@@ -1,34 +1,23 @@
 ﻿//------------------------------------------------------------------------------
-// <generowane automatycznie>
+// <generowany automatycznie>
 //     Ten kod został wygenerowany przez narzędzie.
 //
-//     Zmiany w tym pliku mogą spowodować niewłaściwe zachowanie i zostaną utracone
+//     Modyfikacje tego pliku mogą spowodować niewłaściwe zachowanie i zostaną utracone
 //     w przypadku ponownego wygenerowania kodu. 
-// </generowane automatycznie>
+// </generowany automatycznie>
 //------------------------------------------------------------------------------
 
-namespace Market365_3._0.StronaGlowna
-{
+namespace Market365_3._0.StronaGlowna {
 
 
-    public partial class WebForm1
-    {
-
-        /// <summary>
-        /// Kontrolka form1.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class StronaGlowna {
 
         /// <summary>
         /// Kontrolka Label1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
 
@@ -37,7 +26,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button wyloguj;
 
@@ -46,7 +35,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image produktDealsImg;
 
@@ -55,7 +44,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
 
@@ -64,7 +53,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image2;
 
@@ -73,7 +62,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image3;
 
@@ -82,7 +71,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image4;
 
@@ -91,7 +80,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image5;
 
@@ -100,7 +89,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button sklep;
 
@@ -109,7 +98,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button koszyk;
 
@@ -118,7 +107,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button zamowienia;
 
@@ -127,7 +116,7 @@ namespace Market365_3._0.StronaGlowna
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button mojProfil;
     }

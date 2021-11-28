@@ -1,26 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StronaGlowna.aspx.cs" Inherits="Market365_3._0.StronaGlowna.WebForm1" %>
-
-<!DOCTYPE html>
-<script runat="server">
-
-    protected void zamowienia_Click(object sender, EventArgs e)
-    {
-
-    }
-</script>
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PageLayout.Master" AutoEventWireup="true" CodeBehind="StronaGlowna.aspx.cs" Inherits="Market365_3._0.StronaGlowna.StronaGlowna" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="/Style/StyleGadomski.css" rel="stylesheet" />
     <link href="/Style/StyleBrzezinski.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Market365 - Strona Główna</title>
-</head>
-<body>
-    <div>
-        <form id="form1" runat="server">
-            <div class="header">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="header">
                 <table>
                     <tr>
                         <td class="tdhead">
@@ -123,11 +109,5 @@
                     </tr>
 
                 </table>
-
-
             </div>
-        </form>
-
-    </div>
-</body>
-</html>
+</asp:Content>
