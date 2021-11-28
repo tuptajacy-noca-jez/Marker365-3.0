@@ -14,7 +14,7 @@
     <div class="Container">
         <div class="Container">
             <div class="containerElement" ID="productNameBlock">
-                <asp:label runat="server" ID="productNameLabel" CssClass="productNameLabel">[Nazwa Produktu]</asp:Label>
+                <asp:label runat="server" ID="productNameLabel" Class="productNameLabel">[Nazwa Produktu]</asp:Label>
             </div>
             <div class="containerElement">
                 <svg 

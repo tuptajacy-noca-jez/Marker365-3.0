@@ -21,8 +21,8 @@
                     <table width="100%" runat="server" id="tblProducts">
                         <tr runat="server">
                             <th runat="server"></th>
-                            <th runat="server"></th>
-                            <th runat="server"></th>
+                            <th runat="server">Produkt<br>Cena/kg</th>
+                            <th runat="server">Waga produktu (kg)</th>
                             <th runat="server"></th>
                         </tr>
                         <tr runat="server" id="itemPlaceholder" />
@@ -36,24 +36,14 @@
                 <ItemTemplate>
                    <tr runat="server">
                         <td>
-                            <img height="200px" id="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" />
+                            <img height="200px" id="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" border="1px"/>
                         </td>
                         <td class="input">
                             <asp:Label ID="nazwaProduktu" runat="server" Text='<%# Eval("name") %>' Font-Bold="true" /><br>
                             <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />
                         </td>
                         <td>
-                            <asp:DropDownList ID="iloscProduktu" runat="server" ItemType="number">
-                                <asp:ListItem Selected="True" Value="1">1</asp:ListItem>
-                                <asp:ListItem Value="2">2</asp:ListItem>
-                                <asp:ListItem Value="3">3</asp:ListItem>
-                                <asp:ListItem Value="4">4</asp:ListItem>
-                                <asp:ListItem Value="5">5</asp:ListItem>
-                                <asp:ListItem Value="6">6</asp:ListItem>
-                                <asp:ListItem Value="7">7</asp:ListItem>
-                                <asp:ListItem Value="8">8</asp:ListItem>
-                                <asp:ListItem Value="9">9</asp:ListItem>
-                            </asp:DropDownList>
+                            <asp:TextBox ID="iloscProduktu" runat="server" width="100px"></asp:TextBox>
                         </td>
                         <td>
                             <asp:Button ID="usunProdukt" runat="server" Text="Usuń" CssClass="buttonred" />

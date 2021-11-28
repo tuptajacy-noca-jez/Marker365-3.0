@@ -116,6 +116,7 @@
     <Content Include="Zamowienie\Zamowienie.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cart.cs" />
     <Compile Include="Finalizacja zamówienia\FinalizacjaZamowienia.aspx.cs">
       <DependentUpon>FinalizacjaZamowienia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

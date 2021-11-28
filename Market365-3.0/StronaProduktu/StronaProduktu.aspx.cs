@@ -9,7 +9,13 @@ namespace Market365_3._0.StronaProduktu {
     
     
     public partial class StronaProduktu : System.Web.UI.Page{
+
+        private int ID;
         protected void Page_Load(object sender, EventArgs e) {
+            Uri uri= Request.Url;
+            ID = getProductNumber(uri.ToString());
+
+
 
 
             string Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
@@ -37,5 +43,14 @@ namespace Market365_3._0.StronaProduktu {
             return "ID =" + id;
         }
 
+        private int getProductNumber(string URI) {
+            try {
+                string[] bufer = URI.Split('/');
+                return Int32.Parse(bufer.Last());
+            }
+            catch (FormatException) {
+                return -1;
+            }
+        }
     }
 }
