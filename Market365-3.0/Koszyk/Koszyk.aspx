@@ -23,7 +23,7 @@
                     </div>
                 </LayoutTemplate>
                 <EmptyDataTemplate>
-                    <span>Nie zostały zwrócone żadne dane.</span>
+                    <span>Koszyk pusty.</span>
                 </EmptyDataTemplate>
                 <ItemTemplate>
                    <tr runat="server">
@@ -35,7 +35,7 @@
                             <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="iloscProduktu" runat="server" width="100px" Text='<%# Eval("quantity")%>' OnTextChanged="iloscProduktu_TextChanged"></asp:TextBox>
+                            <asp:TextBox ID="iloscProduktu" runat="server"  width="100px" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscProduktu_TextChanged" Visible="True" AutoPostBack="True"></asp:TextBox>                            
                         </td>
                        <td>
                             <asp:Label ID="cenaProduktuSuma" runat="server" Text='<%# Double.Parse(Eval("price").ToString())*Double.Parse(Eval("quantity").ToString()) %>'></asp:Label>
