@@ -34,7 +34,7 @@ namespace Market365_3._0.Zamowienie
             ids = (List<Int32>) Application["orderProductIds"];
             sum = (double)Application["cartValue"];
             quantities = (List<double>)Application["orderProductquantity"];
-            value.Text = "Wartość koszyka: " + sum + "zł";
+            
             rabat = 1;
             
             if (discount.Text =="alerabat2137")
@@ -48,8 +48,8 @@ namespace Market365_3._0.Zamowienie
             {
                 newOrder.Value = Math.Round(sum,2);
             }
-                
-            discountValue.Text = "Wartość koszyka po rabacie: " + sum*rabat+ "zł";
+            value.Text = "Wartość koszyka: " + Math.Round(sum, 2) + "zł";
+            discountValue.Text = "Wartość koszyka po rabacie: " + Math.Round(sum*rabat, 2) + "zł";
             if (zipCode.Text == "" && city.Text == "" && street.Text == "" && houseNumber.Text == "")
                 ZaladujDane();
             
