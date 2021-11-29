@@ -9,7 +9,7 @@
         body {background-image: url('/images/sklep.jpg');}
     </style>
 </asp:Content>
-
+ 
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
