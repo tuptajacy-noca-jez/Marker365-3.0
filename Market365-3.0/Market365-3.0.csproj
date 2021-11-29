@@ -92,6 +92,7 @@
     <Content Include="MojProfil\MojProfil.aspx" />
     <Content Include="Properties\serviceDependencies.local.json.user" />
     <Content Include="Rejestracja\Rejestracja.aspx" />
+    <Content Include="resources\barka.mp3" />
     <Content Include="resources\icons\heart-broken.svg" />
     <Content Include="resources\icons\heart.svg" />
     <Content Include="resources\icons\login.svg" />
