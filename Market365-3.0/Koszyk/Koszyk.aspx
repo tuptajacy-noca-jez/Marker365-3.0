@@ -35,10 +35,10 @@
                             <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="iloscProduktu" runat="server" width="100px" Text='<%# Eval("quantity")%>'></asp:TextBox>
+                            <asp:TextBox ID="iloscProduktu" runat="server" width="100px" Text='<%# Eval("quantity")%>' OnTextChanged="iloscProduktu_TextChanged"></asp:TextBox>
                         </td>
                        <td>
-                            <asp:Label ID="cenaProduktuSuma" runat="server" Text="0 zł"></asp:Label>
+                            <asp:Label ID="cenaProduktuSuma" runat="server" Text='<%# Double.Parse(Eval("price").ToString())*Double.Parse(Eval("quantity").ToString()) %>'></asp:Label>
                         </td>
                         <td>
                             <asp:Button ID="usunProdukt" runat="server" Text="Usuń" CssClass="buttonred" />
