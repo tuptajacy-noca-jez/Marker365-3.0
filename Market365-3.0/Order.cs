@@ -19,7 +19,7 @@ namespace Market365_3._0
         private String houseNumber;
         private String phoneNumber;
         private String email;
-        private float value;
+        private double value;
          
 
         public Order()
@@ -47,7 +47,7 @@ namespace Market365_3._0
         public string HouseNumber { get => houseNumber; set => houseNumber = value; }
         public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
         public string Email { get => email; set => email = value; }
-        public float Value { get => value; set => this.value = value; }
+        public double Value { get => value; set => this.value = value; }
         public List<int> ProductsId { get => productsId; set => productsId = value; }
         public string Login { get => login; set => login = value; }
         public List<float> ProductsQuantity { get => productsQuantity; set => productsQuantity = value; }

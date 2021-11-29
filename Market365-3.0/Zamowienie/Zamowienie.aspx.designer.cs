@@ -168,15 +168,6 @@ namespace Market365_3._0.Zamowienie
         protected global::System.Web.UI.WebControls.TextBox discount;
 
         /// <summary>
-        /// Kontrolka discountValidator.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator discountValidator;
-
-        /// <summary>
         /// Kontrolka ValidationSummary1.
         /// </summary>
         /// <remarks>
