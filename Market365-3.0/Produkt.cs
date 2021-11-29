@@ -22,7 +22,7 @@ namespace Market365_3._0 {
         public double ilosc;
         public double totalValue;
 
-        object[] values;
+        public object[] values;
 
 
 
