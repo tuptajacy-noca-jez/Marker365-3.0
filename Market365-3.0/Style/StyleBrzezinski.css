@@ -97,3 +97,16 @@ a:hover {
 a:active {
     color: black;
 }
+
+.buttonCart {
+    position: fixed;
+    left: 75%;
+    top: 90%;
+    border: 2px;
+    border-color: #6CCC46;
+    border-radius: 15px;
+    background-color: #6CCC46;
+}
+.buttonCart:hover {
+    background-color: #3132b1;
+}
