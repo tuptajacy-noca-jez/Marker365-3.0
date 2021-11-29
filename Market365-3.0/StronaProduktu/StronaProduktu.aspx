@@ -3,8 +3,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Nazwa Produktu</title>
-    <link href="../Style/produktStyle.css" rel="stylesheet" type="text/css">
-    <link href="../Style/styleMaster.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 
