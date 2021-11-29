@@ -41,7 +41,7 @@
                             <asp:Label ID="cenaProduktuSuma" runat="server" Text='<%# Double.Parse(Eval("price").ToString())*Double.Parse(Eval("quantity").ToString()) %>'></asp:Label>
                         </td>
                         <td>
-                            <asp:Button ID="usunProdukt" runat="server" Text="Usuń" CssClass="buttonred" />
+                            <asp:Button ID="usunProdukt" runat="server" Text="Usuń" CssClass="buttonred" ToolTip='<%# Eval("id") %>' OnClick="usunProdukt_Click"/>
                         </td>
                     </tr>
                 </ItemTemplate>
