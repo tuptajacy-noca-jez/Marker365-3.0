@@ -52,7 +52,7 @@
                             <polyline points="9 6 15 12 9 18" />
                         </svg>
                     </a>
-                    <button id="addButton"  runat="server" onclick="AddButton_Click">
+                    <button id='Button1' runat="server" onclick="AddButton_Click" ToolTip='<%# Eval("id") %>'>
                     <svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-plus"
                         width="40"
@@ -79,7 +79,7 @@
             <td class="td25"></td>
             <td class="td25"></td>
             <td class="td25">
-                <asp:Button ID="doKoszyka" runat="server" Text="Do koszyka" Font-Bold="True" Font-Size="X-Large" ForeColor="White" Height="60px" Width="380px" CssClass="button" BorderStyle="Solid" ToolTip="Przejdź do swojego koszyka" />
+                <asp:Button ID="doKoszyka" runat="server" Text="Do koszyka" Font-Bold="True" Font-Size="X-Large" ForeColor="White" Height="60px" Width="380px" CssClass="button" BorderStyle="Solid" ToolTip="Przejdź do swojego koszyka" OnClick="doKoszyka_Click" />
             </td>
         </tr>
     </table>
