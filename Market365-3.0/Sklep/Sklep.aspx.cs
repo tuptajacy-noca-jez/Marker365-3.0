@@ -13,5 +13,11 @@ namespace Market365_3._0.Sklep
         {
 
         }
+
+        protected void AddButton_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("AddButton_Click OK!");
+        }
     }
+
 }
