@@ -24,49 +24,22 @@ namespace Market365_3._0.StronaGlowna
         protected global::System.Web.UI.WebControls.Image produktDealsImg;
 
         /// <summary>
-        /// Kontrolka Image1.
+        /// Kontrolka ListView1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.ListView ListView1;
 
         /// <summary>
-        /// Kontrolka Image2.
+        /// Kontrolka SqlDataSource1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
-
-        /// <summary>
-        /// Kontrolka Image3.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image3;
-
-        /// <summary>
-        /// Kontrolka Image4.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image4;
-
-        /// <summary>
-        /// Kontrolka Image5.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image5;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
         /// Kontrolka sklep.

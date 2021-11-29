@@ -47,11 +47,17 @@ td {
         background-color: #3132b1;
     }
 
-.list{
-    max-height:80%;
+#placeholderBootstrap {
+    overflow: auto;
+    height: 380px;
+    margin-bottom: 6pt;
 }
 
 .label {
     font-size: 4vh;
     color: black;
+}
+
+.image{
+    transform:translate(800px);
 }

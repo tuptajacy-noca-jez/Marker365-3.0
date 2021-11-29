@@ -46,6 +46,9 @@ namespace Market365_3._0.MojProfil
             if (zipCode.Text == "" && city.Text == "" && street.Text == "" && houseNumber.Text == "")
                 ZaladujDane();
         }
+        /// <summary>
+        /// load current user data to textboxes
+        /// </summary>
         public void ZaladujDane()
         {
             city.Text = currentUser.City;

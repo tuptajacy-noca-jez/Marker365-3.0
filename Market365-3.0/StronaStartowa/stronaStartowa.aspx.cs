@@ -23,6 +23,9 @@ namespace projekt
         {
             Logowanie(); 
         }
+        /// <summary>
+        /// method responsible for log in 
+        /// </summary>
         public void Logowanie()
         {
             String Polaczenie;
@@ -90,7 +93,7 @@ namespace projekt
         }
 
         protected void przeglad_Click(object sender, EventArgs e) {
-            Response.Redirect("/StronaGlowna/StronaGlowna.aspx");
+            Response.Redirect("/Sklep/Sklep.aspx");
         }
     }
 }

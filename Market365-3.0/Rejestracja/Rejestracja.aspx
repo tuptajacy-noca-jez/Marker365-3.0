@@ -14,9 +14,18 @@
                         <asp:TextBox ID="login" runat="server" placeholder="Login" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="loginValidator" runat="server" ErrorMessage="Podany login jest za krótki" ControlToValidate="login" Display="Dynamic" ForeColor="Red" ValidationExpression=".{4,}" Font-Size="X-Large" ValidationGroup="rejestration">*</asp:RegularExpressionValidator>
                     </td>
+                    
+                </tr>
+                <tr>
                     <td>
                         <asp:TextBox ID="password" runat="server" placeholder="Hasło" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" ToolTip="Hasło musi składać się z min. 8 znaków, zawierać małe i duże litery oraz cyfrę" TextMode="Password"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="passwordValidator" runat="server" ErrorMessage="Hasło nie spełnia wymagań" Display="Dynamic" Font-Size="X-Large" ForeColor="Red" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" ControlToValidate="password" ValidationGroup="rejestration">*</asp:RegularExpressionValidator>
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Hasła nie są zgodne" Font-Size="X-Large" ForeColor="Red" ControlToCompare="passwordConfirm" ControlToValidate="password" ValidationGroup="rejestration">*</asp:CompareValidator>
+                    </td>
+                    <td>
+                             <asp:TextBox ID="passwordConfirm" runat="server" placeholder="Potwierdz nowe Hasło" AutoPostBack="True" BorderStyle="Solid" CssClass="ceil" Font-Size="X-Large" TextMode="Password" ToolTip="Hasło musi składać się z min. 8 znaków, zawierać małe i duże litery"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="passwordConfirmValidator" runat="server" ErrorMessage="Hasło nie spełnia wymagań" Font-Size="X-Large" ForeColor="Red" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" ControlToValidate="passwordConfirm" ValidationGroup="rejestration">*</asp:RegularExpressionValidator>
+                        <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Hasła nie są zgodne" Font-Size="X-Large" ForeColor="Red" ControlToCompare="password" ControlToValidate="passwordConfirm" ValidationGroup="rejestration">*</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>

@@ -8,7 +8,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="list">
         <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
             <LayoutTemplate>
                 <table width="100%" runat="server" id="tblProducts">
@@ -71,10 +70,10 @@
         </asp:ListView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [image], [description], [price] FROM [products] "></asp:SqlDataSource>
 <table class="table">
-    <tr>
-        <td class="td25"></td>
-        <td class="td25"></td>
-        <td class="td25"></td>
+    <tr class="table">
+        <td class="td25"> </td>
+        <td class="td25"> </td>
+        <td class="td25"> </td>
         <td class="td25">
             <asp:Button ID="doKoszyka" runat="server" Text="Do koszyka" Font-Bold="True" Font-Size="X-Large" ForeColor="White" Height="60px" Width="380px" CssClass="button" BorderStyle="Solid" ToolTip="Przejdź do swojego koszyka" />
         </td>

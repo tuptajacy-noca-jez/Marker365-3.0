@@ -11,11 +11,7 @@
                 <tr>
                     <td></td>
                 </tr>
-                <tr>
-                    <td colspan="2">
-                        <asp:Label ID="orderID" runat="server" Text="" Font-Size="XX-Large"></asp:Label>
-                    </td>
-                </tr>
+              
                  <tr>
                     <td>
                         <asp:TextBox ID="name" runat="server" placeholder="Imię" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
@@ -52,10 +48,16 @@
                     <asp:RegularExpressionValidator ID="phoneNumberValidator" runat="server" ErrorMessage="Nieprawidłowy numer telefonu" Display="Dynamic" Font-Size="X-Large" ForeColor="Red" ValidationExpression="^\d{9}$" ControlToValidate="phoneNumber" ValidationGroup="orderGroup">*</asp:RegularExpressionValidator>
                     </td>
                     <td>
+                        <asp:TextBox ID="email" runat="server" placeholder="Adres email" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="emailValidator" runat="server" ErrorMessage="Nieprawidłowy adres email" Font-Size="X-Large" ForeColor="Red" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ControlToValidate="email" ValidationGroup="profileChanges">*</asp:RegularExpressionValidator>
+                    </td>
+                </tr>
+                <tr>
+                     <td colspan="2">
                         <asp:TextBox ID="discount" runat="server" placeholder="Kod rabatowy" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="discountValidator" runat="server" ErrorMessage="Nieprawidłowy adres email" Font-Size="X-Large" ForeColor="Red" ControlToValidate="discount" ValidationGroup="orderGroup">*</asp:RegularExpressionValidator>
                     </td>
-                </tr>
+                    </tr>
                   <tr>
                     <td colspan="2">
                         <asp:ValidationSummary ID="ValidationSummary1" runat="server" DisplayMode="List" Font-Size="Large" ForeColor="Red" ValidationGroup="orderGroup" />
@@ -64,12 +66,13 @@
                 <tr>
                     <td>
                         <asp:Label ID="value" runat="server" Font-Size="XX-Large"></asp:Label>
+                        <asp:Label ID="discountValue" runat="server" Font-Size="XX-Large"></asp:Label>
                         </td>
                     <td>     
                         <asp:Button ID="cancel" runat="server" Text="Anuluj" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="300px" CssClass="buttonred" BorderStyle="Solid" OnClick="cancel_Click" />
                    </td> 
                     <td>     
-                <asp:Button ID="order" runat="server" Text="Zamów" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="300px" CssClass="button" BorderStyle="Solid" />
+                <asp:Button ID="order" runat="server" Text="Zamów" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="300px" CssClass="button" BorderStyle="Solid" OnClick="order_Click" />
                    </td> 
                 </tr>
             </table>

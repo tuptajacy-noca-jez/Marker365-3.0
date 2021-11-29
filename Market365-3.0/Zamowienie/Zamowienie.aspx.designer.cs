@@ -15,15 +15,6 @@ namespace Market365_3._0.Zamowienie
     {
 
         /// <summary>
-        /// Kontrolka orderID.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label orderID;
-
-        /// <summary>
         /// Kontrolka name.
         /// </summary>
         /// <remarks>
@@ -150,6 +141,24 @@ namespace Market365_3._0.Zamowienie
         protected global::System.Web.UI.WebControls.RegularExpressionValidator phoneNumberValidator;
 
         /// <summary>
+        /// Kontrolka email.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox email;
+
+        /// <summary>
+        /// Kontrolka emailValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator emailValidator;
+
+        /// <summary>
         /// Kontrolka discount.
         /// </summary>
         /// <remarks>
@@ -184,6 +193,15 @@ namespace Market365_3._0.Zamowienie
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label value;
+
+        /// <summary>
+        /// Kontrolka discountValue.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label discountValue;
 
         /// <summary>
         /// Kontrolka cancel.

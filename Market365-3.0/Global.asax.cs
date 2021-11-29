@@ -14,7 +14,10 @@ namespace Market365_3._0
         {
             Application.Lock();
             Application["user"] = new User();
-
+            Application["order"] = new Order();
+            Application["cart"] = new Cart();
+            Application["orderProductIds"] = new List<int>();
+            Application["orderProductquantity"] = new List<float>(); 
             Application.UnLock();
         }
 

@@ -6,6 +6,7 @@
     <title>Market365 - Strona Główna</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<!-- Wzorzec promowanego produktu
     <div class="bestdeals">
         <div class="produktDeals">
             <asp:Image ID="produktDealsImg" runat="server"
@@ -16,55 +17,36 @@
             <br />
             2,50 zł/kg
         </div>
-
-        <div class="produktDeals">
-            <asp:Image ID="Image1" runat="server"
-                Height="50" Width="50"
-                ImageUrl="~/images/50x50.png"
-                AlternateText="produktDealsImg" /><br />
-            Cebula
-            <br />
-            2,50 zł/kg
-        </div>
-        <div class="produktDeals">
-            <asp:Image ID="Image2" runat="server"
-                Height="50" Width="50"
-                ImageUrl="~/images/50x50.png"
-                AlternateText="produktDealsImg" /><br />
-            Cebula
-            <br />
-            2,50 zł/kg
-        </div>
-        <div class="produktDeals">
-            <asp:Image ID="Image3" runat="server"
-                Height="50" Width="50"
-                ImageUrl="~/images/50x50.png"
-                AlternateText="produktDealsImg" /><br />
-            Cebula
-            <br />
-            2,50 zł/kg
-        </div>
-        <div class="produktDeals">
-            <asp:Image ID="Image4" runat="server"
-                Height="50" Width="50"
-                ImageUrl="~/images/50x50.png"
-                AlternateText="produktDealsImg" /><br />
-            Cebula
-            <br />
-            2,50 zł/kg
-        </div>
-        <div class="produktDeals">
-            <asp:Image ID="Image5" runat="server"
-                Height="50" Width="50"
-                ImageUrl="~/images/50x50.png"
-                AlternateText="produktDealsImg" /><br />
-            Cebula
-            <br />
-            2,50 zł/kg
-        </div>
-
     </div>
+-->
+<div class="bestdeals">
+<asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
+            <LayoutTemplate>
+                <div class="produktDeals">
+                <table width="100%" runat="server" id="tblProducts">
+                    <tr runat="server">
+                        <th runat="server"></th>
+                    </tr>
+                    <tr runat="server" id="itemPlaceholder" />
+                </table>
+                </div>
+            </LayoutTemplate>
+            <EmptyDataTemplate>
+                <span>Nie zostały zwrócone żadne dane.</span>
+            </EmptyDataTemplate>
+            <ItemTemplate>
+                    <td class ="produktDeals" OnClick="produktDeals_Click">
+                        <img height="100px" id="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" /><br />
+                        <asp:Label ID="nazwaProduktu" runat="server" Text='<%# Eval("name") %>' Font-Bold="true" /><br />
+                        <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />zł
+                    </td>
+            </ItemTemplate>
+        </asp:ListView>
 
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [image], [description], [price] FROM [products] "></asp:SqlDataSource>
+</div>    
+    
+    
     <div class="menu">
         <table>
             <tr>
