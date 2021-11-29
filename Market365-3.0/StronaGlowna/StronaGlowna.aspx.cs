@@ -39,9 +39,11 @@ namespace Market365_3._0.StronaGlowna
             Response.Redirect("~/MojProfil/MojProfil.aspx");
         }
 
+        /*
         protected void produktDeals_Click(object sender, EventArgs e) {
 
             Response.Redirect("~/StronaProduktu/StronaProduktu.aspx");
         }
+        */
     }
 }

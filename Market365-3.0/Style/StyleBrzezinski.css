@@ -34,13 +34,21 @@ table{
 .bestdeals{
     height: 100px;
     display: block;
+    text-align: center;
 }
 
-.produktDeals{
+.produktDeals {
     display: inline-block;
     float: left;
     padding: 10px 10px 10px 10px;
+    text-align: center;
+}
 
+.tbCenter {
+    width:100%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .listaProd{
@@ -69,4 +77,23 @@ table{
     width: 10%;
     align-items: center;
     justify-content: center;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    border: dotted;
+    border-color: forestgreen;
+}
+
+a:active {
+    color: black;
 }
