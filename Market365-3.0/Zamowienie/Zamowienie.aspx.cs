@@ -42,11 +42,11 @@ namespace Market365_3._0.Zamowienie
                 rabat = 0.9;
                 value.Visible = false;
                 discountValue.Visible = true;
-                newOrder.Value = sum*rabat;               
+                newOrder.Value = Math.Round(sum*rabat,2);   
             }
             else
             {
-                newOrder.Value = sum;
+                newOrder.Value = Math.Round(sum,2);
             }
                 
             discountValue.Text = "Wartość koszyka po rabacie: " + sum*rabat+ "zł";
@@ -64,7 +64,7 @@ namespace Market365_3._0.Zamowienie
                 newOrder.ZipCode=zipCode.Text;
                 newOrder.Street=street.Text;
                 newOrder.HouseNumber=houseNumber.Text;
-                newOrder.PhoneNumber=phoneNumber.Text; ;
+                newOrder.PhoneNumber=phoneNumber.Text;
                 newOrder.Email=email.Text;
             
                 Application["order"] = newOrder;
