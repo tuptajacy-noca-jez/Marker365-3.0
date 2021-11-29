@@ -52,7 +52,7 @@
                             <polyline points="9 6 15 12 9 18" />
                         </svg>
                     </a>
-                    <button id="addButton">
+                    <button id="addButton"  runat="server" onclick="AddButton_Click">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-plus"
                         width="40"
