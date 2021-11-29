@@ -50,6 +50,7 @@ namespace Market365_3._0
         public float Value { get => value; set => this.value = value; }
         public List<int> ProductsId { get => productsId; set => productsId = value; }
         public string Login { get => login; set => login = value; }
+        public List<float> ProductsQuantity { get => productsQuantity; set => productsQuantity = value; }
     }
 
 
