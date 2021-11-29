@@ -16,6 +16,8 @@ namespace Market365_3._0.Zamowienie
         List<int> ids;
         List<float> quantities;
         string Polaczenie;
+        double sum;
+        double rabat;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -27,13 +29,22 @@ namespace Market365_3._0.Zamowienie
             streetValidator.Validate();
             houseNumberValidator.Validate();
             phoneNumberValidator.Validate();
-            discountValidator.Validate();
             currentUser = (User)Application["user"];
             newOrder =  (Order) Application["order"];
             ids = (List<Int32>) Application["orderProductIds"];
+            sum = (double)Application["cartValue"];
             quantities = (List<float>)Application["orderProductquantity"];
-            value.Text = "Wartość koszyka: " + "9,11" + "zł";
-            discountValue.Text = "Wartość koszyka z kodem rabatowym: ";
+            value.Text = "Wartość koszyka: " + sum + "zł";
+            rabat = 1;
+            
+            if (discount.Text =="alerabat2137")
+            {
+                rabat = 0.9;
+                value.Visible = false;
+                discountValue.Visible = true;
+            }
+                
+            discountValue.Text = "Wartość koszyka po rabacie: " + sum*rabat+ "zł";
             if (zipCode.Text == "" && city.Text == "" && street.Text == "" && houseNumber.Text == "")
                 ZaladujDane();
             
@@ -50,7 +61,7 @@ namespace Market365_3._0.Zamowienie
                 newOrder.HouseNumber=houseNumber.Text;
                 newOrder.PhoneNumber=phoneNumber.Text; ;
                 newOrder.Email=email.Text;
-                //newOrder.Value=
+            newOrder.Value = sum;
                 Application["order"] = newOrder;
             AddOrderToDatabase();
         }

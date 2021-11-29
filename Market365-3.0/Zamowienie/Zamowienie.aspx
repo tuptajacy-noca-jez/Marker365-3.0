@@ -55,7 +55,7 @@
                 <tr>
                      <td colspan="2">
                         <asp:TextBox ID="discount" runat="server" placeholder="Kod rabatowy" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="discountValidator" runat="server" ErrorMessage="Nieprawidłowy adres email" Font-Size="X-Large" ForeColor="Red" ControlToValidate="discount" ValidationGroup="orderGroup">*</asp:RegularExpressionValidator>
+       
                     </td>
                     </tr>
                   <tr>
@@ -63,10 +63,11 @@
                         <asp:ValidationSummary ID="ValidationSummary1" runat="server" DisplayMode="List" Font-Size="Large" ForeColor="Red" ValidationGroup="orderGroup" />
                     </td>
                 </tr>
+               
                 <tr>
                     <td>
-                        <asp:Label ID="value" runat="server" Font-Size="XX-Large"></asp:Label>
-                        <asp:Label ID="discountValue" runat="server" Font-Size="XX-Large"></asp:Label>
+                        <asp:Label ID="value" runat="server" Font-Size="X-Large"></asp:Label>
+                        <asp:Label ID="discountValue" runat="server" Font-Size="X-Large" Visible="False"></asp:Label>
                         </td>
                     <td>     
                         <asp:Button ID="cancel" runat="server" Text="Anuluj" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="300px" CssClass="buttonred" BorderStyle="Solid" OnClick="cancel_Click" />
