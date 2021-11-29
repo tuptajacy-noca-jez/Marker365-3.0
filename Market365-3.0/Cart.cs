@@ -21,7 +21,9 @@ namespace Market365_3._0
 
             string Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
             SqlConnection sql = new SqlConnection(Polaczenie);
-            SqlCommand cmd = new SqlCommand("select [products].*,[cartPosition].[quantity] from [cartPosition] INNER JOIN [products] ON[cartPosition].IdProduct =[products].Id WHERE[cartPosition].IdCard = "+ currUser +";", sql); // zamiast sr306 ma być currUser - sr306 tylko do testów
+            SqlCommand cmd = new SqlCommand("select [products].*,[cartPosition].[quantity] from [cartPosition] " +
+                "INNER JOIN [products] ON[cartPosition].IdProduct =[products].Id " +
+                "WHERE[cartPosition].IdCard = '"+ currUser +"';", sql); // zamiast sr306 ma być currUser - sr306 tylko do testów
             sql.Open();
             SqlDataAdapter sqlda = new SqlDataAdapter(cmd);
             sqlda.Fill(dt);

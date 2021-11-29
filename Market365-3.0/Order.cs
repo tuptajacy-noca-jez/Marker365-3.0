@@ -9,7 +9,7 @@ namespace Market365_3._0
     {
         private String login;
         private List<Int32> productsId;
-        private List<float> productsQuantity;
+        private List<double> productsQuantity;
         private String orderId;
         private String name;
         private String surname;
@@ -50,7 +50,7 @@ namespace Market365_3._0
         public double Value { get => value; set => this.value = value; }
         public List<int> ProductsId { get => productsId; set => productsId = value; }
         public string Login { get => login; set => login = value; }
-        public List<float> ProductsQuantity { get => productsQuantity; set => productsQuantity = value; }
+        public List<double> ProductsQuantity { get => productsQuantity; set => productsQuantity = value; }
     }
 
 

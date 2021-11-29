@@ -14,7 +14,7 @@ namespace Market365_3._0.Zamowienie
         User currentUser;
         Order newOrder;
         List<int> ids;
-        List<float> quantities;
+        List<double> quantities;
         string Polaczenie;
         double sum;
         double rabat;
@@ -33,7 +33,7 @@ namespace Market365_3._0.Zamowienie
             newOrder =  (Order) Application["order"];
             ids = (List<Int32>) Application["orderProductIds"];
             sum = (double)Application["cartValue"];
-            quantities = (List<float>)Application["orderProductquantity"];
+            quantities = (List<double>)Application["orderProductquantity"];
             value.Text = "Wartość koszyka: " + sum + "zł";
             rabat = 1;
             

@@ -10,25 +10,25 @@ namespace Market365_3._0.Koszyk
     public partial class Koszyk : System.Web.UI.Page
     {
         Cart kosz;
-        string currentUser;
+        User currentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
-            currentUser=(string)Application["currentUser"];
-            kosz = new Cart(currentUser);
+            currentUser=(User)Application["user"];
+            Cart kosz = new Cart(currentUser.Login);
             ListView1.DataSource = kosz.dt;
             ListView1.DataBind();
         }
 
         protected void anulujButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/stronaGłówna/stronaGłówna.aspx");
+            Response.Redirect("~/stronaGlowna/stronaGlowna.aspx");
         }
 
         protected void zamowButton_Click(object sender, EventArgs e)
         {
-            kosz = new Cart(currentUser); //odświeżenie danych tak na wszelki wypadek
+            kosz = new Cart(currentUser.Login); //odświeżenie danych tak na wszelki wypadek
             List<int> ids = new List<int>();
-            List<float> quantities = new List<float>();
+            List<double> quantities = new List<double>();
             double cartValue = 0.0;
             foreach (var item in kosz.produkts)
             {
