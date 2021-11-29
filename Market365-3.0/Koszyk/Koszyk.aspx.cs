@@ -41,19 +41,13 @@ namespace Market365_3._0.Koszyk
             Application["orderProductquantity"] = quantities;
             Application["cartValue"] = cartValue;
             Application.UnLock();
-        }
 
-        protected static string ReturnEncodedBase64UTF8(object rawImg)
-        {
-            string img = "data:image/jpg;base64,{0}";
-            byte[] toEncodeAsBytes = (byte[])rawImg;
-            string returnValue = System.Convert.ToBase64String(toEncodeAsBytes);
-            return String.Format(img, returnValue);
-        }
+            Response.Redirect("~/FinalizacjaZamowienia/FinalizacjaZamowienia.aspx");
+        }   
 
         protected void iloscProduktu_TextChanged(object sender, EventArgs e)
         {
-            
+            //ListView1.SelectedIndex;
         }
     }
 }
