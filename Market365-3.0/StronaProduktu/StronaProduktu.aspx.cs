@@ -11,33 +11,50 @@ namespace Market365_3._0.StronaProduktu {
     public partial class StronaProduktu : System.Web.UI.Page{
 
         private int ID;
+        
         protected void Page_Load(object sender, EventArgs e) {
             Uri uri= Request.Url;
             ID = getProductNumber(uri.ToString());
 
+            //ID = 10;
+            Produkt produkt = new Produkt(ID);
+            var values = produkt.values;
 
+            string[] converedValues = new string[values.Length];
 
+            for (int i = 0; i < values.Length; ++i) {
+                try {
+                    converedValues[i] = values[i].ToString();
+                }
+                catch(Exception) {
 
-            string Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-            SqlConnection sql = new SqlConnection(Polaczenie);
+                }
+            }
 
             try {
-                sql.Open();
-                SqlCommand cmd = new SqlCommand("select * from [products] WHERE ID=@id", sql);
-                //cmd.Parameters.AddWithValue("@id", produktID);
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                string afterFormatString = char.ToUpper(converedValues[1][0]) + converedValues[1].Substring(1);
+                productNameLabel.Text = afterFormatString;
+                priceTag.Text= converedValues[3] +" zł/"+ converedValues.Last();
+            }
+            catch (NullReferenceException ex) {
+                //carryon
+            }
 
-                if (count == 1) {
-                    //cmd = new SqlCommand("update [customers] set isActive=@isActive WHERE login='" + login.Text + "'", sql);
-                    cmd.Parameters.AddWithValue("@isActive", "true");
-                    cmd.ExecuteNonQuery();
-                }
-                sql.Close();
-            }
-            catch (Exception ex) {
-                Console.WriteLine(ex.Message);
-            }
         }
+
+       
+            static void CaptLetter() {
+                string str = "educative";
+
+                if (str.Length == 0)
+                    System.Console.WriteLine("Empty String");
+                else if (str.Length == 1)
+                    System.Console.WriteLine(char.ToUpper(str[0]));
+                else
+                    System.Console.WriteLine(char.ToUpper(str[0]) + str.Substring(1));
+            }
+        
+
 
         public string Index(string id) {
             return "ID =" + id;
