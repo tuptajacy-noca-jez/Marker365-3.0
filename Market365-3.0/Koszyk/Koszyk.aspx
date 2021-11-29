@@ -12,8 +12,8 @@
                     <table width="100%" runat="server" id="tblProducts">
                         <tr runat="server">
                             <th runat="server"></th>
-                            <th runat="server">Produkt<br>Cena/kg</th>
-                            <th runat="server">Waga produktu (kg)</th>
+                            <th runat="server">Produkt<br>Cena/Jednostka</th>
+                            <th runat="server">Ilość</th>
                             <th runat="server">Cena</th>
                             <th runat="server"></th>
                         </tr>
