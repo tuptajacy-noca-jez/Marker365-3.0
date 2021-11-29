@@ -90,8 +90,8 @@ a:visited {
 
 a:hover {
     color: black;
-    border: dotted;
-    border-color: forestgreen;
+    border-bottom: dotted;
+    border-bottom-color: forestgreen;
 }
 
 a:active {

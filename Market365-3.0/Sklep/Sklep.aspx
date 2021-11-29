@@ -52,8 +52,11 @@
                             <polyline points="9 6 15 12 9 18" />
                         </svg>
                     </a>
-                    <asp:Button ID="AddButton" 
-                        runat="server"  
+                    <asp:ImageButton ID="AddButton" 
+                        runat="server"
+                        ImageUrl="../resources/icons/tabler-icon-chevron-right.jpg"
+                        heigh="40px"
+                        width="40px"
                         OnClick="AddButton_Click" 
                         Text='+'
                         ToolTip='<%# Eval("id") %>'/>
