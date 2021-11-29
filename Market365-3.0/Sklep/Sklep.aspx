@@ -87,8 +87,9 @@
             <td class="td25"></td>
             <td class="td25"></td>
             <td class="td25">
-                <asp:Button ID="doKoszyka" runat="server" Text="Do koszyka" Font-Bold="True" Font-Size="X-Large" ForeColor="White" Height="60px" Width="380px" CssClass="button" BorderStyle="Solid" ToolTip="Przejdź do swojego koszyka" OnClick="doKoszyka_Click" />
             </td>
         </tr>
     </table>
+<asp:Button ID="doKoszyka" runat="server" Text="Do koszyka" Font-Bold="True" Font-Size="X-Large" ForeColor="White" Height="60px" Width="380px" CssClass="buttonCart" BorderStyle="Solid" ToolTip="Przejdź do swojego koszyka" OnClick="doKoszyka_Click" />
+
 </asp:Content>

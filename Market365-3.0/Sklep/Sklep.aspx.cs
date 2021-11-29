@@ -49,7 +49,15 @@ namespace Market365_3._0.Sklep
 
         protected void doKoszyka_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Koszyk/Koszyk.aspx");
+            currUser = (User)Application["user"];
+            if (currUser.IsActive == false)
+            {
+                Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");
+            }
+            else
+            {
+                Response.Redirect("~/Koszyk/Koszyk.aspx");
+            }
         }
     }
 
