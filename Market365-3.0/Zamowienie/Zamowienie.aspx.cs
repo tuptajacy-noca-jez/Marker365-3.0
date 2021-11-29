@@ -14,7 +14,7 @@ namespace Market365_3._0.Zamowienie
         User currentUser;
         Order newOrder;
         List<int> ids;
-        List<float> quantities;
+        List<double> quantities;
         string Polaczenie;
         double sum;
         double rabat;
@@ -33,7 +33,7 @@ namespace Market365_3._0.Zamowienie
             newOrder =  (Order) Application["order"];
             ids = (List<Int32>) Application["orderProductIds"];
             sum = (double)Application["cartValue"];
-            quantities = (List<float>)Application["orderProductquantity"];
+            quantities = (List<double>)Application["orderProductquantity"];
             value.Text = "Wartość koszyka: " + sum + "zł";
             rabat = 1;
             
@@ -42,8 +42,11 @@ namespace Market365_3._0.Zamowienie
                 rabat = 0.9;
                 value.Visible = false;
                 discountValue.Visible = true;
+                newOrder.Value = sum*rabat;
             }
-                
+            else
+                newOrder.Value = sum;
+
             discountValue.Text = "Wartość koszyka po rabacie: " + sum*rabat+ "zł";
             if (zipCode.Text == "" && city.Text == "" && street.Text == "" && houseNumber.Text == "")
                 ZaladujDane();
@@ -61,7 +64,7 @@ namespace Market365_3._0.Zamowienie
                 newOrder.HouseNumber=houseNumber.Text;
                 newOrder.PhoneNumber=phoneNumber.Text; ;
                 newOrder.Email=email.Text;
-            newOrder.Value = sum;
+            
                 Application["order"] = newOrder;
             AddOrderToDatabase();
         }
@@ -120,8 +123,20 @@ namespace Market365_3._0.Zamowienie
         if (streetValidator.IsValid == true && houseNumberValidator.IsValid == true && zipCodeValidator.IsValid == true && cityValidator.IsValid == true && phoneNumberValidator.IsValid == true && emailValidator.IsValid == true)
         {
                 CreateOrder();
+                Application["cart"] = null;
+                UsunKoszyk();
             Response.Redirect("/FinalizacjaZamowienia/FinalizacjaZamowienia.aspx");
         }
+        }
+
+        public void UsunKoszyk()
+        {
+            Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            SqlConnection sql = new SqlConnection(Polaczenie);
+            sql.Open();
+            SqlCommand cmd = new SqlCommand("DELETE from [cartPosition] WHERE IdCard='" + currentUser.Login + "'", sql);
+            cmd.ExecuteNonQuery();
+            sql.Close();
         }
     }
 }
