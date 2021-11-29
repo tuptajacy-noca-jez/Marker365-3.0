@@ -36,7 +36,7 @@
             </EmptyDataTemplate>
             <ItemTemplate>
                 <td class ="produktDeals" runat="server" onclick="produktDeals_Click">
-                    <a href="../StronaProduktu/StronaProduktu.aspx/11" style='font-family: "Comic Sans MS"'>
+                    <a href="../StronaProduktu/StronaProduktu.aspx/<%# Eval("id") %>">
                         <img height="100px" id="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" /><br />
                         <asp:Label ID="nazwaProduktu" runat="server" Text='<%# Eval("name") %>' Font-Bold="true" /><br />
                         <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />&nbspzł/<asp:Label ID="Label1" runat="server" Text='<%# Eval("unit") %>' />
@@ -45,7 +45,7 @@
             </ItemTemplate>
         </asp:ListView>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT TOP 10 [name], [image], [description], [price], [unit] FROM [products] ORDER BY NEWID()"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT TOP 10 [Id], [name], [image], [description], [price], [unit] FROM [products] ORDER BY NEWID()"></asp:SqlDataSource>
 </div>    
     
     

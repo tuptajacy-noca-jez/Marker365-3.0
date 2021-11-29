@@ -37,7 +37,7 @@
                     zł
                 </td>
                 <td class="prodSter">
-                    <a href="../StronaProduktu/StronaProduktu.aspx">
+                    <a href="../StronaProduktu/StronaProduktu.aspx/<%# Eval("id") %>">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="icon icon-tabler icon-tabler-chevron-right"
                             width="40"
@@ -71,7 +71,7 @@
             </tr>
         </ItemTemplate>
     </asp:ListView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [image], [description], [price] FROM [products] "></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Id], [name], [image], [description], [price] FROM [products] "></asp:SqlDataSource>
     <table class="table">
         <tr class="table">
             <td class="td25"></td>
