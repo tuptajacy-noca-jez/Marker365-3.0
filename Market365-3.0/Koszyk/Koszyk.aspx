@@ -12,8 +12,8 @@
                     <table width="100%" runat="server" id="tblProducts">
                         <tr runat="server">
                             <th runat="server"></th>
-                            <th runat="server">Produkt<br>Cena/kg</th>
-                            <th runat="server">Waga produktu (kg)</th>
+                            <th runat="server">Produkt<br>Cena/Jednostka</th>
+                            <th runat="server">Ilość</th>
                             <th runat="server">Cena</th>
                             <th runat="server"></th>
                         </tr>
@@ -23,7 +23,7 @@
                     </div>
                 </LayoutTemplate>
                 <EmptyDataTemplate>
-                    <span>Nie zostały zwrócone żadne dane.</span>
+                    <span>Koszyk pusty.</span>
                 </EmptyDataTemplate>
                 <ItemTemplate>
                    <tr runat="server">
@@ -35,13 +35,13 @@
                             <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="iloscProduktu" runat="server" width="100px" Text='<%# Eval("quantity")%>' OnTextChanged="iloscProduktu_TextChanged"></asp:TextBox>
+                            <asp:TextBox ID="iloscProduktu" runat="server"  width="100px" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscProduktu_TextChanged" Visible="True" AutoPostBack="True"></asp:TextBox>                            
                         </td>
                        <td>
                             <asp:Label ID="cenaProduktuSuma" runat="server" Text='<%# Double.Parse(Eval("price").ToString())*Double.Parse(Eval("quantity").ToString()) %>'></asp:Label>
                         </td>
                         <td>
-                            <asp:Button ID="usunProdukt" runat="server" Text="Usuń" CssClass="buttonred" />
+                            <asp:Button ID="usunProdukt" runat="server" Text="Usuń" CssClass="buttonred" ToolTip='<%# Eval("id") %>' OnClick="usunProdukt_Click"/>
                         </td>
                     </tr>
                 </ItemTemplate>

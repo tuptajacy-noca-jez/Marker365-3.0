@@ -77,6 +77,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrator\Administrator.aspx" />
+    <Content Include="Administrator\DodajProdukt\DodajProdukt.aspx" />
+    <Content Include="Administrator\Magazyn\Magazyn.aspx" />
+    <Content Include="Administrator\ZamowienieKlientow\ZamowienieKlientow.aspx" />
     <Content Include="FinalizacjaZamowienia\FinalizacjaZamowienia.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\100x100.png" />
@@ -118,6 +122,34 @@
     <Content Include="Zamowienie\Zamowienie.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\Administrator.aspx.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Administrator.aspx.designer.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\DodajProdukt\DodajProdukt.aspx.cs">
+      <DependentUpon>DodajProdukt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\DodajProdukt\DodajProdukt.aspx.designer.cs">
+      <DependentUpon>DodajProdukt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Magazyn\Magazyn.aspx.cs">
+      <DependentUpon>Magazyn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Magazyn\Magazyn.aspx.designer.cs">
+      <DependentUpon>Magazyn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\ZamowienieKlientow\ZamowienieKlientow.aspx.cs">
+      <DependentUpon>ZamowienieKlientow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\ZamowienieKlientow\ZamowienieKlientow.aspx.designer.cs">
+      <DependentUpon>ZamowienieKlientow.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cart.cs" />
     <Compile Include="FinalizacjaZamowienia\FinalizacjaZamowienia.aspx.cs">
       <DependentUpon>FinalizacjaZamowienia.aspx</DependentUpon>

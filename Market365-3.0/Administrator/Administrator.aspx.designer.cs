@@ -7,65 +7,65 @@
 // </generowany automatycznie>
 //------------------------------------------------------------------------------
 
-namespace projekt
+namespace Market365_3._0.Administrator
 {
 
 
-    public partial class stronaStartowa
+    public partial class Administrator
     {
 
         /// <summary>
-        /// Kontrolka login.
+        /// Kontrolka ListView1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox login;
+        protected global::System.Web.UI.WebControls.ListView ListView1;
 
         /// <summary>
-        /// Kontrolka password.
+        /// Kontrolka SqlDataSource1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// Kontrolka Validacion.
+        /// Kontrolka ListaProdukt.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Validacion;
+        protected global::System.Web.UI.WebControls.Button ListaProdukt;
 
         /// <summary>
-        /// Kontrolka zaloguj.
+        /// Kontrolka magazyn.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button zaloguj;
+        protected global::System.Web.UI.WebControls.Button magazyn;
 
         /// <summary>
-        /// Kontrolka rejestracja.
+        /// Kontrolka zamowieniaKlientow.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button rejestracja;
+        protected global::System.Web.UI.WebControls.Button zamowieniaKlientow;
 
         /// <summary>
-        /// Kontrolka przeglad.
+        /// Kontrolka mojProfil.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button przeglad;
+        protected global::System.Web.UI.WebControls.Button mojProfil;
     }
 }
