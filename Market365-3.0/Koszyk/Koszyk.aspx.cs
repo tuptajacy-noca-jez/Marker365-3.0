@@ -13,7 +13,7 @@ namespace Market365_3._0.Koszyk
         string currentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //currentUser=Application["currentUser"];
+            currentUser=(string)Application["currentUser"];
             kosz = new Cart(currentUser);
             ListView1.DataSource = kosz.dt;
             ListView1.DataBind();
