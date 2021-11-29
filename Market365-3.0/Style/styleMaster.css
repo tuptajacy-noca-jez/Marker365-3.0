@@ -79,7 +79,7 @@
     display: inline-block;
 }
 
-.loginButton {
+.logOutButton {
     visibility: visible;
     color: white;
     width: auto;
@@ -99,8 +99,203 @@
     top: auto;
 }
 
+.logInButton {
+    visibility: visible;
+    color: white;
+    width: auto;
+    height: 33px;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: #3cae0f;
+    border: 2px;
+    border-color: #6CCC46;
+    border-radius: 15px;
+    margin-right: 12pt;
+    padding-right: 6pt;
+    position: absolute;
+    right: 12pt;
+    top: auto;
+}
+
 .loginButton:hover {
     transform: scale(1.05);
+}
+
+
+.icons {
+    stroke-width: 1.25;
+}
+
+.liked {
+    fill: red;
+}
+
+.unliked {
+    fill: none;
+}
+
+#productNameBlock {
+    margin: 0 0 0 60px;
+}
+
+.leftContentBlock {
+    margin: 0 0 0 60px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.containerElement {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.productNameLabel {
+    font-family: "Open Sans",sans-serif;
+    font-size: 40pt;
+    color: rgb(0 0 0);
+}
+
+.productPriceLabel {
+    font-family: "Open Sans",sans-serif;
+    font-size: 30pt;
+    color: rgb(168 0 0);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+#productDescription {
+    font-family: "Open Sans",sans-serif;
+    font-size: 20pt;
+    font-weight: normal;
+    text-align: left;
+}
+
+.amountTextBox {
+    width: 154px;
+    height: 66px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0 18 107);
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.Button {
+    color: white;
+    width: auto;
+    height: 66px;
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: #6CCC46;
+    border: 2px;
+    border-color: #6CCC46;
+    border-radius: 15px;
+    margin-right: 12pt;
+    padding-left: 6pt;
+    padding-right: 6pt;
+}
+
+    .Button:hover {
+        transform: scale(1.05);
+    }
+
+#placeholderBootstrap {
+    overflow: auto;
+    height: 380px;
+    margin-bottom: 6pt;
+}
+
+.amountLabelCSS {
+    font-family: "Open Sans",sans-serif;
+    font-size: 13pt;
+    color: rgb(0 0 0);
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+    font-style: normal;
+}
+
+.basicContainer {
+    display: block;
+}
+
+.listElem {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.smallProductNameLabel {
+    font-family: "Open Sams",sans-serif;
+    font-size: 20pt;
+    color: rgb(0 0 0);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    font-style: normal;
+}
+
+.productPricelabel {
+    font-family: "Open Sams",sans-serif;
+    font-size: 18pt;
+    color: rgb(0 0 0);
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+    font-style: normal;
+}
+
+.categoryCSSClass {
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+}
+
+.nameTag {
+    margin: 0 0 0 6pt;
+}
+
+.gridContainer {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 150px auto 150px 150px;
+    grid-template-rows: 150px;
+    padding-bottom: 6pt;
+    border-bottom: 2px solid black;
+    margin-top: 6pt;
+}
+
+.gridBox-1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.gridBox-2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.gridBox-3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    padding-left: 4pt;
+}
+
+.gridBox-4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    padding-left: 4pt;
+}
+
+#returnButtonStyle {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12pt;
+    padding-right: 8pt;
 }
 
 

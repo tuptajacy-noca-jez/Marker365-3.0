@@ -29,14 +29,17 @@ namespace Market365_3._0.Koszyk
             kosz = new Cart(currentUser); //odświeżenie danych tak na wszelki wypadek
             List<int> ids = new List<int>();
             List<float> quantities = new List<float>();
+            double cartValue = 0.0;
             foreach (var item in kosz.produkts)
             {
                 ids.Add(item.id);
                 quantities.Add(item.quantity);
+                cartValue += item.price * item.quantity;
             }
             Application.Lock();
             Application["orderProductIds"] = ids;
             Application["orderProductquantity"] = quantities;
+            Application["cartValue"] = cartValue;
             Application.UnLock();
         }
 
@@ -46,6 +49,11 @@ namespace Market365_3._0.Koszyk
             byte[] toEncodeAsBytes = (byte[])rawImg;
             string returnValue = System.Convert.ToBase64String(toEncodeAsBytes);
             return String.Format(img, returnValue);
+        }
+
+        protected void iloscProduktu_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

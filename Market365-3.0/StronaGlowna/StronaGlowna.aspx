@@ -23,7 +23,7 @@
 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
             <LayoutTemplate>
                 <div class="produktDeals">
-                <table width="100%" runat="server" id="tblProducts">
+                <table class="tbCenter" runat="server" id="tblProducts">
                     <tr runat="server">
                         <th runat="server"></th>
                     </tr>
@@ -35,15 +35,17 @@
                 <span>Nie zostały zwrócone żadne dane.</span>
             </EmptyDataTemplate>
             <ItemTemplate>
-                    <td class ="produktDeals" OnClick="produktDeals_Click">
+                <td class ="produktDeals" runat="server" onclick="produktDeals_Click">
+                    <a href="../StronaProduktu/StronaProduktu.aspx" style='font-family: "Comic Sans MS"'>
                         <img height="100px" id="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" /><br />
                         <asp:Label ID="nazwaProduktu" runat="server" Text='<%# Eval("name") %>' Font-Bold="true" /><br />
-                        <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />zł
-                    </td>
+                        <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />&nbspzł/<asp:Label ID="Label1" runat="server" Text='<%# Eval("unit") %>' />
+                     </a>
+                </td>
             </ItemTemplate>
         </asp:ListView>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [image], [description], [price] FROM [products] "></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT TOP 10 [name], [image], [description], [price], [unit] FROM [products] ORDER BY NEWID()"></asp:SqlDataSource>
 </div>    
     
     

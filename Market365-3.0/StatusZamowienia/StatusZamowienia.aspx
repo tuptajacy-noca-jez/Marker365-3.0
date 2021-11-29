@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PageLayout.Master" AutoEventWireup="true" CodeBehind="StatusZamowienia.aspx.cs" Inherits="Market365_3._0.StatusZamowienia.StronaZamowienia" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../Style/produktStyle.css" rel="stylesheet" type="text/css">
     <title>Status Zamówienia nr: </title>
 </asp:Content>
 
@@ -19,7 +18,7 @@
                 <div class="listElem nameTag gridBox-2">
                     <div class="containerElement">
                         <asp:label runat="server" ID="productNameLabel" class="smallProductNameLabel">[Nazwa Produktu]</asp:Label><br />
-                        <asp:label runat="server" ID="productPrice" class="productPricelabel">[ilość]</asp:Label>
+                        <asp:label runat="server" ID="productPrice" class="productPricelabel">[cena]</asp:Label>
                     </div>
                 </div>
                 
