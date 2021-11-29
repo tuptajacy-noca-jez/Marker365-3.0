@@ -36,7 +36,7 @@
             </EmptyDataTemplate>
             <ItemTemplate>
                 <td class ="produktDeals" runat="server" onclick="produktDeals_Click">
-                    <a href="../StronaProduktu/StronaProduktu.aspx" style='font-family: "Comic Sans MS"'>
+                    <a href="../StronaProduktu/StronaProduktu.aspx/11" style='font-family: "Comic Sans MS"'>
                         <img height="100px" id="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" /><br />
                         <asp:Label ID="nazwaProduktu" runat="server" Text='<%# Eval("name") %>' Font-Bold="true" /><br />
                         <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />&nbspzł/<asp:Label ID="Label1" runat="server" Text='<%# Eval("unit") %>' />

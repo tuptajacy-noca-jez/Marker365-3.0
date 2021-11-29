@@ -19,9 +19,10 @@ namespace Market365_3._0 {
 
 
         public int idProdukt;
-        public float ilosc;
+        public double ilosc;
+        public double totalValue;
 
-        public dynamic[] values;
+
 
         public Produkt() { }
 
@@ -30,7 +31,20 @@ namespace Market365_3._0 {
 
             fetchData(this.idProdukt);
         }
-        
+
+        public Produkt(int idProdukt,double quantity) {
+            this.idProdukt = idProdukt;
+            this.ilosc = quantity;
+            fetchData(this.idProdukt);
+        }
+
+        public Produkt(int idProdukt, double quantity, double totalValue) {
+            this.idProdukt = idProdukt;
+            this.ilosc = quantity;
+            this.totalValue = totalValue;
+            fetchData(this.idProdukt);
+        }
+
 
         private bool fetchData(int id) {
 
