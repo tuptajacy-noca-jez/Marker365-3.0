@@ -10,12 +10,18 @@ namespace Market365_3._0 {
         protected void Page_Load(object sender, EventArgs e) {
             User currentUser = (User)Application["user"];
             logOut.CssClass= "hiddenButton";
+            logIn.CssClass = "hiddenButton";
             if (currentUser.IsActive) {
-                logOut.CssClass = "loginButton";
+                logOut.CssClass = "logOutButton";
             }
+            else {
+                logIn.CssClass = "logInButton";
+            }
+
 
             if (Request.Url.ToString().Contains("StronaStartowa")) {
                 menuBand.Style.Add("visibility", "hidden");
+                logIn.CssClass = "hiddenButton";
             }
             else {
                 menuBand.Style.Add("visibility", "visible");
@@ -32,6 +38,10 @@ namespace Market365_3._0 {
 
         protected void logoButton_Click(object sender, EventArgs e) {
             Response.Redirect("~/StronaGlowna/StronaGlowna.aspx");
+        }
+
+        protected void logIn_Click(object sender, EventArgs e) {
+            Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");
         }
     }
 }

@@ -13,34 +13,46 @@ namespace Market365_3._0 {
         public string unit;
         public float ocena;
 
-        private List<ProductField> cechyProduktu;
+
+
+
+        public int idProdukt;
+        public float ilosc;
+
+        public dynamic[] values;
 
         public Produkt() { }
 
-        public Produkt(string name) {
-            cechyProduktu = new List<ProductField>();
+        public Produkt(int idProdukt) {
+            this.idProdukt = idProdukt;
+
+            fetchData(this.idProdukt);
         }
-        public Produkt(int id) {
-            cechyProduktu = new List<ProductField>();
+        
+
+        private bool fetchData(int id) {
 
             string Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
             SqlConnection sql = new SqlConnection(Polaczenie);
             try {
                 sql.Open();
-                SqlCommand cmd = new SqlCommand("select * from [products] WHERE ID=@login AND password=@password", sql);
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                SqlCommand cmd = new SqlCommand("select * from [products] WHERE ID=@id", sql);
 
-                if (count == 1) {
-                    //cmd = new SqlCommand("update [customers] set isActive=@isActive WHERE login='" + login.Text + "'", sql);
-                    //cmd.Parameters.AddWithValue("@isActive", "true");
-                    //cmd.ExecuteNonQuery();
-                }
+                cmd.Parameters.AddWithValue("@id", id);
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+                sqlDataReader.Read();
+                int l = sqlDataReader.FieldCount;
+                values = new dynamic[l];
+                int c = sqlDataReader.GetValues(values);
+
                 sql.Close();
+                return true;
             }
-            catch(Exception ex) {
+            catch (Exception ex) {
                 Console.WriteLine(ex.Message);
+                return false;
             }
-            
         }
+        
     }
 }

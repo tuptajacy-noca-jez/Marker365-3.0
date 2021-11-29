@@ -79,6 +79,7 @@
   <ItemGroup>
     <Content Include="Finalizacja zamówienia\FinalizacjaZamowienia.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\100x100.png" />
     <Content Include="images\150x150.png" />
     <Content Include="images\250x250.png" />
     <Content Include="images\340x453.png" />

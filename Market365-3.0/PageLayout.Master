@@ -15,6 +15,7 @@
             <div class="ContainterMain">
                 <asp:Button runat="server" ID="logoButton" text="Market365" class="logoButton" OnClick="logoButton_Click"/>
                 <asp:Button runat="server" ID="logOut" text="Wyloguj" class="Button" OnClick="logOut_Click"/>
+                <asp:Button runat="server" ID="logIn" text="Zaloguj się" class="Button" OnClick="logIn_Click"/>
             </div>
         </div>
  
