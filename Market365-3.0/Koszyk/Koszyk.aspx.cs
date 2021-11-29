@@ -42,7 +42,7 @@ namespace Market365_3._0.Koszyk
             Application["cartValue"] = cartValue;
             Application.UnLock();
 
-            Response.Redirect("~/FinalizacjaZamowienia/FinalizacjaZamowienia.aspx");
+            Response.Redirect("~/Zamowienie/Zamowienie.aspx");
         }   
 
         protected void iloscProduktu_TextChanged(object sender, EventArgs e)
