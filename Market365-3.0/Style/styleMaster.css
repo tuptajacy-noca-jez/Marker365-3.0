@@ -94,10 +94,14 @@
     border-radius: 15px;
     margin-right: 12pt;
     padding-right: 6pt;
+    padding-left: 6pt;
     position: absolute;
     right: 12pt;
     top: auto;
 }
+    .logOutButton:hover {
+        transform: scale(1.15);
+    }
 
 .logInButton {
     visibility: visible;
@@ -114,14 +118,15 @@
     border-radius: 15px;
     margin-right: 12pt;
     padding-right: 6pt;
+    padding-left: 6pt;
     position: absolute;
     right: 12pt;
     top: auto;
 }
 
-.loginButton:hover {
-    transform: scale(1.05);
-}
+    .logInButton:hover {
+        transform: scale(1.15);
+    }
 
 
 .icons {
