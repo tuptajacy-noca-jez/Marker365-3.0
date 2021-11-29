@@ -19,12 +19,10 @@ namespace Market365_3._0.Sklep
 
         protected void AddButton_Click(object sender, EventArgs e)
         {
-
-            ids = (List<Int32>)Application["orderProductIds"];
-            quantities = (List<float>)Application["orderProductquantity"];
-
-            ids.Add(ids[0]);
-            quantities.Add(quantities[0]);
+            Button button = (Button)sender;
+            int buttonId = Int32.Parse(button.ToolTip);
+            System.Console.WriteLine("OK");
+            System.Console.WriteLine(buttonId);
 
         }
 
