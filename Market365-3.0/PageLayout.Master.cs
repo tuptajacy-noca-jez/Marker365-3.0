@@ -11,6 +11,7 @@ namespace Market365_3._0 {
             User currentUser = (User)Application["user"];
             logOut.CssClass= "hiddenButton";
             logIn.CssClass = "hiddenButton";
+
             if (currentUser.IsActive) {
                 logOut.CssClass = "logOutButton";
             }
