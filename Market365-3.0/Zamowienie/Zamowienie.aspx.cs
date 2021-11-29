@@ -70,7 +70,7 @@ namespace Market365_3._0.Zamowienie
             Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
             SqlConnection sql = new SqlConnection(Polaczenie);
             sql.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [orders] VALUES (@Id,@userlogin,@value,@name,@surname,@street,@houseNumber,@zipCode,@city,@phoneNumber,@email)", sql);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [orders] VALUES (@Id,@userlogin,@value,@name,@surname,@zipCode,@city,@street,@houseNumber,@phoneNumber,@email)", sql);
             cmd.Parameters.AddWithValue("@Id", newOrder.OrderId);
             cmd.Parameters.AddWithValue("@userlogin", currentUser.Login);
             cmd.Parameters.AddWithValue("@name", name.Text);
@@ -86,17 +86,22 @@ namespace Market365_3._0.Zamowienie
             sql.Close();
 
             sql.Open();
-            cmd = new SqlCommand("INSERT INTO [orderPosition] VALUES (@IdOrder,@IdProduct,@quantity)", sql);
+            
             for(int i=0;i<ids.Count();i++)
             {
+                cmd = new SqlCommand("INSERT INTO [orderPosition] VALUES (@IdOrder,@IdProduct,@quantity)", sql);
                 cmd.Parameters.AddWithValue("@IdOrder", newOrder.OrderId);
-                cmd.Parameters.AddWithValue("@IdProduct", ids[0]);
-                cmd.Parameters.AddWithValue("@quantity", quantities[0]);
+                cmd.Parameters.AddWithValue("@IdProduct", ids[i]);
+                cmd.Parameters.AddWithValue("@quantity", quantities[i]);
+                cmd.ExecuteNonQuery();
+
             }
             sql.Close();
         }
         public void ZaladujDane()
         {
+            name.Text= currentUser.Name;
+            surname.Text = currentUser.Surname;
             city.Text = currentUser.City;
             zipCode.Text = currentUser.ZipCode;
             street.Text = currentUser.Street;
