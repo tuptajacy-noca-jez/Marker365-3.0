@@ -42,6 +42,11 @@ namespace Market365_3._0.Zamowienie
                 rabat = 0.9;
                 value.Visible = false;
                 discountValue.Visible = true;
+                newOrder.Value = sum*rabat;               
+            }
+            else
+            {
+                newOrder.Value = sum;
             }
                 
             discountValue.Text = "Wartość koszyka po rabacie: " + sum*rabat+ "zł";
@@ -61,7 +66,7 @@ namespace Market365_3._0.Zamowienie
                 newOrder.HouseNumber=houseNumber.Text;
                 newOrder.PhoneNumber=phoneNumber.Text; ;
                 newOrder.Email=email.Text;
-            newOrder.Value = sum;
+            
                 Application["order"] = newOrder;
             AddOrderToDatabase();
         }
