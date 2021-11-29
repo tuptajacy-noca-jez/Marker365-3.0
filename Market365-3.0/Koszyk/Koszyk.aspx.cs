@@ -11,11 +11,20 @@ namespace Market365_3._0.Koszyk
     {
         Cart kosz;
         User currentUser;
+        double value;
         protected void Page_Load(object sender, EventArgs e)
         {
+            value = 0.0;
             currentUser=(User)Application["user"];
             Cart kosz = new Cart(currentUser.Login);
             ListView1.DataSource = kosz.dt;
+
+            foreach (var item in kosz.produkts)
+            {
+                value += item.price * item.quantity;
+            }
+            cenaSuma.Text = "Do Zapłaty: " +Math.Round(value,2)+" zł";
+
             ListView1.DataBind();
         }
 

@@ -120,8 +120,20 @@ namespace Market365_3._0.Zamowienie
         if (streetValidator.IsValid == true && houseNumberValidator.IsValid == true && zipCodeValidator.IsValid == true && cityValidator.IsValid == true && phoneNumberValidator.IsValid == true && emailValidator.IsValid == true)
         {
                 CreateOrder();
+                Application["cart"] = null;
+                UsunKoszyk();
             Response.Redirect("/FinalizacjaZamowienia/FinalizacjaZamowienia.aspx");
         }
+        }
+
+        public void UsunKoszyk()
+        {
+            Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            SqlConnection sql = new SqlConnection(Polaczenie);
+            sql.Open();
+            SqlCommand cmd = new SqlCommand("DELETE from [cartPosition] WHERE IdCard='" + currentUser.Login + "'", sql);
+            cmd.ExecuteNonQuery();
+            sql.Close();
         }
     }
 }
