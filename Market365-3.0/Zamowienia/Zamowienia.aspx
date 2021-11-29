@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div>
-            <asp:ListView ID="ListView1" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSource1">
+            <asp:ListView ID="ListView1" runat="server" DataKeyNames="Id">
                 <LayoutTemplate>
                     <table width="100%" runat="server" id="tblOrders">
                         <tr runat="server">
@@ -32,7 +32,7 @@
                         </td>
                         <td class="input">
                             <asp:Label ID="nazwaZamowienia" runat="server" Text='<%# Eval("Id") %>' Font-Bold="true" /><br/>
-                            <asp:Label ID="opisZamowienia" runat="server" Text='<%# Eval("opis") %>' />
+                            <asp:Label ID="opisZamowienia" runat="server" Text='<%# Eval("value") %>' />
                         </td>
                         <td>
                             <asp:ImageButton ID="edycjaZamowienia" runat="server" ImageUrl="~/images/edit.PNG" OnClick="edycjaZamowienia_Click"/>
@@ -40,6 +40,6 @@
                     </tr>
                 </ItemTemplate>
             </asp:ListView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Id], [image], [opis] FROM [orders]"></asp:SqlDataSource>
+            <!--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Id], [image], [opis] FROM [orders]"></asp:SqlDataSource>-->
         </div>
 </asp:Content>

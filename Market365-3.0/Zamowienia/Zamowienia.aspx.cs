@@ -12,33 +12,29 @@ namespace Market365_3._0.Zamówienia
 {
     public partial class Zamówienia : System.Web.UI.Page
     {
+        User currUser;
         String Polaczenie;
         protected void Page_Load(object sender, EventArgs e)
         {
+            currUser = (User)Application["user"];
             Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
             SqlConnection sql = new SqlConnection(Polaczenie);
             sql.Open();
-            SqlDataAdapter ada = new SqlDataAdapter("select * from [orders]", Polaczenie); // where [userlogin]='zalogowanyuzytkownik'
+            SqlDataAdapter ada = new SqlDataAdapter("SELECT TOP 1 [products].[image],[orders].Id,[orders].value from [orders] INNER JOIN[orderPosition] on[orders].[Id] =[orderPosition].[IdOrder] INNER JOIN[products] ON[orderPosition].[IdProduct] =[products].[Id]WHERE orders.userlogin = '"+ currUser.Login +"'", Polaczenie); // where [userlogin]='zalogowanyuzytkownik'
             DataSet dt = new DataSet();
             ada.Fill(dt);
             sql.Close();
 
-            //ListView1.DataSource = dt;
-            //ListView1.DataBind();
+            ListView1.DataSource = dt;
+            ListView1.DataBind();
             
         }
 
         protected void edycjaZamowienia_Click(object sender, ImageClickEventArgs e)
-        {   
-            
-        }
-
-        protected static string ReturnEncodedBase64UTF8(object rawImg)
         {
-            string img = "data:image/jpg;base64,{0}";
-            byte[] toEncodeAsBytes = (byte[])rawImg;
-            string returnValue = System.Convert.ToBase64String(toEncodeAsBytes);
-            return String.Format(img, returnValue);
+            Button button = (Button)sender;
+            int buttonId = Int32.Parse(button.ID);
+            Response.Redirect("~/StatusZamowienia/StatusZamowienia.aspx");
         }
 
 
