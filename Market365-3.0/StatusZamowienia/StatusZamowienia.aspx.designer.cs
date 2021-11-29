@@ -22,6 +22,15 @@ namespace Market365_3._0.StatusZamowienia {
         protected global::System.Web.UI.WebControls.Label orderNrLabel;
 
         /// <summary>
+        /// Kontrolka ordersListViev.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView ordersListViev;
+
+        /// <summary>
         /// Kontrolka Label2.
         /// </summary>
         /// <remarks>

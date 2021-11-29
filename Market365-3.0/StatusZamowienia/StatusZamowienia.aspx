@@ -10,7 +10,7 @@
 
     <div class="basicContainer">
         <div ID="placeholderBootstrap">
-            <asp:ListView runat="server">
+            <asp:ListView runat="server" ID="ordersListViev">
                 <LayoutTemplate>
                     
                 </LayoutTemplate>
@@ -45,7 +45,7 @@
                 <ItemTemplate>
                     <div class="gridContainer">
                         <div class="listElem gridBox-1">
-                            <img runat="server" src="data:image/jpg;base64,<%# Eval("image") %>" class="productImage"/>
+                            <img runat="server" src='data:image/jpg;base64,<%# Eval("image") %>' class="productImage"/>
                         </div>
 
                         <div class="listElem nameTag gridBox-2">
