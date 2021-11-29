@@ -5,14 +5,14 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="basicContainer categoryCSSClass">
-            <asp:label runat="server" ID="orderNrLabel" class="productNameLabel">Zamówienie nr [nr]</asp:Label>
+            <asp:label runat="server" ID="zam" class="productNameLabel">Zamówienie nr: </asp:Label><asp:label runat="server" ID="orderNrLabel" class="productNameLabel">[nr]</asp:Label>
     </div>
 
     <div class="basicContainer">
         <div ID="placeholderBootstrap">
             <asp:ListView runat="server" ID="ordersListViev">
                 <LayoutTemplate>
-                    
+                    <div id="itemPlaceholder" runat="server"></div>
                 </LayoutTemplate>
 
                 <EmptyDataTemplate>
@@ -45,7 +45,7 @@
                 <ItemTemplate>
                     <div class="gridContainer">
                         <div class="listElem gridBox-1">
-                            <img runat="server" src='data:image/jpg;base64,<%# Eval("image") %>' class="productImage"/>
+                            <img src="data:image/jpg;base64,<%# Eval("image") %>" class="productImage" style="width:150px;height: 150px;" alt="There Should be picture"/>
                         </div>
 
                         <div class="listElem nameTag gridBox-2">
@@ -64,7 +64,7 @@
 
                         <div class="listElem gridBox-4">
                             <div class="containerElement">
-                                <asp:label runat="server" ID="priceLabelPlaceholder" class="productPricelabel" Text='<%# Eval("quantity") %>'></asp:Label>
+                                <asp:label runat="server" ID="priceLabelPlaceholder" class="productPricelabel" Text='[Should be taken from cart]'></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -74,9 +74,9 @@
     </div>
 
     <div class="basicContainer">
-        <asp:label runat="server" ID="Label2" class="productNameLabel">Status: [Status] </asp:Label><br />
+        <asp:label runat="server" ID="labelStatus" class="productNameLabel">Status: [Status] </asp:Label><br />
         <asp:label runat="server" ID="Label1" class="productNameLabel">Wartość zamówienia:</asp:Label><br />
-        <asp:label runat="server" ID="Label3" class="productPriceLabel">[wartość zamówienia]</asp:Label><br />
+        <asp:label runat="server" ID="labelTotalVale" class="productPriceLabel">[wartość zamówienia]</asp:Label><br />
     </div>
 
     <div class="basicContainer" ID="returnButtonStyle">

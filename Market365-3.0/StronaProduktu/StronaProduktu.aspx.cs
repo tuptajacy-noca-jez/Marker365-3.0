@@ -10,14 +10,14 @@ namespace Market365_3._0.StronaProduktu {
     
     public partial class StronaProduktu : System.Web.UI.Page{
 
-        private int ID;
+        private int productID;
         
         protected void Page_Load(object sender, EventArgs e) {
             Uri uri= Request.Url;
-            ID = getProductNumber(uri.ToString());
+            productID = getProductNumber(uri.ToString());
 
             //ID = 10;
-            Produkt produkt = new Produkt(ID);
+            Produkt produkt = new Produkt(productID);
             var values = produkt.values;
 
             string[] converedValues = new string[values.Length];
@@ -43,22 +43,18 @@ namespace Market365_3._0.StronaProduktu {
         }
 
        
-            static void CaptLetter() {
-                string str = "educative";
+        static void CaptLetter() {
+            string str = "educative";
 
-                if (str.Length == 0)
-                    System.Console.WriteLine("Empty String");
-                else if (str.Length == 1)
-                    System.Console.WriteLine(char.ToUpper(str[0]));
-                else
-                    System.Console.WriteLine(char.ToUpper(str[0]) + str.Substring(1));
-            }
+            if (str.Length == 0)
+                System.Console.WriteLine("Empty String");
+            else if (str.Length == 1)
+                System.Console.WriteLine(char.ToUpper(str[0]));
+            else
+                System.Console.WriteLine(char.ToUpper(str[0]) + str.Substring(1));
+        }
         
 
-
-        public string Index(string id) {
-            return "ID =" + id;
-        }
 
         private int getProductNumber(string URI) {
             try {

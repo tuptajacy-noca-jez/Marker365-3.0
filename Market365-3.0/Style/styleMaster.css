@@ -59,7 +59,7 @@
     padding: 0;
     background: none;
     font-size: 40pt;
-    font-family: 'Open sans';
+    font-family: 'Open Sans';
     color: rgb(255 255 255);
     text-align: center;
     margin-top: 15pt;
@@ -236,7 +236,7 @@
 }
 
 .smallProductNameLabel {
-    font-family: "Open Sams",sans-serif;
+    font-family: "Open Sans",sans-serif;
     font-size: 20pt;
     color: rgb(0 0 0);
     font-weight: 600;
@@ -246,7 +246,7 @@
 }
 
 .productPricelabel {
-    font-family: "Open Sams",sans-serif;
+    font-family: "Open Sans",sans-serif;
     font-size: 18pt;
     color: rgb(0 0 0);
     font-weight: normal;
@@ -301,6 +301,13 @@
     justify-content: flex-end;
     margin-top: 12pt;
     padding-right: 8pt;
+}
+
+
+.addToCartButton {
+    width = 100%;
+    height = 100%;
+    background-color:transparent;
 }
 
 

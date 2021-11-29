@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace Market365_3._0 {
     public class Produkt {
@@ -67,7 +68,8 @@ namespace Market365_3._0 {
                 return true;
             }
             catch (Exception ex) {
-                Console.WriteLine(ex.Message);
+                Trace.Write(ex.Message);
+                //Console.WriteLine(ex.Message);
                 return false;
             }
         }

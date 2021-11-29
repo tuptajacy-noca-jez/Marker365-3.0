@@ -13,6 +13,15 @@ namespace Market365_3._0.StatusZamowienia {
     public partial class StronaZamowienia {
 
         /// <summary>
+        /// Kontrolka zam.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label zam;
+
+        /// <summary>
         /// Kontrolka orderNrLabel.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace Market365_3._0.StatusZamowienia {
         protected global::System.Web.UI.WebControls.ListView ordersListViev;
 
         /// <summary>
-        /// Kontrolka Label2.
+        /// Kontrolka labelStatus.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label labelStatus;
 
         /// <summary>
         /// Kontrolka Label1.
@@ -49,13 +58,13 @@ namespace Market365_3._0.StatusZamowienia {
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Kontrolka Label3.
+        /// Kontrolka labelTotalVale.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label labelTotalVale;
 
         /// <summary>
         /// Kontrolka returnToOrders.
