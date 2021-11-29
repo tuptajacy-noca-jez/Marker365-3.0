@@ -12,7 +12,7 @@ namespace Market365_3._0.StatusZamowienia {
         }
 
         protected void returnToOrders_Click(object sender, EventArgs e) {
-            Response.Redirect("~/Zamowienia/Zamowienia.aspx");
+            Response.Redirect("~/Zamowienia/Zamowienia.aspx/");
         }
     }
 }
