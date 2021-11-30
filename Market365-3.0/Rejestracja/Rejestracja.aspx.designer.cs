@@ -33,6 +33,15 @@ namespace projekt
         protected global::System.Web.UI.WebControls.RegularExpressionValidator loginValidator;
 
         /// <summary>
+        /// Kontrolka loginRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator loginRequiredValidator;
+
+        /// <summary>
         /// Kontrolka password.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace projekt
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+
+        /// <summary>
+        /// Kontrolka passwordRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator passwordRequiredValidator;
 
         /// <summary>
         /// Kontrolka passwordConfirm.
@@ -87,6 +105,15 @@ namespace projekt
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator2;
 
         /// <summary>
+        /// Kontrolka passwordConfirmRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator passwordConfirmRequiredValidator;
+
+        /// <summary>
         /// Kontrolka name.
         /// </summary>
         /// <remarks>
@@ -103,6 +130,15 @@ namespace projekt
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator nameValidator;
+
+        /// <summary>
+        /// Kontrolka nameRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameRequiredValidator;
 
         /// <summary>
         /// Kontrolka surname.
@@ -123,6 +159,15 @@ namespace projekt
         protected global::System.Web.UI.WebControls.RegularExpressionValidator surnameValidator;
 
         /// <summary>
+        /// Kontrolka surnameRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator surnameRequiredValidator;
+
+        /// <summary>
         /// Kontrolka zipCode.
         /// </summary>
         /// <remarks>
@@ -139,6 +184,15 @@ namespace projekt
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator zipCodeValidator;
+
+        /// <summary>
+        /// Kontrolka zipCodeRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator zipCodeRequiredValidator;
 
         /// <summary>
         /// Kontrolka city.
@@ -159,6 +213,15 @@ namespace projekt
         protected global::System.Web.UI.WebControls.RegularExpressionValidator cityValidator;
 
         /// <summary>
+        /// Kontrolka cityRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator cityRequiredValidator;
+
+        /// <summary>
         /// Kontrolka street.
         /// </summary>
         /// <remarks>
@@ -177,6 +240,15 @@ namespace projekt
         protected global::System.Web.UI.WebControls.RegularExpressionValidator streetValidator;
 
         /// <summary>
+        /// Kontrolka streetRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator streetRequiredValidator;
+
+        /// <summary>
         /// Kontrolka houseNumber.
         /// </summary>
         /// <remarks>
@@ -193,6 +265,15 @@ namespace projekt
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator houseNumberValidator;
+
+        /// <summary>
+        /// Kontrolka houseNumberRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator houseNumberRequiredValidator;
 
         /// <summary>
         /// Kontrolka phoneNumber.

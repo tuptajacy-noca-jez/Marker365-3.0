@@ -23,6 +23,14 @@ namespace Market365_3._0 {
         public double ilosc;
         public double totalValue;
 
+        /// <summary>
+        /// [0] - id
+        /// [1] - name
+        /// [2] - description
+        /// [3] - price
+        /// [4] - image
+        /// [5] - unit
+        /// </summary>
         public object[] values;
 
 
