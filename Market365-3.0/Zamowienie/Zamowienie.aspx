@@ -66,8 +66,8 @@
                
                 <tr>
                     <td>
-                        <asp:Label ID="value" runat="server" Font-Size="X-Large"></asp:Label>
-                        <asp:Label ID="discountValue" runat="server" Font-Size="X-Large" Visible="False"></asp:Label>
+                        <asp:Label ID="value" runat="server" Font-Size="X-Large" CssClass="czcionka" ></asp:Label>
+                        <asp:Label ID="discountValue" runat="server" Font-Size="X-Large" Visible="False" CssClass="czcionka"></asp:Label>
                         </td>
                     <td>     
                         <asp:Button ID="cancel" runat="server" Text="Anuluj" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="300px" CssClass="buttonred" BorderStyle="Solid" OnClick="cancel_Click" />

@@ -13,13 +13,13 @@
                     
                     <td colspan="2">
                     <div class="pad">
-                    <asp:Label ID="Label2" runat="server" Font-Size="X-Large"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Font-Size="X-Large" CssClass="czcionka"></asp:Label>
                 </div>
                         </td>   
                 </tr>
                 <tr>
                      <td colspan="2">
-                        <asp:Label ID="Label4" runat="server" Text="Aby zmienić hasło wprowadź stare hasło oraz dwukrotnie nowe hasło" Font-Size="Large"></asp:Label>
+                        <asp:Label ID="Label4" runat="server" Text="Aby zmienić hasło wprowadź stare hasło oraz dwukrotnie nowe hasło" Font-Size="Large" CssClass="czcionka"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -77,7 +77,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:Label ID="Label3" runat="server" Font-Size="X-Large"></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Font-Size="X-Large" CssClass="czcionka"></asp:Label>
                     </td>
                 </tr>
                   <tr>

@@ -12,7 +12,9 @@ namespace Market365_3._0.MojProfil
     public partial class MojProfil : System.Web.UI.Page
     {
         User currentUser;
-
+        string Passwordd;
+        string NewPasswordd;
+        string NewPasswordConfirmd;
         //User pomUser;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,12 +32,12 @@ namespace Market365_3._0.MojProfil
             CompareValidator1.Validate();
             CompareValidator2.Validate();
             password.ForeColor = System.Drawing.Color.Black;
-            string Password = password.Text;
-            password.Attributes.Add("value", Password);
-            string NewPassword = newPassword.Text;
-            newPassword.Attributes.Add("value", NewPassword);
-            string NewPasswordConfirm = newPasswordConfirm.Text;
-            newPasswordConfirm.Attributes.Add("value", NewPasswordConfirm);
+            Passwordd = password.Text;
+            password.Attributes.Add("value", Passwordd);
+            NewPasswordd = newPassword.Text;
+            newPassword.Attributes.Add("value", NewPasswordd);
+            NewPasswordConfirmd = newPasswordConfirm.Text;
+            newPasswordConfirm.Attributes.Add("value", NewPasswordConfirmd);
 
             // string ZipCode = zipCode.Text;
             // zipCode.Attributes.Add("value", ZipCode);
@@ -78,40 +80,19 @@ namespace Market365_3._0.MojProfil
 
         protected void zapisz_Click(object sender, EventArgs e)
         {
-            if (checkEmpty())
+            try
             {
-                if (newPasswordValidator.IsValid == true && newPasswordConfirmValidator.IsValid == true && CompareValidator1.IsValid == true && streetValidator.IsValid == true && CompareValidator2.IsValid == true && houseNumberValidator.IsValid == true && zipCodeValidator.IsValid == true && cityValidator.IsValid == true && phoneNumberValidator.IsValid == true && emailValidator.IsValid == true)
+                if (checkEmpty())
                 {
-                    String Polaczenie;
-                    Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-                    SqlConnection sql = new SqlConnection(Polaczenie);
-                    sql.Open();
-                    if (password.Text == "")
+                    if (newPasswordValidator.IsValid == true && newPasswordConfirmValidator.IsValid == true && CompareValidator1.IsValid == true && streetValidator.IsValid == true && CompareValidator2.IsValid == true && houseNumberValidator.IsValid == true && zipCodeValidator.IsValid == true && cityValidator.IsValid == true && phoneNumberValidator.IsValid == true && emailValidator.IsValid == true)
                     {
-                        SqlCommand cmd = new SqlCommand("update [customers] set city=@city,zipCode=@zipCode,street=@street,houseNumber=@houseNumber,phoneNumber=@phoneNumber,email=@email WHERE login='" + currentUser.Login + "'", sql);
-                        cmd.Parameters.AddWithValue("@city", city.Text);
-                        cmd.Parameters.AddWithValue("@zipCode", zipCode.Text);
-                        cmd.Parameters.AddWithValue("@street", street.Text);
-                        cmd.Parameters.AddWithValue("@houseNumber", houseNumber.Text);
-                        cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber.Text);
-                        cmd.Parameters.AddWithValue("@email", email.Text);
-                        cmd.ExecuteNonQuery();
-                        sql.Close();
-                        currentUser.City = city.Text;
-                        currentUser.ZipCode = zipCode.Text;
-                        currentUser.HouseNumber = houseNumber.Text;
-                        currentUser.Street = street.Text;
-                        currentUser.PhoneNumber = phoneNumber.Text;
-                        currentUser.Email = email.Text;
-                        Application["user"] = currentUser;
-                        Label3.Text = "Zmiany zostały zapisane!";
-                    }
-                    else
-                    {
-                        if (currentUser.Password == password.Text && newPassword.Text != "" && newPasswordConfirm.Text != "")
+                        String Polaczenie;
+                        Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+                        SqlConnection sql = new SqlConnection(Polaczenie);
+                        sql.Open();
+                        if (password.Text == "")
                         {
-                            SqlCommand cmd = new SqlCommand("update [customers] set password=@password,city=@city,zipCode=@zipCode,street=@street,houseNumber=@houseNumber,phoneNumber=@phoneNumber,email=@email WHERE login='" + currentUser.Login + "'", sql);
-                            cmd.Parameters.AddWithValue("@password", newPassword.Text);
+                            SqlCommand cmd = new SqlCommand("update [customers] set city=@city,zipCode=@zipCode,street=@street,houseNumber=@houseNumber,phoneNumber=@phoneNumber,email=@email WHERE login='" + currentUser.Login + "'", sql);
                             cmd.Parameters.AddWithValue("@city", city.Text);
                             cmd.Parameters.AddWithValue("@zipCode", zipCode.Text);
                             cmd.Parameters.AddWithValue("@street", street.Text);
@@ -120,7 +101,6 @@ namespace Market365_3._0.MojProfil
                             cmd.Parameters.AddWithValue("@email", email.Text);
                             cmd.ExecuteNonQuery();
                             sql.Close();
-                            currentUser.Password = newPassword.Text;
                             currentUser.City = city.Text;
                             currentUser.ZipCode = zipCode.Text;
                             currentUser.HouseNumber = houseNumber.Text;
@@ -132,16 +112,44 @@ namespace Market365_3._0.MojProfil
                         }
                         else
                         {
-                            Label3.ForeColor = System.Drawing.Color.Red;
-                            Label3.Text = "Błędne Hasło!";
+                            if (currentUser.Password == password.Text && newPassword.Text != "" && newPasswordConfirm.Text != "")
+                            {
+                                SqlCommand cmd = new SqlCommand("update [customers] set password=@password,city=@city,zipCode=@zipCode,street=@street,houseNumber=@houseNumber,phoneNumber=@phoneNumber,email=@email WHERE login='" + currentUser.Login + "'", sql);
+                                cmd.Parameters.AddWithValue("@password", newPassword.Text);
+                                cmd.Parameters.AddWithValue("@city", city.Text);
+                                cmd.Parameters.AddWithValue("@zipCode", zipCode.Text);
+                                cmd.Parameters.AddWithValue("@street", street.Text);
+                                cmd.Parameters.AddWithValue("@houseNumber", houseNumber.Text);
+                                cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber.Text);
+                                cmd.Parameters.AddWithValue("@email", email.Text);
+                                cmd.ExecuteNonQuery();
+                                sql.Close();
+                                currentUser.Password = newPassword.Text;
+                                currentUser.City = city.Text;
+                                currentUser.ZipCode = zipCode.Text;
+                                currentUser.HouseNumber = houseNumber.Text;
+                                currentUser.Street = street.Text;
+                                currentUser.PhoneNumber = phoneNumber.Text;
+                                currentUser.Email = email.Text;
+                                Application["user"] = currentUser;
+                                Label3.Text = "Zmiany zostały zapisane!";
+                                
+
+                            }
+                            else
+                            {
+                                Label3.ForeColor = System.Drawing.Color.Red;
+                                Label3.Text = "Błędne Hasło!";
+                            }
+
                         }
 
                     }
 
+
                 }
-
-
             }
+            catch { }
 
         }
     }
