@@ -157,30 +157,33 @@ namespace Market365_3._0.Koszyk
 
             ilosc++;
 
-            String Polaczenie;
-            Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-            SqlConnection sql = new SqlConnection(Polaczenie);
+            if (ilosc < 75) {
+                String Polaczenie;
+                Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+                SqlConnection sql = new SqlConnection(Polaczenie);
 
-            SqlCommand cmd = new SqlCommand("UPDATE cartPosition SET quantity=" + ilosc + " WHERE cartPosition.IdProduct =" + buttonId + " AND cartPosition.IdCard = '" + currentUser.Login + "'", sql);
-            sql.Open();
-            cmd.ExecuteNonQuery();
-            sql.Close();
+                SqlCommand cmd = new SqlCommand("UPDATE cartPosition SET quantity=" + ilosc + " WHERE cartPosition.IdProduct =" + buttonId + " AND cartPosition.IdCard = '" + currentUser.Login + "'", sql);
+                sql.Open();
+                cmd.ExecuteNonQuery();
+                sql.Close();
 
-            ListView1.DataSource = null;
-            ListView1.DataBind();
+                ListView1.DataSource = null;
+                ListView1.DataBind();
 
-            value = 0.0;
-            currentUser = (User)Application["user"];
-            Cart kosz = new Cart(currentUser.Login);
-            ListView1.DataSource = kosz.dt;
+                value = 0.0;
+                currentUser = (User)Application["user"];
+                Cart kosz = new Cart(currentUser.Login);
+                ListView1.DataSource = kosz.dt;
 
-            foreach (var item in kosz.produkts)
-            {
-                value += item.price * item.quantity;
+                foreach (var item in kosz.produkts)
+                {
+                    value += item.price * item.quantity;
+                }
+                cenaSuma.Text = Math.Round(value, 2) + " zł         ";
+
+                ListView1.DataBind();
             }
-            cenaSuma.Text = Math.Round(value, 2) + " zł         ";
-
-            ListView1.DataBind();
+            
         }
     }
 }
