@@ -17,10 +17,10 @@
         <div class="main-header">
             <div class="input">
                 <div class="pad">
-                    <asp:TextBox ID="login" runat="server" Height="30px" placeholder="Login" Width="300px" Font-Size="Large"  CssClass="inputText" BorderStyle="Solid"></asp:TextBox>
+                    <asp:TextBox ID="login" runat="server" Height="30px" placeholder="Login" Width="300px" Font-Size="Large"  CssClass="inputText" BorderStyle="Solid" MaxLength="49"></asp:TextBox>
                 </div>
                 <div class="pad">
-                    <asp:TextBox ID="password" runat="server" Height="30px" placeholder="Hasło" Width="300px" Font-Size="Large"  CssClass="inputText" BorderStyle="Solid" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="password" runat="server" Height="30px" placeholder="Hasło" Width="300px" Font-Size="Large"  CssClass="inputText" BorderStyle="Solid" TextMode="Password" MaxLength="49"></asp:TextBox>
                 </div>
                 <div class="pad">
                     <asp:Label ID="Validacion" runat="server" Text="Nieprawidłowy login lub hasło" ForeColor="Red" Visible="False" Font-Size="Large" Font-Bold="True" CssClass="czcionka"></asp:Label>
