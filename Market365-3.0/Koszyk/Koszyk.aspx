@@ -6,8 +6,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div>
+        <asp:ScriptManager ID="Script" runat="server" />
         <div id="placeholderBootstrap">                        
-            <asp:ListView ID="ListView1" runat="server" >
+            <asp:ListView ID="ListView1" runat="server"  >
                 <LayoutTemplate>
                     <table width="100%" runat="server" id="tblProducts">
                         <tr runat="server">
@@ -25,7 +26,9 @@
                 <EmptyDataTemplate>
                     <span>Koszyk pusty.</span>
                 </EmptyDataTemplate>
-                <ItemTemplate >
+                <ItemTemplate >                   
+                    <asp:UpdatePanel ID="update" runat="server">
+                        <ContentTemplate>
                    <tr runat="server" id="tempp">
                         <td>
                             <img height="200px" id="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" border="1px"/>
@@ -35,14 +38,9 @@
                             <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />
                         </td>
                         <td id="temp">
-                            <asp:TextBox ID="iloscProduktu" runat="server"  width="100px" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscProduktu_TextChanged"  Visible="True" AutoPostBack="True"></asp:TextBox>                         
-                           <!-- <asp:DropDownList ID="iloscProduktuu" runat="server" Width="50px" AutoPostBack="true" ViewStateMode="Enabled" EnableViewState="true" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscproduktu_TextChanged1">
-                                <asp:ListItem Value="1" Text="1" Selected="True"></asp:ListItem>
-                                <asp:ListItem Value="2" Text="2"></asp:ListItem>
-                                <asp:ListItem Value="3" Text="3"></asp:ListItem>
-                                <asp:ListItem Value="4" Text="4"></asp:ListItem>
-                                <asp:ListItem Value="5" Text="5"></asp:ListItem>
-                            </asp:DropDownList> -->
+                            <asp:TextBox ID="iloscProduktu" Height="20px" Font-Size="20px" ReadOnly="true" runat="server" width="100px" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' Visible="True" ></asp:TextBox>   
+                            <asp:Imagebutton ID="minusProdukt" Height="20px" ImageUrl="~/images/minus.png" runat="server" AlternateText='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnClick="minusProdukt_Click"/>
+                            <asp:Imagebutton ID="plusProdukt" Height="20px" ImageUrl="~/images/plus.png" runat="server" AlternateText='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnClick="plusProdukt_Click"/>                           
                         </td>
                        <td>
                             <asp:Label ID="cenaProduktuSuma" runat="server" Text='<%# Double.Parse(Eval("price").ToString())*Double.Parse(Eval("quantity").ToString()) %>'></asp:Label>
@@ -51,7 +49,12 @@
                             <asp:Button ID="usunProdukt" runat="server" Text="Usuń" CssClass="buttonred" ToolTip='<%# Eval("id") %>' OnClick="usunProdukt_Click"/>
                         </td>
                     </tr>
-                </ItemTemplate>
+                            </ContentTemplate>
+                        <Triggers>
+                            <asp:PostBackTrigger ControlID="iloscProduktu" />
+                        </Triggers>
+                        </asp:UpdatePanel>
+                </ItemTemplate>                
             </asp:ListView>  
             <!--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [image], [description], [price] FROM [products] "></asp:SqlDataSource>-->                   
             <asp:Button id="zamowButton" runat="server" Text="Zamów" CssClass="button" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="50px" Width="200px" BorderStyle="Solid" style="float:right" OnClick="zamowButton_Click" /> 
@@ -60,10 +63,5 @@
         </div>
         </div>
 
-    <script >
-        function iloscproduktu_TextChanged1()() {
-            var list = document.getElementById("ListView1");
-            var ilosc = list.options.
-        }
-    </script>
+
 </asp:Content>

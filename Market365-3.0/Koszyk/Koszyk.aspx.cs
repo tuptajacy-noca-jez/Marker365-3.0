@@ -60,7 +60,7 @@ namespace Market365_3._0.Koszyk
             Response.Redirect("~/Zamowienie/Zamowienie.aspx");
         }   
 
-        protected void iloscProduktu_TextChanged(object sender, EventArgs e)
+        protected void IloscProduktu_TextChanged(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             int textboxId = Int32.Parse(textBox.ToolTip);
@@ -113,7 +113,6 @@ namespace Market365_3._0.Koszyk
             currentUser = (User)Application["user"];
             Cart kosz = new Cart(currentUser.Login);
             ListView1.DataSource = kosz.dt;
-            //ListView1.
 
             foreach (var item in kosz.produkts)
             {
@@ -136,6 +135,76 @@ namespace Market365_3._0.Koszyk
             SqlConnection sql = new SqlConnection(Polaczenie);
 
             SqlCommand cmd = new SqlCommand("UPDATE cartPosition SET quantity=" + tekst + " WHERE cartPosition.IdProduct =" + textboxId + " AND cartPosition.IdCard = '" + currentUser.Login + "'", sql);
+            sql.Open();
+            cmd.ExecuteNonQuery();
+            sql.Close();
+
+            ListView1.DataSource = null;
+            ListView1.DataBind();
+
+            value = 0.0;
+            currentUser = (User)Application["user"];
+            Cart kosz = new Cart(currentUser.Login);
+            ListView1.DataSource = kosz.dt;
+
+            foreach (var item in kosz.produkts)
+            {
+                value += item.price * item.quantity;
+            }
+            cenaSuma.Text = "Do Zapłaty: " + Math.Round(value, 2) + " zł";
+
+            ListView1.DataBind();
+        }
+
+        protected void minusProdukt_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton button = (ImageButton)sender;
+            int buttonId = Int32.Parse(button.ToolTip);
+            double ilosc = double.Parse(button.AlternateText);
+
+            ilosc--;
+
+            String Polaczenie;
+            Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            SqlConnection sql = new SqlConnection(Polaczenie);
+
+            SqlCommand cmd = new SqlCommand("UPDATE cartPosition SET quantity=" + ilosc + " WHERE cartPosition.IdProduct =" + buttonId + " AND cartPosition.IdCard = '" + currentUser.Login + "'", sql);
+            sql.Open();
+            cmd.ExecuteNonQuery();
+            sql.Close();
+
+            ListView1.DataSource = null;
+            ListView1.DataBind();
+
+            value = 0.0;
+            currentUser = (User)Application["user"];
+            Cart kosz = new Cart(currentUser.Login);
+            ListView1.DataSource = kosz.dt;
+
+            foreach (var item in kosz.produkts)
+            {
+                value += item.price * item.quantity;
+            }
+            cenaSuma.Text = "Do Zapłaty: " + Math.Round(value, 2) + " zł";
+
+            ListView1.DataBind();
+
+
+        }
+
+        protected void plusProdukt_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton button = (ImageButton)sender;
+            int buttonId = Int32.Parse(button.ToolTip);
+            double ilosc = double.Parse(button.AlternateText);
+
+            ilosc++;
+
+            String Polaczenie;
+            Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            SqlConnection sql = new SqlConnection(Polaczenie);
+
+            SqlCommand cmd = new SqlCommand("UPDATE cartPosition SET quantity=" + ilosc + " WHERE cartPosition.IdProduct =" + buttonId + " AND cartPosition.IdCard = '" + currentUser.Login + "'", sql);
             sql.Open();
             cmd.ExecuteNonQuery();
             sql.Close();

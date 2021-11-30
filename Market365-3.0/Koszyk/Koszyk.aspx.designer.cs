@@ -15,6 +15,15 @@ namespace Market365_3._0.Koszyk
     {
 
         /// <summary>
+        /// Kontrolka Script.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager Script;
+
+        /// <summary>
         /// Kontrolka ListView1.
         /// </summary>
         /// <remarks>
