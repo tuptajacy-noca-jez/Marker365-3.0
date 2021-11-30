@@ -32,9 +32,9 @@ namespace Market365_3._0.Zamówienia
 
         protected void edycjaZamowienia_Click(object sender, ImageClickEventArgs e)
         {
-            Button button = (Button)sender;
-            int buttonId = Int32.Parse(button.ID);
-            Response.Redirect("~/StatusZamowienia/StatusZamowienia.aspx");
+            ImageButton button = (ImageButton)sender;
+            string buttonId = button.AlternateText;
+            Response.Redirect("~/StatusZamowienia/StatusZamowienia.aspx/"+ buttonId);
         }
 
 
