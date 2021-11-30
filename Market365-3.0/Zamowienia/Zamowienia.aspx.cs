@@ -36,16 +36,22 @@ namespace Market365_3._0.Zamówienia
             foreach (DataRow row in dt.Rows)
             {
                 SqlCommand ad = new SqlCommand("SELECT TOP 1 products.image FROM products " +
-                    "Inner join orderPosition on orderPosition.IdOrder = '" + row["Id"] + "' ",sql);
+                    " INNER JOIN orderPosition on products.Id = orderPosition.IdProduct " +
+                    " WHERE orderPosition.IdOrder = '" + row["Id"].ToString() + "'; ",sql);
                 SqlDataReader sqlDataReader = ad.ExecuteReader();
                 sqlDataReader.Read();
-                row["image"];
+                int l = sqlDataReader.FieldCount;
+                object[] values = new object[l];
+                int c = sqlDataReader.GetValues(values);
+
+                row["image"]=values[0].ToString();
+                sqlDataReader.Close();
 
             }
 
 
 
-            ada.Fill(dt);
+            //ada.Fill(dt);
             sql.Close();
 
             ListView1.DataSource = dt;

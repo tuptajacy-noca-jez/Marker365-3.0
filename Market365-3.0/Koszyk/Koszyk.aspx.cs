@@ -57,7 +57,12 @@ namespace Market365_3._0.Koszyk
             Application["cartValue"] = cartValue;
             Application.UnLock();
 
-            Response.Redirect("~/Zamowienie/Zamowienie.aspx");
+            if (ids.Count != 0)
+            {
+                Response.Redirect("~/Zamowienie/Zamowienie.aspx");
+            }
+
+            
         }   
      
 
