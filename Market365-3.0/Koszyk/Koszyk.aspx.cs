@@ -128,7 +128,7 @@ namespace Market365_3._0.Koszyk
         {
             DropDownList textBox = (DropDownList)sender;
             int textboxId = Int32.Parse(textBox.ToolTip);
-            string tekst = textBox.Text;
+            string tekst = textBox.SelectedValue;
 
             String Polaczenie;
             Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;

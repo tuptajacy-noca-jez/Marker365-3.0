@@ -35,8 +35,8 @@
                             <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="iloscProduktu" runat="server"  width="100px" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscProduktu_TextChanged" Visible="True" AutoPostBack="True"></asp:TextBox>                            
-                            <asp:DropDownList ID="iloscProduktuu" runat="server" Width="50px" AutoPostBack="true" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscproduktu_TextChanged1">
+                           <!-- <asp:TextBox ID="iloscProduktu" runat="server"  width="100px" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscProduktu_TextChanged" Visible="True" AutoPostBack="True"></asp:TextBox>  -->                          
+                            <asp:DropDownList ID="iloscProduktuu" runat="server" Width="50px" AutoPostBack="true" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnSelectedIndexChanged="iloscproduktu_TextChanged1">
                                 <asp:ListItem Value="1" Text="1"></asp:ListItem>
                                 <asp:ListItem Value="2" Text="2"></asp:ListItem>
                                 <asp:ListItem Value="3" Text="3"></asp:ListItem>
