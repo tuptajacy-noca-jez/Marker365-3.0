@@ -23,7 +23,7 @@
                     <asp:TextBox ID="password" runat="server" Height="30px" placeholder="Hasło" Width="300px" Font-Size="Large"  CssClass="inputText" BorderStyle="Solid" TextMode="Password"></asp:TextBox>
                 </div>
                 <div class="pad">
-                    <asp:Label ID="Validacion" runat="server" Text="Nieprawidłowy login lub hasło" ForeColor="Red" Visible="False" Font-Size="Large" Font-Bold="True"></asp:Label>
+                    <asp:Label ID="Validacion" runat="server" Text="Nieprawidłowy login lub hasło" ForeColor="Red" Visible="False" Font-Size="Large" Font-Bold="True" CssClass="czcionka"></asp:Label>
                 </div>
             </div>
 

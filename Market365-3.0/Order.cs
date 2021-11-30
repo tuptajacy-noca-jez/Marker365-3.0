@@ -7,7 +7,9 @@ using System.Linq;
 using System.Web;
 
 namespace Market365_3._0
-{
+{/// <summary>
+/// stores information about order
+/// </summary>
     public class Order
     {
         private String login;
