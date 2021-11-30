@@ -20,7 +20,7 @@
                     </div>
                 </LayoutTemplate>                              
                 <EmptyDataTemplate>
-                    Nie zostały zwrócone żadne dane.
+                    Brak zamówień.
                 </EmptyDataTemplate>                
                 <ItemSeparatorTemplate>
                     <br />
@@ -35,7 +35,7 @@
                             <asp:Label ID="opisZamowienia" runat="server" Text='<%# Eval("value") %>' />
                         </td>
                         <td>
-                            <asp:ImageButton ID="edycjaZamowienia" runat="server" ImageUrl="~/images/edit.PNG" OnClick="edycjaZamowienia_Click"/>
+                            <asp:ImageButton ID="edycjaZamowienia" runat="server" ImageUrl="~/images/edit.PNG" OnClick="edycjaZamowienia_Click" AlternateText='<%# Eval("Id") %>'/>
                         </td>
                     </tr>
                 </ItemTemplate>
