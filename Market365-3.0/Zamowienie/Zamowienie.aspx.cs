@@ -15,6 +15,7 @@ namespace Market365_3._0.Zamowienie
         Order newOrder;
         List<int> ids;
         List<double> quantities;
+        List<double> total;
         string Polaczenie;
         double sum;
         double rabat;
@@ -34,7 +35,8 @@ namespace Market365_3._0.Zamowienie
             ids = (List<Int32>) Application["orderProductIds"];
             sum = (double)Application["cartValue"];
             quantities = (List<double>)Application["orderProductquantity"];
-            
+            total = (List<double>)Application["totalProductValue"];
+
             rabat = 1;
             
             if (discount.Text =="alerabat2137")
@@ -75,7 +77,7 @@ namespace Market365_3._0.Zamowienie
             Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
             SqlConnection sql = new SqlConnection(Polaczenie);
             sql.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [orders] VALUES (@Id,@userlogin,@value,@name,@surname,@zipCode,@city,@street,@houseNumber,@phoneNumber,@email)", sql);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [orders] VALUES (@Id,@userlogin,@value,@name,@surname,@zipCode,@city,@street,@houseNumber,@phoneNumber,@email,@status)", sql);
             cmd.Parameters.AddWithValue("@Id", newOrder.OrderId);
             cmd.Parameters.AddWithValue("@userlogin", currentUser.Login);
             cmd.Parameters.AddWithValue("@name", name.Text);
@@ -87,6 +89,7 @@ namespace Market365_3._0.Zamowienie
             cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber.Text);
             cmd.Parameters.AddWithValue("@email", email.Text);
             cmd.Parameters.AddWithValue("@value", newOrder.Value);
+            cmd.Parameters.AddWithValue("@status", "Oczekujace na platnosc");
             cmd.ExecuteNonQuery();
             sql.Close();
 
@@ -95,10 +98,11 @@ namespace Market365_3._0.Zamowienie
             //TODO: dodac parametr
             for(int i=0;i<ids.Count();i++)
             {
-                cmd = new SqlCommand("INSERT INTO [orderPosition] VALUES (@IdOrder,@IdProduct,@quantity)", sql);
+                cmd = new SqlCommand("INSERT INTO [orderPosition] VALUES (@IdOrder,@IdProduct,@quantity,@totalProductValue)", sql);
                 cmd.Parameters.AddWithValue("@IdOrder", newOrder.OrderId);
                 cmd.Parameters.AddWithValue("@IdProduct", ids[i]);
                 cmd.Parameters.AddWithValue("@quantity", quantities[i]);
+                cmd.Parameters.AddWithValue("@totalProductValue", total[i]);
                 cmd.ExecuteNonQuery();
 
             }
