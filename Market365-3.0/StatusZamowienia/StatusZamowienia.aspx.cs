@@ -32,8 +32,9 @@ namespace Market365_3._0.StatusZamowienia {
                 ordersListViev.DataSource = dt;
                 ordersListViev.DataBind();
 
-                labelTotalVale.Text=order.Value.ToString();
+                labelTotalVale.Text=order.Value.ToString()+" zł";
                 orderNrLabel.Text = idZamowienia;
+                labelStatus.Text = order.Status;
             }
             catch (Exception ex) {
                 Debug.WriteLine(ex.Message);

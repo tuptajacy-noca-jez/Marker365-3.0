@@ -64,7 +64,7 @@
 
                         <div class="listElem gridBox-4">
                             <div class="containerElement">
-                                <asp:label runat="server" ID="priceLabelPlaceholder" class="productPricelabel" Text='[Should be taken from cart]'></asp:Label>
+                                <asp:label runat="server" ID="priceLabelPlaceholder" class="productPricelabel" Text='<%# Eval("totalProductValue") %>'></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
     </div>
 
     <div class="basicContainer">
-        <asp:label runat="server" ID="labelStatus" class="productNameLabel">Status: [Status] </asp:Label><br />
+        <asp:label runat="server" ID="labelStatus" class="productNameLabel">Status: [Status]</asp:Label><br />
         <asp:label runat="server" ID="Label1" class="productNameLabel">Wartość zamówienia:</asp:Label><br />
         <asp:label runat="server" ID="labelTotalVale" class="productPriceLabel">[wartość zamówienia]</asp:Label><br />
     </div>

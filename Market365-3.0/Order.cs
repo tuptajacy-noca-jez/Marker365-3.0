@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -21,6 +22,7 @@ namespace Market365_3._0
         private String houseNumber;
         private String phoneNumber;
         private String email;
+        private string status;
         private double value;
          
 
@@ -74,6 +76,7 @@ namespace Market365_3._0
         public List<int> ProductsId { get => productsId; set => productsId = value; }
         public string Login { get => login; set => login = value; }
         public List<double> ProductsQuantity { get => productsQuantity; set => productsQuantity = value; }
+        public string Status { get => status; set => status = value; }
 
 
 
@@ -100,6 +103,7 @@ namespace Market365_3._0
                 sqlDataReader.GetValues(values);
                
                 this.value = Double.Parse(values[2].ToString());
+                Status = values[11].ToString();
 
 
                 cmd = new SqlCommand("SELECT * FROM [orderPosition] WHERE IdOrder = @idOrder",sql);
@@ -124,7 +128,7 @@ namespace Market365_3._0
                     }
                 }
                 catch (Exception ex) {
-                    Console.WriteLine(ex.Message);
+                    Debug.WriteLine(ex.Message);
                 }
 
                sql.Close();
@@ -132,7 +136,7 @@ namespace Market365_3._0
                 return;
             }
             catch (Exception ex) {
-                Console.WriteLine(ex.Message);
+                Debug.WriteLine(ex.Message);
                 return;
             }
         }
