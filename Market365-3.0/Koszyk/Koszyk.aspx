@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div>
-        <div id="placeholderBootstrap">
+        <div id="placeholderBootstrap">                        
             <asp:ListView ID="ListView1" runat="server" >
                 <LayoutTemplate>
                     <table width="100%" runat="server" id="tblProducts">
@@ -25,8 +25,8 @@
                 <EmptyDataTemplate>
                     <span>Koszyk pusty.</span>
                 </EmptyDataTemplate>
-                <ItemTemplate>
-                   <tr runat="server">
+                <ItemTemplate >
+                   <tr runat="server" id="tempp">
                         <td>
                             <img height="200px" id="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" border="1px"/>
                         </td>
@@ -34,15 +34,15 @@
                             <asp:Label ID="nazwaProduktu" runat="server" Text='<%# Eval("name") %>' Font-Bold="true" /><br>
                             <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />
                         </td>
-                        <td>
-                           <!-- <asp:TextBox ID="iloscProduktu" runat="server"  width="100px" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscProduktu_TextChanged" Visible="True" AutoPostBack="True"></asp:TextBox>  -->                          
-                            <asp:DropDownList ID="iloscProduktuu" runat="server" Width="50px" AutoPostBack="true" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnSelectedIndexChanged="iloscproduktu_TextChanged1">
-                                <asp:ListItem Value="1" Text="1"></asp:ListItem>
+                        <td id="temp">
+                            <asp:TextBox ID="iloscProduktu" runat="server"  width="100px" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscProduktu_TextChanged"  Visible="True" AutoPostBack="True"></asp:TextBox>                         
+                           <!-- <asp:DropDownList ID="iloscProduktuu" runat="server" Width="50px" AutoPostBack="true" ViewStateMode="Enabled" EnableViewState="true" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscproduktu_TextChanged1">
+                                <asp:ListItem Value="1" Text="1" Selected="True"></asp:ListItem>
                                 <asp:ListItem Value="2" Text="2"></asp:ListItem>
                                 <asp:ListItem Value="3" Text="3"></asp:ListItem>
                                 <asp:ListItem Value="4" Text="4"></asp:ListItem>
                                 <asp:ListItem Value="5" Text="5"></asp:ListItem>
-                            </asp:DropDownList>
+                            </asp:DropDownList> -->
                         </td>
                        <td>
                             <asp:Label ID="cenaProduktuSuma" runat="server" Text='<%# Double.Parse(Eval("price").ToString())*Double.Parse(Eval("quantity").ToString()) %>'></asp:Label>
@@ -59,4 +59,11 @@
             <asp:Label id="cenaSuma" CssClass="label" runat="server" style="float:right" Text="Do zapłaty:"></asp:Label>
         </div>
         </div>
+
+    <script >
+        function iloscproduktu_TextChanged1()() {
+            var list = document.getElementById("ListView1");
+            var ilosc = list.options.
+        }
+    </script>
 </asp:Content>

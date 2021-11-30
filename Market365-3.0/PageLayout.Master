@@ -10,7 +10,7 @@
     <link href="/Style/styleMaster.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" method="post">
         <div id="menuBand" class="menuBarVisible" runat="server">
 
             <div class="ContainterMain">

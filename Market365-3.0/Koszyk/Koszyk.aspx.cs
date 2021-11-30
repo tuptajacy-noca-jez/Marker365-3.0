@@ -16,7 +16,7 @@ namespace Market365_3._0.Koszyk
         double value = 0.0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            currentUser=(User)Application["user"];
+            currentUser =(User)Application["user"];
             kosz = new Cart(currentUser.Login);
             ListView1.DataSource = kosz.dt;
 
@@ -26,8 +26,8 @@ namespace Market365_3._0.Koszyk
             }
             cenaSuma.Text = "Do Zapłaty: " +Math.Round(value,2)+" zł";
 
-            ListView1.DataBind();
 
+            ListView1.DataBind();
            
         }
 
@@ -113,6 +113,7 @@ namespace Market365_3._0.Koszyk
             currentUser = (User)Application["user"];
             Cart kosz = new Cart(currentUser.Login);
             ListView1.DataSource = kosz.dt;
+            //ListView1.
 
             foreach (var item in kosz.produkts)
             {
