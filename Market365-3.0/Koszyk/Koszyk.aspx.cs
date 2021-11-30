@@ -24,7 +24,7 @@ namespace Market365_3._0.Koszyk
             {
                 value += item.price * item.quantity;
             }
-            cenaSuma.Text = "Do Zapłaty: " +Math.Round(value,2)+" zł";
+            cenaSuma.Text = Math.Round(value,2)+" zł         ";
 
 
             ListView1.DataBind();
@@ -86,7 +86,7 @@ namespace Market365_3._0.Koszyk
             {
                 value += item.price * item.quantity;
             }
-            cenaSuma.Text = "Do Zapłaty: " + Math.Round(value, 2) + " zł";
+            cenaSuma.Text = Math.Round(value, 2) + " zł         ";
 
             ListView1.DataBind();
 
@@ -138,7 +138,7 @@ namespace Market365_3._0.Koszyk
             {
                 value += item.price * item.quantity;
             }
-            cenaSuma.Text = "Do Zapłaty: " + Math.Round(value, 2) + " zł";
+            cenaSuma.Text = Math.Round(value, 2) + " zł         ";
 
             ListView1.DataBind();
 
@@ -173,7 +173,7 @@ namespace Market365_3._0.Koszyk
             {
                 value += item.price * item.quantity;
             }
-            cenaSuma.Text = "Do Zapłaty: " + Math.Round(value, 2) + " zł";
+            cenaSuma.Text = Math.Round(value, 2) + " zł         ";
 
             ListView1.DataBind();
         }
