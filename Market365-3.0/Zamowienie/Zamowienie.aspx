@@ -14,47 +14,47 @@
               
                  <tr>
                     <td>
-                        <asp:TextBox ID="name" runat="server" placeholder="Imię" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="name" runat="server" placeholder="Imię" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" MaxLength="49"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="nameValidator" runat="server" ErrorMessage="Nieprawidłowe imię" Display="Dynamic" Font-Size="X-Large" ForeColor="Red" ValidationExpression="[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]{2}[a-z]*" ControlToValidate="name" ValidationGroup="orderGroup">*</asp:RegularExpressionValidator>
                     </td>
                     <td>
-                        <asp:TextBox ID="surname" runat="server" placeholder="Nazwisko" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="surname" runat="server" placeholder="Nazwisko" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" MaxLength="49"></asp:TextBox>
                       <asp:RegularExpressionValidator ID="surnameValidator" runat="server" ErrorMessage="Nieprawidłowe nazwisko" Display="Dynamic" Font-Size="X-Large" ForeColor="Red" ValidationExpression="[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]{2}[a-z]*" ControlToValidate="surname" ValidationGroup="orderGroup">*</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="zipCode" runat="server" placeholder="Kod pocztowy" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="zipCode" runat="server" placeholder="Kod pocztowy" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" MaxLength="6"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="zipCodeValidator" runat="server" ErrorMessage="Nieprawidłowy kod pocztowy" Display="Dynamic" Font-Size="X-Large" ForeColor="Red" ValidationExpression="[0-9]{2}-[0-9]{3}" ControlToValidate="zipCode" ValidationGroup="orderGroup">*</asp:RegularExpressionValidator>
                     </td>
                     <td>
-                        <asp:TextBox ID="city" runat="server" placeholder="Miejscowość" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="city" runat="server" placeholder="Miejscowość" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" MaxLength="49"></asp:TextBox>
                       <asp:RegularExpressionValidator ID="cityValidator" runat="server" ErrorMessage="Nieprawidłowa nazwa miasta" Display="Dynamic" Font-Size="X-Large" ForeColor="Red" ValidationExpression="[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż][a-ząćęłńóśźż]*( [A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż][a-ząćęłńóśźż]*)*" ControlToValidate="city" ValidationGroup="orderGroup">*</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="street" runat="server" placeholder="Ulica" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="street" runat="server" placeholder="Ulica" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" MaxLength="49"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="streetValidator" runat="server" ErrorMessage="Nieprawidłowa nazwa ulicy" Display="Dynamic" Font-Size="X-Large" ForeColor="Red" ValidationExpression="[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż][a-ząćęłńóśźż]*( [A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż][a-ząćęłńóśźż]*)*" ControlToValidate="street" ValidationGroup="orderGroup">*</asp:RegularExpressionValidator>
                     </td>
                     <td>
-                        <asp:TextBox ID="houseNumber" runat="server" placeholder="Numer domu/mieszkania" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="houseNumber" runat="server" placeholder="Numer domu/mieszkania" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" MaxLength="49"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="houseNumberValidator" runat="server" ErrorMessage="Nieprawidłowy numer domu" Display="Dynamic" Font-Size="X-Large" ForeColor="Red" ValidationExpression="[0-9]+[A-Z]?(/?[0-9])*" ControlToValidate="houseNumber" ValidationGroup="orderGroup">*</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="phoneNumber" runat="server" placeholder="Telefon" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="phoneNumber" runat="server" placeholder="Telefon" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" MaxLength="9"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="phoneNumberValidator" runat="server" ErrorMessage="Nieprawidłowy numer telefonu" Display="Dynamic" Font-Size="X-Large" ForeColor="Red" ValidationExpression="^\d{9}$" ControlToValidate="phoneNumber" ValidationGroup="orderGroup">*</asp:RegularExpressionValidator>
                     </td>
                     <td>
-                        <asp:TextBox ID="email" runat="server" placeholder="Adres email" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="email" runat="server" placeholder="Adres email" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" MaxLength="49"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="emailValidator" runat="server" ErrorMessage="Nieprawidłowy adres email" Font-Size="X-Large" ForeColor="Red" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ControlToValidate="email" ValidationGroup="profileChanges">*</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
                      <td colspan="2">
-                        <asp:TextBox ID="discount" runat="server" placeholder="Kod rabatowy" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="discount" runat="server" placeholder="Kod rabatowy" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" MaxLength="49"></asp:TextBox>
        
                     </td>
                     </tr>
