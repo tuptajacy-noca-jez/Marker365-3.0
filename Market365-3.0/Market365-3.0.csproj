@@ -89,7 +89,9 @@
     <Content Include="images\340x453.png" />
     <Content Include="images\50x50.png" />
     <Content Include="images\edit.PNG" />
+    <Content Include="images\minus.jpg" />
     <Content Include="images\placeholder.png" />
+    <Content Include="images\plus.jpg" />
     <Content Include="images\sklep.jpg" />
     <Content Include="images\thanks-man.jpg" />
     <Content Include="Koszyk\Koszyk.aspx" />
