@@ -159,7 +159,7 @@
                             <asp:TextBox runat="server" ID="amountTextBox" CssClASS="amountTextBox" ToolTip="ilość w kg ..."></asp:TextBox>
                         </div>
                         <div class="containerElement">
-                            <asp:Button runat="server" ID="addToCart" text="Dodaj do koszyka" CssClass="Button"/>
+                            <asp:Button runat="server" ID="addToCart" text="Dodaj do koszyka" CssClass="Button" OnClick ="addToCart_Click"/>
                         </div>
                     </div>
                 </div>

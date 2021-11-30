@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
+using System.Web;
+using System.Web.UI.WebControls;
 
 namespace Market365_3._0.StronaProduktu {
 
@@ -64,6 +67,65 @@ namespace Market365_3._0.StronaProduktu {
             catch (FormatException) {
                 return -1;
             }
+        }
+
+        public  void addToCart_Click(object sender, EventArgs e) {
+            try {
+                Uri uri = Request.Url;
+                productID = getProductNumber(uri.ToString());
+                Produkt produkt = new Produkt(productID);
+
+                User currUser = (User)Application["user"];
+                if (currUser.IsActive == false) {
+                    Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");
+                }
+                else {
+                    int amount = int.Parse(amountTextBox.Text);
+                    if (amount > 0) {
+                        Button button = (Button)sender;
+
+                        String Polaczenie;
+                        Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+                        SqlConnection sql = new SqlConnection(Polaczenie);
+                        SqlCommand cmd;
+
+                        cmd = new SqlCommand("SELECT *  FROM [cartPosition] WHERE IdProduct=@IdProduct", sql);
+                        cmd.Parameters.AddWithValue("@IdProduct", produkt.idProdukt);
+                        sql.Open();
+
+                        SqlDataReader sqlDataReader = cmd.ExecuteReader();
+                        sqlDataReader.Read();
+
+                        int l = sqlDataReader.FieldCount;
+                        object[] values=new object[l];
+                        
+                        //sqlDataReader.Close();
+                        if (sqlDataReader.HasRows) {
+                            sqlDataReader.Close();
+                            cmd = new SqlCommand("UPDATE [cartPosition] SET (IdProduct=@IdProduct,quantit=@quantity) WHERE IdCard=@IdCard", sql);
+                            cmd.Parameters.AddWithValue("@IdProduct", productID);
+                            cmd.Parameters.AddWithValue("@quantity", amount+int.Parse(values[2].ToString())); ;
+                            cmd.Parameters.AddWithValue("@IdCard", currUser.Login);
+                        }
+                        else {
+                            sqlDataReader.Close();
+                            cmd = new SqlCommand("INSERT INTO [cartPosition] VALUES (@IdOrder,@IdProduct,@quantity)", sql);
+                            cmd.Parameters.AddWithValue("@IdOrder", currUser.Login);
+                            cmd.Parameters.AddWithValue("@IdProduct", productID);
+                            cmd.Parameters.AddWithValue("@quantity", amount);
+                        }
+                        cmd.ExecuteNonQuery();
+                        sql.Close();
+                        
+                        //double totalValue = amount * Double.Parse(produkt.values[3].ToString());
+                        //int amount = int.Parse(amountTextBox.Text);
+                    }
+                }
+            }
+            catch (Exception ex) {
+                Debug.Write(ex.Message);
+            }
+           
         }
     }
 }
