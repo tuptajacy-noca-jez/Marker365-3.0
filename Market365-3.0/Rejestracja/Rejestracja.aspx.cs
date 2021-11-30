@@ -72,11 +72,11 @@ namespace projekt
                     currentUser.IsActive = true;
                     Application["user"] = currentUser;
                     //tworzenie koszyka dla uzytkownika
-                    sql.Open();
+                    /*sql.Open();
                     cmd = new SqlCommand("INSERT INTO [cart] VALUES (@Id)", sql);
                     cmd.Parameters.AddWithValue("@Id", login.Text);
                     cmd.ExecuteNonQuery();
-                    sql.Close();
+                    sql.Close();*/
 
                     Response.Redirect("/StronaGlowna/StronaGlowna.aspx");
                 }

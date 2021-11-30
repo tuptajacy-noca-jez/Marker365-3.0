@@ -59,39 +59,7 @@ namespace Market365_3._0.Koszyk
 
             Response.Redirect("~/Zamowienie/Zamowienie.aspx");
         }   
-
-        protected void IloscProduktu_TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            int textboxId = Int32.Parse(textBox.ToolTip);
-            string tekst = textBox.Text;
-
-            String Polaczenie;
-            Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-            SqlConnection sql = new SqlConnection(Polaczenie);
-
-            SqlCommand cmd = new SqlCommand("UPDATE cartPosition SET quantity="+ tekst +" WHERE cartPosition.IdProduct ="+ textboxId +" AND cartPosition.IdCard = '"+ currentUser.Login + "'" ,sql);
-            sql.Open();
-            cmd.ExecuteNonQuery();
-            sql.Close();
-
-            ListView1.DataSource = null;
-            ListView1.DataBind();
-
-            value = 0.0;
-            currentUser = (User)Application["user"];
-            Cart kosz = new Cart(currentUser.Login);
-            ListView1.DataSource = kosz.dt;
-
-            foreach (var item in kosz.produkts)
-            {
-                value += item.price * item.quantity;
-            }
-            cenaSuma.Text = "Do Zapłaty: " + Math.Round(value, 2) + " zł";
-
-            ListView1.DataBind();
-
-        }
+     
 
         protected void usunProdukt_Click(object sender, EventArgs e)
         {
@@ -124,38 +92,6 @@ namespace Market365_3._0.Koszyk
 
         }
 
-        protected void iloscproduktu_TextChanged1(object sender, EventArgs e)
-        {
-            DropDownList textBox = (DropDownList)sender;
-            int textboxId = Int32.Parse(textBox.ToolTip);
-            string tekst = textBox.SelectedValue;
-
-            String Polaczenie;
-            Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-            SqlConnection sql = new SqlConnection(Polaczenie);
-
-            SqlCommand cmd = new SqlCommand("UPDATE cartPosition SET quantity=" + tekst + " WHERE cartPosition.IdProduct =" + textboxId + " AND cartPosition.IdCard = '" + currentUser.Login + "'", sql);
-            sql.Open();
-            cmd.ExecuteNonQuery();
-            sql.Close();
-
-            ListView1.DataSource = null;
-            ListView1.DataBind();
-
-            value = 0.0;
-            currentUser = (User)Application["user"];
-            Cart kosz = new Cart(currentUser.Login);
-            ListView1.DataSource = kosz.dt;
-
-            foreach (var item in kosz.produkts)
-            {
-                value += item.price * item.quantity;
-            }
-            cenaSuma.Text = "Do Zapłaty: " + Math.Round(value, 2) + " zł";
-
-            ListView1.DataBind();
-        }
-
         protected void minusProdukt_Click(object sender, ImageClickEventArgs e)
         {
             ImageButton button = (ImageButton)sender;
@@ -163,18 +99,35 @@ namespace Market365_3._0.Koszyk
             double ilosc = double.Parse(button.AlternateText);
 
             ilosc--;
+            if (ilosc > 0) {
+                String Polaczenie;
+                Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+                SqlConnection sql = new SqlConnection(Polaczenie);
 
-            String Polaczenie;
-            Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-            SqlConnection sql = new SqlConnection(Polaczenie);
+                SqlCommand cmd = new SqlCommand("UPDATE cartPosition SET quantity=" + ilosc + " WHERE cartPosition.IdProduct =" + buttonId + " AND cartPosition.IdCard = '" + currentUser.Login + "'", sql);
+                sql.Open();
+                cmd.ExecuteNonQuery();
+                sql.Close();
 
-            SqlCommand cmd = new SqlCommand("UPDATE cartPosition SET quantity=" + ilosc + " WHERE cartPosition.IdProduct =" + buttonId + " AND cartPosition.IdCard = '" + currentUser.Login + "'", sql);
-            sql.Open();
-            cmd.ExecuteNonQuery();
-            sql.Close();
+                ListView1.DataSource = null;
+                ListView1.DataBind();
+            }
+            else
+            {
+                String Polaczenie;
+                Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+                SqlConnection sql = new SqlConnection(Polaczenie);
 
-            ListView1.DataSource = null;
-            ListView1.DataBind();
+                SqlCommand cmd = new SqlCommand("DELETE FROM cartPosition WHERE cartPosition.IdProduct =" + buttonId, sql);
+                sql.Open();
+                cmd.ExecuteNonQuery();
+                sql.Close();
+
+                ListView1.DataSource = null;
+                ListView1.DataBind();
+            }
+
+
 
             value = 0.0;
             currentUser = (User)Application["user"];
@@ -188,7 +141,6 @@ namespace Market365_3._0.Koszyk
             cenaSuma.Text = "Do Zapłaty: " + Math.Round(value, 2) + " zł";
 
             ListView1.DataBind();
-
 
         }
 

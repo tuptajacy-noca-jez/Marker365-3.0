@@ -33,16 +33,21 @@ namespace Market365_3._0.Sklep
                 ImageButton button = (ImageButton)sender;
                 int buttonId = Int32.Parse(button.ToolTip);
 
-                String Polaczenie;
-                Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-                SqlConnection sql = new SqlConnection(Polaczenie);
-                SqlCommand cmd = new SqlCommand("INSERT INTO [cartPosition] VALUES (@IdOrder,@IdProduct,@quantity)", sql);
-                cmd.Parameters.AddWithValue("@IdOrder", currUser.Login);
-                cmd.Parameters.AddWithValue("@IdProduct", buttonId);
-                cmd.Parameters.AddWithValue("@quantity", 1);
-                sql.Open();
-                cmd.ExecuteNonQuery();
-                sql.Close();
+                try
+                {
+                    String Polaczenie;
+                    Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+                    SqlConnection sql = new SqlConnection(Polaczenie);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO [cartPosition] VALUES (@IdOrder,@IdProduct,@quantity)", sql);
+                    cmd.Parameters.AddWithValue("@IdOrder", currUser.Login);
+                    cmd.Parameters.AddWithValue("@IdProduct", buttonId);
+                    cmd.Parameters.AddWithValue("@quantity", 1);
+                    sql.Open();
+                    cmd.ExecuteNonQuery();
+                    sql.Close();
+                }
+                catch (Exception) { }
+                
             }
 
         }
