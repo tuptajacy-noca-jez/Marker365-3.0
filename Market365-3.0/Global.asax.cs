@@ -18,7 +18,6 @@ namespace Market365_3._0
             Application["cart"] = new Cart();
             Application["orderProductIds"] = new List<int>();
             Application["orderProductquantity"] = new List<float>();
-            Application["totalProductValue"] = new List<double>();
             Application["cartValue"] = 0.00;
             Application.UnLock();
         }

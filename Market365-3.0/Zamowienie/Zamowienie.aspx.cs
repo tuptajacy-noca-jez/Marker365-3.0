@@ -92,7 +92,6 @@ namespace Market365_3._0.Zamowienie
 
             sql.Open();
             
-            //TODO: dodac parametr
             for(int i=0;i<ids.Count();i++)
             {
                 cmd = new SqlCommand("INSERT INTO [orderPosition] VALUES (@IdOrder,@IdProduct,@quantity)", sql);

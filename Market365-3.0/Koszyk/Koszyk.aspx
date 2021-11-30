@@ -36,13 +36,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="iloscProduktu" runat="server"  width="100px" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscProduktu_TextChanged" Visible="True" AutoPostBack="True"></asp:TextBox>                            
-                            <asp:DropDownList ID="iloscProduktuu" runat="server" Width="50px" AutoPostBack="true" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnTextChanged="iloscproduktu_TextChanged1">
-                                <asp:ListItem Value="1" Text="1"></asp:ListItem>
-                                <asp:ListItem Value="2" Text="2"></asp:ListItem>
-                                <asp:ListItem Value="3" Text="3"></asp:ListItem>
-                                <asp:ListItem Value="4" Text="4"></asp:ListItem>
-                                <asp:ListItem Value="5" Text="5"></asp:ListItem>
-                            </asp:DropDownList>
                         </td>
                        <td>
                             <asp:Label ID="cenaProduktuSuma" runat="server" Text='<%# Double.Parse(Eval("price").ToString())*Double.Parse(Eval("quantity").ToString()) %>'></asp:Label>
