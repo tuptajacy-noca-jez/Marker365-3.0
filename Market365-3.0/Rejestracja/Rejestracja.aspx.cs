@@ -31,6 +31,7 @@ namespace projekt
             passwordConfirmValidator.Validate();
             CompareValidator1.Validate();
             CompareValidator2.Validate();
+            loginValidator.ErrorMessage = "Podany login jest za krótki";
             string Password = password.Text;
             password.Attributes.Add("value", Password);
             string PasswordConfirm = passwordConfirm.Text;
@@ -39,6 +40,8 @@ namespace projekt
 
         protected void zarejestruj_Click(object sender, EventArgs e)
         {
+            if(checkEmpty())
+            { 
             if (loginValidator.IsValid == true && CompareValidator1.IsValid == true && CompareValidator2.IsValid == true && passwordValidator.IsValid == true && passwordConfirmValidator.IsValid == true && nameValidator.IsValid == true && surnameValidator.IsValid == true && streetValidator.IsValid == true && houseNumberValidator.IsValid == true && zipCodeValidator.IsValid == true && cityValidator.IsValid == true && phoneNumberValidator.IsValid == true && emailValidator.IsValid == true)
             {
                 if (checkLogin(login.Text))
@@ -72,12 +75,12 @@ namespace projekt
                     currentUser.IsActive = true;
                     Application["user"] = currentUser;
                     //tworzenie koszyka dla uzytkownika
-                    sql.Open();
+                    /*sql.Open();
                     cmd = new SqlCommand("INSERT INTO [cart] VALUES (@Id)", sql);
                     cmd.Parameters.AddWithValue("@Id", login.Text);
                     cmd.ExecuteNonQuery();
                     sql.Close();
-
+                    */
                     Response.Redirect("/StronaGlowna/StronaGlowna.aspx");
                 }
                 else
@@ -86,7 +89,26 @@ namespace projekt
                     loginValidator.ErrorMessage = "Podany login jest już zajęty";
                 }
             }
+            }
         }
+
+        bool checkEmpty()
+        {
+            loginRequiredValidator.Validate();
+            passwordRequiredValidator.Validate();
+            passwordConfirmRequiredValidator.Validate();
+            nameRequiredValidator.Validate();
+            surnameRequiredValidator.Validate();
+            zipCodeRequiredValidator.Validate();
+            cityRequiredValidator.Validate();
+            streetRequiredValidator.Validate();
+            houseNumberRequiredValidator.Validate();
+            if (loginRequiredValidator.IsValid == true && passwordRequiredValidator.IsValid == true && passwordConfirmRequiredValidator.IsValid == true && nameRequiredValidator.IsValid == true && surnameRequiredValidator.IsValid == true && zipCodeRequiredValidator.IsValid == true && cityRequiredValidator.IsValid == true && streetRequiredValidator.IsValid == true && houseNumberRequiredValidator.IsValid == true)
+                return true;
+            else
+                return false;
+                    }
+
         /// <summary>
         /// check the availability of the login 
         /// </summary>
@@ -107,6 +129,15 @@ namespace projekt
             }
             sql.Close();
             return true;
+        }
+
+        protected void login_TextChanged(object sender, EventArgs e)
+        {
+            if (!checkLogin(login.Text))
+            {
+                loginValidator.IsValid = false;
+                loginValidator.ErrorMessage = "Podany login jest już zajęty";
+            }
         }
     }
 }
