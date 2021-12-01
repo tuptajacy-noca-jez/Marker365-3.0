@@ -21,9 +21,9 @@ namespace Market365_3._0.StronaProduktu {
         Produkt produkt;
         
         protected void Page_Load(object sender, EventArgs e) {
-            if (!IsPostBack) {
+           /* if (!IsPostBack) {
                 _="Elo Elo";
-            }
+            }*/
             
 
             string b = sender.GetType().Name;
@@ -31,14 +31,7 @@ namespace Market365_3._0.StronaProduktu {
             UriProcessor uriProcessor = new UriProcessor(uri);
             string[] uriParameters = uriProcessor.UriDecoder();
             productID = int.Parse(uriParameters[0]);
-            //productID = getProductNumber(uri.ToString());
             if (productID != -1) {
-                //parametersHandle(uriParameters);
-                var aContainerId =likeButton.ID;
-                string likeButtonUri = uriProcessor.UriBuilder(new string[] { productID.ToString(), aContainerId.ToString() });
-                likeButton.HRef= likeButtonUri;
-                //ID = 10;
-
                 try {
                     User user = (User)Application["user"];
                     produkt = new Produkt(productID, user.Login);
@@ -187,6 +180,7 @@ namespace Market365_3._0.StronaProduktu {
                 cmd.ExecuteNonQuery();
 
                 sql.Close();
+                likeButtonSourceChanger(produkt.favourite);
             }
             catch (Exception ex) {
                 Debug.WriteLine(ex.Message);
@@ -195,10 +189,66 @@ namespace Market365_3._0.StronaProduktu {
 
         public void likeButtonSourceChanger(bool isFavourite) {
             if (isFavourite) {
-                likeButtonV22.ImageUrl = "../resources/icons/hearfilled.png";
+                likeButtonV22.CssClass = "unlikeImageButton";
+                //likeButtonV22.ImageUrl = "../resources/icons/hearfilled.png";
             }
             else {
-                likeButtonV22.ImageUrl = "../resources/icons/hearEmpty.png";
+                likeButtonV22.CssClass = "likeImageButton ";
+                //likeButtonV22.ImageUrl = "../resources/icons/hearEmpty.png";
+            }
+        }
+
+        public void starButton_Click(object sender, EventArgs e) {
+            ImageButton button = (ImageButton)sender;
+            int rate = int.Parse(button.ID.ToString().Last().ToString());
+            User user = (User)Application["user"];
+            if (!user.IsActive) {
+                return;
+            }
+            try {
+                //User user = (User)Application["user"];
+                Uri uri = Request.Url;
+                UriProcessor uriProcessor = new UriProcessor(uri);
+                string[] uriParameters = uriProcessor.UriDecoder();
+
+                string Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+
+                SqlConnection sql = new SqlConnection(Polaczenie);
+
+                SqlCommand cmd = new SqlCommand(
+                   "SELECT COUNT (userlogin) FROM Ratings WHERE userlogin=@IdCustomer AND idproduct=@IdProduct;", sql);
+                cmd.Parameters.AddWithValue("@IdCustomer", user.Login);
+                cmd.Parameters.AddWithValue("@IdProduct", uriParameters[0]);
+
+                sql.Open();
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+                sqlDataReader.Read();
+
+                var count = sqlDataReader.GetValue(0);
+                sqlDataReader.Close();
+
+                if ((int)count == 0) {//dodaj ocenę
+                    cmd = new SqlCommand(
+                        "INSERT INTO [Ratings] VALUES (@IdCustomer, @IdProduct, @rate );", sql);
+                    produkt.favourite = true;
+                }
+                else {//edytuj ocenę
+                    cmd = new SqlCommand(
+                        "UPDATE [Ratings] SET rate=@rate WHERE IdCustomer=@IdCustomer AND IdProduct=@IdProduct;", sql);
+                    produkt.favourite = false;
+                }
+                
+                cmd.Parameters.AddWithValue("@IdCustomer", user.Login);
+                cmd.Parameters.AddWithValue("@IdProduct", int.Parse(uriParameters[0]));
+                cmd.Parameters.AddWithValue("@rate", rate);
+
+                cmd.ExecuteNonQuery();
+
+                sql.Close();
+                //likeButtonSourceChanger(produkt.favourite);
+            }
+            catch (Exception ex) {
+                Debug.WriteLine(ex.Message);
             }
         }
 
