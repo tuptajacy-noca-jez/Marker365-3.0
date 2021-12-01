@@ -19,7 +19,11 @@ namespace Market365_3._0.Sklep
         {
                             
         }
-
+        /// <summary>
+        /// This method realise adding product to shopping cart.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void AddButton_Click(object sender, EventArgs e)
         {
             currUser = (User)Application["user"];
@@ -51,7 +55,11 @@ namespace Market365_3._0.Sklep
             }
 
         }
-
+        /// <summary>
+        /// When user is logged this method redirect to shopping cart page, but when he isn't logged on his account method redirect him to start page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void doKoszyka_Click(object sender, EventArgs e)
         {
             currUser = (User)Application["user"];

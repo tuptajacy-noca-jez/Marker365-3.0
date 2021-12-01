@@ -239,8 +239,12 @@ C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\E
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
-C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csprojAssemblyReference.cache
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CopyComplete
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.dll
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.pdb
+<<<<<<< HEAD
+C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.AssemblyReference.cache
+C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CoreCompileInputs.cache
+=======
 D:\GIT\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.AssemblyReference.cache
+>>>>>>> e32afcfb86b4af9160ed2223dd4588977f2fdf5b
