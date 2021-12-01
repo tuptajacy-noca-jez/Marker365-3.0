@@ -114,6 +114,15 @@ namespace Market365_3._0.MojProfil
         protected global::System.Web.UI.WebControls.RegularExpressionValidator zipCodeValidator;
 
         /// <summary>
+        /// Kontrolka zipCodeRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator zipCodeRequiredValidator;
+
+        /// <summary>
         /// Kontrolka city.
         /// </summary>
         /// <remarks>
@@ -130,6 +139,15 @@ namespace Market365_3._0.MojProfil
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator cityValidator;
+
+        /// <summary>
+        /// Kontrolka cityRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator cityRequiredValidator;
 
         /// <summary>
         /// Kontrolka street.
@@ -150,6 +168,15 @@ namespace Market365_3._0.MojProfil
         protected global::System.Web.UI.WebControls.RegularExpressionValidator streetValidator;
 
         /// <summary>
+        /// Kontrolka streetRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator streetRequiredValidator;
+
+        /// <summary>
         /// Kontrolka houseNumber.
         /// </summary>
         /// <remarks>
@@ -166,6 +193,15 @@ namespace Market365_3._0.MojProfil
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator houseNumberValidator;
+
+        /// <summary>
+        /// Kontrolka houseNumberRequiredValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator houseNumberRequiredValidator;
 
         /// <summary>
         /// Kontrolka phoneNumber.

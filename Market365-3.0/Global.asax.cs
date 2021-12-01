@@ -18,7 +18,9 @@ namespace Market365_3._0
             Application["cart"] = new Cart();
             Application["orderProductIds"] = new List<int>();
             Application["orderProductquantity"] = new List<float>();
+            Application["totalProductValue"] = new List<double>();
             Application["cartValue"] = 0.00;
+            Application["reloadFlag"] = 0;
             Application.UnLock();
         }
 
@@ -29,7 +31,8 @@ namespace Market365_3._0
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-
+            string b = sender.GetType().Name;
+            _ = b;
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
