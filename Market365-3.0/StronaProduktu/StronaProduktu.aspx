@@ -53,10 +53,9 @@
                     runat="server" 
                     ID="likeButtonV22" 
                     ImageUrl="~/resources/icons/hearEmpty.png"
-                    heigh="40px"
-                    width="40px"
+                    heigh="75px"
+                    width="75px"
                     OnClick="like_click" 
-                    
                     />
                 
             </div>

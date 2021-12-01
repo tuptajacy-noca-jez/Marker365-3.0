@@ -17,11 +17,14 @@ namespace Market365_3._0.StronaProduktu {
     public partial class StronaProduktu : System.Web.UI.Page{
 
         private int productID;
+
+        Produkt produkt;
         
         protected void Page_Load(object sender, EventArgs e) {
             if (!IsPostBack) {
                 _="Elo Elo";
             }
+            
 
             string b = sender.GetType().Name;
             Uri uri= Request.Url;
@@ -30,7 +33,7 @@ namespace Market365_3._0.StronaProduktu {
             productID = int.Parse(uriParameters[0]);
             //productID = getProductNumber(uri.ToString());
             if (productID != -1) {
-                parametersHandle(uriParameters);
+                //parametersHandle(uriParameters);
                 var aContainerId =likeButton.ID;
                 string likeButtonUri = uriProcessor.UriBuilder(new string[] { productID.ToString(), aContainerId.ToString() });
                 likeButton.HRef= likeButtonUri;
@@ -38,7 +41,8 @@ namespace Market365_3._0.StronaProduktu {
 
                 try {
                     User user = (User)Application["user"];
-                    Produkt produkt = new Produkt(productID, user.Login);
+                    produkt = new Produkt(productID, user.Login);
+                    likeButtonSourceChanger(produkt.favourite);
                     var values = produkt.values;
 
                     string[] converedValues = new string[values.Length];
@@ -56,15 +60,6 @@ namespace Market365_3._0.StronaProduktu {
                         string afterFormatString = char.ToUpper(converedValues[1][0]) + converedValues[1].Substring(1);
                         productNameLabel.Text = afterFormatString;
                         priceTag.Text = converedValues[3] + " zł/" + converedValues.Last();
-
-                        if (produkt.favourite) {
-
-                            HtmlGenericControl likeSVG = FindControl("likeSVG") as HtmlGenericControl;
-                        }
-                        else {
-
-                        }
-
                     }
                     catch (NullReferenceException ex) {
                         Debug.WriteLine(ex.Message);
@@ -154,52 +149,62 @@ namespace Market365_3._0.StronaProduktu {
 
         
         public void like_click(object sender, EventArgs e) {
-            _ = sender;
+            try {
+                User user = (User)Application["user"];
+                Uri uri = Request.Url;
+                UriProcessor uriProcessor = new UriProcessor(uri);
+                string[] uriParameters = uriProcessor.UriDecoder();
+
+                string Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+
+                SqlConnection sql = new SqlConnection(Polaczenie);
+
+                SqlCommand cmd = new SqlCommand(
+                   "SELECT COUNT(IdProduct) FROM favouritesPosition WHERE IdCustomer=@IdCustomer AND IdProduct=@IdProduct;", sql);
+                cmd.Parameters.AddWithValue("@IdCustomer", user.Login);
+                cmd.Parameters.AddWithValue("@IdProduct", uriParameters[0]);
+
+                sql.Open();
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+                sqlDataReader.Read();
+
+                var count = sqlDataReader.GetValue(0);
+                sqlDataReader.Close();
+
+                if ((int)count == 0) {//dodaj produkt do ulubionych
+                    cmd = new SqlCommand(
+                        "INSERT INTO[favouritesPosition] (IdProduct, IdCustomer) VALUES (@IdProduct, @IdCustomer);", sql);
+                    produkt.favourite = true;
+                }
+                else {//usun produkt z ulubionych
+                    cmd = new SqlCommand(
+                        "DELETE FROM [favouritesPosition]  WHERE IdCustomer=@IdCustomer AND IdProduct=@IdProduct;", sql);
+                    produkt.favourite = false;
+                }
+                cmd.Parameters.AddWithValue("@IdCustomer", user.Login);
+                cmd.Parameters.AddWithValue("@IdProduct", int.Parse(uriParameters[0]));
+
+                cmd.ExecuteNonQuery();
+
+                sql.Close();
+            }
+            catch (Exception ex) {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        public void likeButtonSourceChanger(bool isFavourite) {
+            if (isFavourite) {
+                likeButtonV22.ImageUrl = "../resources/icons/hearfilled.png";
+            }
+            else {
+                likeButtonV22.ImageUrl = "../resources/icons/hearEmpty.png";
+            }
         }
 
         private void parametersHandle(string[] args) {
             if (args[1] == "likeButton") {
-                try {
-                    User user = (User)Application["user"];
-
-                    string Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-
-                    SqlConnection sql = new SqlConnection(Polaczenie);
-                    //sql.Open();
-                    //SqlCommand cmd = new SqlCommand("select * from [orderPosition] WHERE IdOrder=@IdOrder", sql);
-
-
-                    SqlCommand cmd = new SqlCommand(
-                       "SELECT COUNT(IdProduct) FROM favouritesPosition WHERE IdCustomer=@IdCustomer AND IdProduct=@IdProduct;", sql);
-                    cmd.Parameters.AddWithValue("@IdCustomer", user.Login);
-                    cmd.Parameters.AddWithValue("@IdProduct", args[0]);
-
-                    sql.Open();
-                    SqlDataReader sqlDataReader = cmd.ExecuteReader();
-                    sqlDataReader.Read();
-
-                    var count = sqlDataReader.GetValue(0);
-                    sqlDataReader.Close();
-
-                    if ((int)count == 0) {//dodaj produkt do ulubionych
-                        cmd = new SqlCommand(
-                            "INSERT INTO[favouritesPosition] VALUES(IdProduct=@IdProduct, IdCustomer=@IdCustomer);", sql);
-                        
-                    }
-                    else {//usun produkt z ulubionych
-                        cmd = new SqlCommand(
-                            "DELETE FROM [favouritesPosition]  WHERE IdCustomer=@IdCustomer AND IdProduct=@IdProduct;", sql);
-                    }
-                    cmd.Parameters.AddWithValue("@IdCustomer", user.Login);
-                    cmd.Parameters.AddWithValue("@IdProduct", args[0]);
-
-                    cmd.ExecuteNonQuery();
-
-                    sql.Close();
-                }
-                catch (Exception ex) {
-                    Debug.WriteLine(ex.Message);
-                }
+                
             }
             else if (args[1] == "starButton") {
                 try {

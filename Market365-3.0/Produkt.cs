@@ -109,7 +109,7 @@ namespace Market365_3._0 {
                 sqlDataReader.Close();
 
                 cmd = new SqlCommand(
-                        "SELECT COUNT(IdProduct) FROM favouritesPosition WHERE IdCustomer=@IdCustomer AND IdProduct=@IdProduct;", sql);
+                        "SELECT COUNT (IdProduct) FROM favouritesPosition WHERE IdCustomer=@IdCustomer AND IdProduct=@IdProduct;", sql);
                 cmd.Parameters.AddWithValue("@IdCustomer", usertID);
                 cmd.Parameters.AddWithValue("@IdProduct", idProdukt);
 
