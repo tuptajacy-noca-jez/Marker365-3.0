@@ -6,19 +6,7 @@
     <title>Market365 - Strona Główna</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<!-- Wzorzec promowanego produktu
-    <div class="bestdeals">
-        <div class="produktDeals">
-            <asp:Image ID="produktDealsImg" runat="server"
-                Height="50" Width="50"
-                ImageUrl="~/images/50x50.png"
-                AlternateText="produktDealsImg" /><br />
-            Cebula
-            <br />
-            2,50 zł/kg
-        </div>
-    </div>
--->
+
 <div class="bestdeals">
 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
             <LayoutTemplate>

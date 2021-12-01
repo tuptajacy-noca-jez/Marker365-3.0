@@ -42,15 +42,6 @@ namespace Market365_3._0.Administrator
         protected global::System.Web.UI.WebControls.Button ListaProdukt;
 
         /// <summary>
-        /// Kontrolka magazyn.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button magazyn;
-
-        /// <summary>
         /// Kontrolka zamowieniaKlientow.
         /// </summary>
         /// <remarks>
@@ -58,14 +49,5 @@ namespace Market365_3._0.Administrator
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button zamowieniaKlientow;
-
-        /// <summary>
-        /// Kontrolka mojProfil.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button mojProfil;
     }
 }
