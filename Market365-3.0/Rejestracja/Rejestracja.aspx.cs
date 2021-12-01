@@ -142,7 +142,7 @@ namespace projekt
             return true;
         }
 
-        protected void login_TextChanged(object sender, EventArgs e)
+        protected void Login_TextChanged(object sender, EventArgs e)
         {
             if (!checkLogin(login.Text))
             {
