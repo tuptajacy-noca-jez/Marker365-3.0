@@ -56,6 +56,9 @@ namespace Market365_3._0.Zamowienie
                 ZaladujDane();
             
         }
+        /// <summary>
+        /// create new order
+        /// </summary>
         public void CreateOrder()
         {
             newOrder.ProductsId = ids;
@@ -72,41 +75,47 @@ namespace Market365_3._0.Zamowienie
                 Application["order"] = newOrder;
             AddOrderToDatabase();
         }
+      
         public void AddOrderToDatabase()
         {
-            Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-            SqlConnection sql = new SqlConnection(Polaczenie);
-            sql.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [orders] VALUES (@Id,@userlogin,@value,@name,@surname,@zipCode,@city,@street,@houseNumber,@phoneNumber,@email,@status)", sql);
-            cmd.Parameters.AddWithValue("@Id", newOrder.OrderId);
-            cmd.Parameters.AddWithValue("@userlogin", currentUser.Login);
-            cmd.Parameters.AddWithValue("@name", name.Text);
-            cmd.Parameters.AddWithValue("@surname", surname.Text);
-            cmd.Parameters.AddWithValue("@street", street.Text);
-            cmd.Parameters.AddWithValue("@houseNumber", houseNumber.Text);
-            cmd.Parameters.AddWithValue("@zipCode", zipCode.Text);
-            cmd.Parameters.AddWithValue("@city", city.Text);
-            cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber.Text);
-            cmd.Parameters.AddWithValue("@email", email.Text);
-            cmd.Parameters.AddWithValue("@value", newOrder.Value);
-            cmd.Parameters.AddWithValue("@status", "Oczekujace na platnosc");
-            cmd.ExecuteNonQuery();
-            sql.Close();
-
-            sql.Open();
-            
-            //TODO: dodac parametr
-            for(int i=0;i<ids.Count();i++)
+            try
             {
-                cmd = new SqlCommand("INSERT INTO [orderPosition] VALUES (@IdOrder,@IdProduct,@quantity,@totalProductValue)", sql);
-                cmd.Parameters.AddWithValue("@IdOrder", newOrder.OrderId);
-                cmd.Parameters.AddWithValue("@IdProduct", ids[i]);
-                cmd.Parameters.AddWithValue("@quantity", quantities[i]);
-                cmd.Parameters.AddWithValue("@totalProductValue", total[i]);
+                Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+                SqlConnection sql = new SqlConnection(Polaczenie);
+                sql.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO [orders] VALUES (@Id,@userlogin,@value,@name,@surname,@zipCode,@city,@street,@houseNumber,@phoneNumber,@email,@status)", sql);
+                cmd.Parameters.AddWithValue("@Id", newOrder.OrderId);
+                cmd.Parameters.AddWithValue("@userlogin", currentUser.Login);
+                cmd.Parameters.AddWithValue("@name", name.Text);
+                cmd.Parameters.AddWithValue("@surname", surname.Text);
+                cmd.Parameters.AddWithValue("@street", street.Text);
+                cmd.Parameters.AddWithValue("@houseNumber", houseNumber.Text);
+                cmd.Parameters.AddWithValue("@zipCode", zipCode.Text);
+                cmd.Parameters.AddWithValue("@city", city.Text);
+                cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber.Text);
+                cmd.Parameters.AddWithValue("@email", email.Text);
+                cmd.Parameters.AddWithValue("@value", newOrder.Value);
+                cmd.Parameters.AddWithValue("@status", "Oczekujace na platnosc");
                 cmd.ExecuteNonQuery();
+                sql.Close();
 
+                sql.Open();
+
+                //TODO: dodac parametr
+                for (int i = 0; i < ids.Count(); i++)
+                {
+                    cmd = new SqlCommand("INSERT INTO [orderPosition] VALUES (@IdOrder,@IdProduct,@quantity,@totalProductValue)", sql);
+                    cmd.Parameters.AddWithValue("@IdOrder", newOrder.OrderId);
+                    cmd.Parameters.AddWithValue("@IdProduct", ids[i]);
+                    cmd.Parameters.AddWithValue("@quantity", quantities[i]);
+                    cmd.Parameters.AddWithValue("@totalProductValue", total[i]);
+                    cmd.ExecuteNonQuery();
+
+                }
+                sql.Close();
             }
-            sql.Close();
+            catch { }
+
         }
         public void ZaladujDane()
         {
@@ -135,15 +144,21 @@ namespace Market365_3._0.Zamowienie
             Response.Redirect("/FinalizacjaZamowienia/FinalizacjaZamowienia.aspx");
         }
         }
-
+        /// <summary>
+        /// delete cart after order
+        /// </summary>
         public void UsunKoszyk()
         {
-            Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-            SqlConnection sql = new SqlConnection(Polaczenie);
-            sql.Open();
-            SqlCommand cmd = new SqlCommand("DELETE from [cartPosition] WHERE IdCard='" + currentUser.Login + "'", sql);
-            cmd.ExecuteNonQuery();
-            sql.Close();
+            try
+            {
+                Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+                SqlConnection sql = new SqlConnection(Polaczenie);
+                sql.Open();
+                SqlCommand cmd = new SqlCommand("DELETE from [cartPosition] WHERE IdCard='" + currentUser.Login + "'", sql);
+                cmd.ExecuteNonQuery();
+                sql.Close();
+            }
+            catch { }
         }
     }
 }

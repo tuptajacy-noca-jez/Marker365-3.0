@@ -58,8 +58,10 @@
             </asp:ListView>  
             <!--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=market365dbserver.database.windows.net;Initial Catalog=Market365_db;Persist Security Info=True;User ID=market365admin;Password=WATwcy18" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [image], [description], [price] FROM [products] "></asp:SqlDataSource>-->                   
             <asp:Button id="zamowButton" runat="server" Text="Zamów" CssClass="button" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="50px" Width="200px" BorderStyle="Solid" style="float:right" OnClick="zamowButton_Click" /> 
-            <asp:Button id="anulujButton" runat="server" Text="Anuluj" CssClass="buttonred" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="50px" Width="200px" BorderStyle="Solid" style="float:right" OnClick="anulujButton_Click"/>          
-            <asp:Label id="cenaSuma" CssClass="label" runat="server" style="float:right" Text="Do zapłaty:"></asp:Label>
+            <asp:Button id="anulujButton" runat="server" Text="Anuluj" CssClass="buttonred" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="50px" Width="200px" BorderStyle="Solid" style="float:right" OnClick="anulujButton_Click"/>  
+            <asp:Label id="cenaSuma" CssClass="label" runat="server" ForeColor="Red" style="float:right" Text=" "></asp:Label>
+            <asp:Label id="static" CssClass="label" runat="server" style="float:right" Text="Do zapłaty:"></asp:Label>
+            
         </div>
         </div>
 

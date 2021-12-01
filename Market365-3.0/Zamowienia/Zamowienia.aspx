@@ -31,8 +31,8 @@
                             <img height="200px" ="obrazZamowienia" src="data:image/jpg;base64,<%# Eval("image") %>" />
                         </td>
                         <td class="input">
-                            <asp:Label ID="nazwaZamowienia" runat="server" Text='<%# Eval("Id") %>' Font-Bold="true" /><br/>
-                            <asp:Label ID="opisZamowienia" runat="server" Text='<%# Eval("value") %>' />
+                            <asp:Label ID="nazwaZamowienia" runat="server" Text='<%# "Id zamówienia: " + Eval("Id")%>' Font-Bold="true" /><br/>
+                            <asp:Label ID="opisZamowienia" runat="server" Text='<%# "Cena: " + Eval("value") + " zł"%>' />
                         </td>
                         <td>
                             <asp:ImageButton ID="edycjaZamowienia" runat="server" ImageUrl="~/images/edit.PNG" OnClick="edycjaZamowienia_Click" AlternateText='<%# Eval("Id") %>'/>
