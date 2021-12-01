@@ -11,7 +11,7 @@
             <table>
                 <tr>
                     <td>
-                        <asp:TextBox ID="login" runat="server" placeholder="Login" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" OnTextChanged="login_TextChanged" MaxLength="49"></asp:TextBox>
+                        <asp:TextBox ID="login" runat="server" placeholder="Login" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" OnTextChanged="Login_TextChanged" MaxLength="49"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="loginValidator" runat="server" ErrorMessage="Podany login jest za krótki" ControlToValidate="login" Display="Dynamic" ForeColor="Red" ValidationExpression=".{4,}" Font-Size="X-Large" ValidationGroup="rejestration">*</asp:RegularExpressionValidator>
                         <asp:RequiredFieldValidator ID="loginRequiredValidator" runat="server" ErrorMessage="Pole nie może być puste" ControlToValidate="login" Display="Dynamic" ForeColor="Red" Font-Size="X-Large" ValidationGroup="rejestration">*</asp:RequiredFieldValidator>
                     </td>

@@ -7,7 +7,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    -->
 <div class="bestdeals">
 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
             <LayoutTemplate>
