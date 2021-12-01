@@ -79,7 +79,6 @@
   <ItemGroup>
     <Content Include="Administrator\Administrator.aspx" />
     <Content Include="Administrator\DodajProdukt\DodajProdukt.aspx" />
-    <Content Include="Administrator\Magazyn\Magazyn.aspx" />
     <Content Include="Administrator\ZamowienieKlientow\ZamowienieKlientow.aspx" />
     <Content Include="FinalizacjaZamowienia\FinalizacjaZamowienia.aspx" />
     <Content Include="Global.asax" />
@@ -141,13 +140,6 @@
     </Compile>
     <Compile Include="Administrator\DodajProdukt\DodajProdukt.aspx.designer.cs">
       <DependentUpon>DodajProdukt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Administrator\Magazyn\Magazyn.aspx.cs">
-      <DependentUpon>Magazyn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Administrator\Magazyn\Magazyn.aspx.designer.cs">
-      <DependentUpon>Magazyn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrator\ZamowienieKlientow\ZamowienieKlientow.aspx.cs">
       <DependentUpon>ZamowienieKlientow.aspx</DependentUpon>

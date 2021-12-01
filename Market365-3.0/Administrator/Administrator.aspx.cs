@@ -36,10 +36,5 @@ namespace Market365_3._0.Administrator
 
         }
 
-        protected void mojProfil_Click(object sender, EventArgs e)
-        {
-            //Server.Transfer("~/MojProfil/MojProfil.aspx");
-            Response.Redirect("~/MojProfil/MojProfil.aspx");
-        }
     }
 }
