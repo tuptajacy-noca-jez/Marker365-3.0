@@ -31,7 +31,38 @@
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
             </svg>
+                <!--
+                    test
+                    -->
             </div>
+            <div class="containerElement">
+                <a id="likeButton" runat="server">
+                    
+                </a>
+            </div>
+            <!--
+                    /test
+                    -->
+
+            <!--
+                    test2
+                    -->
+            </div>
+            <div class="containerElement">
+                <asp:ImageButton 
+                    runat="server" 
+                    ID="likeButtonV22" 
+                    ImageUrl="~/resources/icons/hearEmpty.png"
+                    heigh="40px"
+                    width="40px"
+                    OnClick="like_click" 
+                    
+                    />
+                
+            </div>
+            <!--
+                    /test2
+                    -->
         </div>
 
         <div class="Container">
@@ -43,95 +74,118 @@
                     <div class="Container">
                         <div class="containerElement">
                             <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            class="icons liked unliked" 
-                            width="100"
-                            height="100"
-                            viewBox="-3.3 -3.3 30 30"
-                            stroke-width="2" 
-                            stroke="currentColor" 
-                            fill="none" 
-                            preserveAspectRatio ="xMidyMid meet"
-                            stroke-linecap="round" 
-                            stroke-linejoin="round"
-                            >
-                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                         <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
-                        </svg>
+                                xmlns="http://www.w3.org/2000/svg" 
+                                class="icons unrated" 
+                                width="100"
+                                height="100"
+                                viewBox="-3.3 -3.3 30 30"
+                                stroke-width="2" 
+                                stroke="currentColor" 
+                                fill="none" 
+                                preserveAspectRatio ="xMidyMid meet"
+                                stroke-linecap="round" 
+                                stroke-linejoin="round"
+                                >
+                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                             <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                            </svg>
 
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            class="icons liked unliked" 
-                            width="100"
-                            height="100"
-                            viewBox="-3.3 -3.3 30 30"
-                            stroke-width="2" 
-                            stroke="currentColor" 
-                            fill="none" 
-                            preserveAspectRatio ="xMidyMid meet"
-                            stroke-linecap="round" 
-                            stroke-linejoin="round"
-                            >
-                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                         <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
-                        </svg>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                class="icons unrated" 
+                                width="100"
+                                height="100"
+                                viewBox="-3.3 -3.3 30 30"
+                                stroke-width="2" 
+                                stroke="currentColor" 
+                                fill="none" 
+                                preserveAspectRatio ="xMidyMid meet"
+                                stroke-linecap="round" 
+                                stroke-linejoin="round"
+                                >
+                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                             <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                            </svg>
 
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            class="icons liked unliked" 
-                            width="100"
-                            height="100"
-                            viewBox="-3.3 -3.3 30 30"
-                            stroke-width="2" 
-                            stroke="currentColor" 
-                            fill="none" 
-                            preserveAspectRatio ="xMidyMid meet"
-                            stroke-linecap="round" 
-                            stroke-linejoin="round"
-                            >
-                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                         <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
-                        </svg>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                class="icons unrated" 
+                                width="100"
+                                height="100"
+                                viewBox="-3.3 -3.3 30 30"
+                                stroke-width="2" 
+                                stroke="currentColor" 
+                                fill="none" 
+                                preserveAspectRatio ="xMidyMid meet"
+                                stroke-linecap="round" 
+                                stroke-linejoin="round"
+                                >
+                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                             <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                            </svg>
 
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            class="icons liked unliked" 
-                            width="100"
-                            height="100"
-                            viewBox="-3.3 -3.3 30 30"
-                            stroke-width="2" 
-                            stroke="currentColor" 
-                            fill="none" 
-                            preserveAspectRatio ="xMidyMid meet"
-                            stroke-linecap="round" 
-                            stroke-linejoin="round"
-                            >
-                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                         <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
-                        </svg>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                class="icons unrated" 
+                                width="100"
+                                height="100"
+                                viewBox="-3.3 -3.3 30 30"
+                                stroke-width="2" 
+                                stroke="currentColor" 
+                                fill="none" 
+                                preserveAspectRatio ="xMidyMid meet"
+                                stroke-linecap="round" 
+                                stroke-linejoin="round"
+                                >
+                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                             <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                            </svg>
 
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            class="icons liked unliked" 
-                            width="100"
-                            height="100"
-                            viewBox="-3.3 -3.3 30 30"
-                            stroke-width="2" 
-                            stroke="currentColor" 
-                            fill="none" 
-                            preserveAspectRatio ="xMidyMid meet"
-                            stroke-linecap="round" 
-                            stroke-linejoin="round"
-                            >
-                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                         <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
-                        </svg>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                class="icons unrated" 
+                                width="100"
+                                height="100"
+                                viewBox="-3.3 -3.3 30 30"
+                                stroke-width="2" 
+                                stroke="currentColor" 
+                                fill="none" 
+                                preserveAspectRatio ="xMidyMid meet"
+                                stroke-linecap="round" 
+                                stroke-linejoin="round"
+                                >
+                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                             <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                            </svg>
                         </div>
                     </div>
 
                     <div class="Container">
                         <div class="containerElement">
                             <asp:label runat="server" ID="priceTag" CssClass="productPriceLabel">99.99 zł/kg</asp:Label>
+                        </div>
+                    </div>
+
+                    <div class="Container">
+                        <div class="containerElement">
+                            <button runat="server" id="star1" onclick="starButton_Clicked(this.id.value)">
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    class="icons unrated" 
+                                    width="100"
+                                    height="100"
+                                    viewBox="-3.3 -3.3 30 30"
+                                    stroke-width="2" 
+                                    stroke="currentColor" 
+                                    fill="none" 
+                                    preserveAspectRatio ="xMidyMid meet"
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round"
+                                    >
+                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                 <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
 

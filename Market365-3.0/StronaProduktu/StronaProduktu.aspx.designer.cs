@@ -22,6 +22,24 @@ namespace Market365_3._0.StronaProduktu {
         protected global::System.Web.UI.WebControls.Label productNameLabel;
 
         /// <summary>
+        /// Kontrolka likeButton.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor likeButton;
+
+        /// <summary>
+        /// Kontrolka likeButtonV22.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton likeButtonV22;
+
+        /// <summary>
         /// Kontrolka priceTag.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,15 @@ namespace Market365_3._0.StronaProduktu {
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label priceTag;
+
+        /// <summary>
+        /// Kontrolka star1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton star1;
 
         /// <summary>
         /// Kontrolka amountTextBox.

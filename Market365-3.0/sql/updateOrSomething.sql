@@ -1,0 +1,1 @@
+﻿DELETE FROM [favouritesPosition]  WHERE IdCustomer=@IdCustomer AND IdProduct=@IdProduct;

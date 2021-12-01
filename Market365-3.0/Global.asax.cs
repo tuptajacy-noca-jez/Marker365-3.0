@@ -31,7 +31,8 @@ namespace Market365_3._0
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-            _ = sender;
+            string b = sender.GetType().Name;
+            _ = b;
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)

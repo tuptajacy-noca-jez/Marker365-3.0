@@ -130,16 +130,52 @@
 
 
 .icons {
-    stroke-width: 1.25;
+    stroke-width: 1;
 }
 
 .liked {
     fill: red;
 }
+    .liked:hover {
+        fill: none;
+    }
 
+
+
+.starButtonIcons {
+    stroke-width: 3;
+    width: 71px;
+    height: 68px;
+}
 .unliked {
     fill: none;
 }
+    .unliked:hover {
+        fill: red;
+    }
+
+.rated {
+    fill: yellow;
+}
+    .rated:hover {
+        fill: none;
+    }
+
+.unrated {
+    fill: none;
+}
+    .unrated:hover {
+        fill: yellow;
+    }
+
+.ratedButton {
+    fill: yellow;
+}
+
+    .ratedButton:hover {
+        fill: none;
+    }
+
 
 #productNameBlock {
     margin: 0 0 0 60px;
@@ -154,6 +190,7 @@
 .containerElement {
     display: inline-block;
     vertical-align: middle;
+    justify-content: left;
 }
 
 
