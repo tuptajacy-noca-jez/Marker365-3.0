@@ -25,7 +25,7 @@
                 <tr>
                  
                     <td>
-                        <asp:TextBox ID="password" runat="server" placeholder="Stare Hasło" AutoPostBack="True" BorderStyle="Solid" CssClass="ceil" Font-Size="X-Large" ToolTip="Hasło musi składać się z min. 8 znaków, zawierać małe i duże litery" OnTextChanged="password_TextChanged" TextMode="Password" MaxLength="49"></asp:TextBox>
+                        <asp:TextBox ID="password" runat="server" placeholder="Stare Hasło" AutoPostBack="True" BorderStyle="Solid" CssClass="ceil" Font-Size="X-Large" ToolTip="Hasło musi składać się z min. 8 znaków, zawierać małe i duże litery, cyfrę oraz znak specjalny" OnTextChanged="password_TextChanged" TextMode="Password" MaxLength="49"></asp:TextBox>
 
                     </td>
                 </tr>

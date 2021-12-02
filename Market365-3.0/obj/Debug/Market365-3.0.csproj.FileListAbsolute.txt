@@ -296,3 +296,7 @@ C:\Users\macie\OneDrive\Pulpit\365m\Market365-3.0\bin\Newtonsoft.Json.dll
 C:\Users\macie\OneDrive\Pulpit\365m\Market365-3.0\bin\System.Net.Http.Formatting.dll
 C:\Users\macie\OneDrive\Pulpit\365m\Market365-3.0\bin\Newtonsoft.Json.xml
 C:\Users\macie\OneDrive\Pulpit\365m\Market365-3.0\bin\System.Net.Http.Formatting.xml
+D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Newtonsoft.Json.dll
+D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\System.Net.Http.Formatting.dll
+D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Newtonsoft.Json.xml
+D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\System.Net.Http.Formatting.xml
