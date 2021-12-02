@@ -117,3 +117,7 @@ a:active {
 .buttonCart:hover {
     background-color: #3132b1;
 }
+
+.ButtonFix{
+    width:40%;
+}
