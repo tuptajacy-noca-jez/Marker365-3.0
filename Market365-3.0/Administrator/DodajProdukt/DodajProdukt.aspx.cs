@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -39,9 +41,9 @@ namespace Market365_3._0.Administrator.DodajProdukt
 
             // string ZipCode = zipCode.Text;
             // zipCode.Attributes.Add("value", ZipCode);
-            currentUser = (User)Application["user"];
-            Label2.Text = "Witaj " + currentUser.Name;
-            Label3.ForeColor = System.Drawing.Color.Black;
+            currentUser = (User)Session["user"];
+           //// Label2.Text = "Witaj " + currentUser.Name;
+          ////  Label3.ForeColor = System.Drawing.Color.Black;
           //  Label3.Text = "";
            // if (zipCode.Text == "" && city.Text == "" && street.Text == "" && houseNumber.Text == "")
             //    ZaladujDane();
@@ -62,15 +64,54 @@ namespace Market365_3._0.Administrator.DodajProdukt
 
         protected void password_TextChanged(object sender, EventArgs e)
         {
-
+        
         }
 
         protected void zapisz_Click(object sender, EventArgs e)
         {
-            //passwordValidator.Validate();
-           
+
+            //byte[] imageArray = System.IO.File.ReadAllBytes(@"FileUpload.FormFile");
+            //string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+            byte[] image;
+            double val;
+            Stream s = FileUpload1.PostedFile.InputStream;
+            BinaryReader br = new BinaryReader(s);
+            image = br.ReadBytes((int)s.Length);
+            String temp;
+            temp = Convert.ToBase64String(image);
+            try
+            {
+                String Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+                SqlConnection sql = new SqlConnection(Polaczenie);
+                sql.Open();
+
+                if (Double.TryParse(cena.Text, out val) && Convert.ToDouble(cena.Text) > 0)
+                {
+
+                    SqlCommand command = new SqlCommand("INSERT INTO [products] ([products].[name], [products].[description], [products].[price], [products].[unit], [products].[image])" + "Values (@param1, @param2, @param3, @param4, @param5)", sql);
+                    command.Parameters.Add("@param1", SqlDbType.VarChar, 50).Value = nazwa.Text;
+                    command.Parameters.Add("@param2", SqlDbType.VarChar, 50).Value = opis.Text;
+                    command.Parameters.Add("@param3", SqlDbType.Real).Value = Convert.ToDouble(cena.Text);
+                    command.Parameters.Add("@param4", SqlDbType.VarChar, 50).Value = jednostka.Text;
+                    command.Parameters.AddWithValue("@param5", temp);
+                    SqlDataAdapter ada = new SqlDataAdapter();
+                    ada.InsertCommand = command;
+                    ada.InsertCommand.ExecuteNonQuery();
+                    sql.Close();
+                    Response.Redirect("~/Administrator/Administrator.aspx");
+                }
+
+                sql.Close();
+            }
+            catch { }
+            //  command.Parameters.Add("@param5").Value = image; //To wez w Base64 czy sie dopytaj czy cokolwiek
+
+
+
+
 
 
         }
     }
-}
+}       
+    

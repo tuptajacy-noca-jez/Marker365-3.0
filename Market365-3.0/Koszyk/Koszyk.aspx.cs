@@ -16,7 +16,7 @@ namespace Market365_3._0.Koszyk
         double value = 0.0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            currentUser =(User)Application["user"];
+            currentUser =(User)Session["user"];
             kosz = new Cart(currentUser.Login);
             ListView1.DataSource = kosz.dt;
 
@@ -50,12 +50,12 @@ namespace Market365_3._0.Koszyk
                 totalProductValue.Add(item.price * item.quantity);
                 cartValue += item.price * item.quantity;
             }
-            Application.Lock();
-            Application["orderProductIds"] = ids;
-            Application["orderProductquantity"] = quantities;
-            Application["totalProductValue"] = totalProductValue;
-            Application["cartValue"] = cartValue;
-            Application.UnLock();
+            Session.Lock();
+            Session["orderProductIds"] = ids;
+            Session["orderProductquantity"] = quantities;
+            Session["totalProductValue"] = totalProductValue;
+            Session["cartValue"] = cartValue;
+            Session.UnLock();
 
             if (ids.Count != 0)
             {
@@ -83,7 +83,7 @@ namespace Market365_3._0.Koszyk
             ListView1.DataBind();
 
             value = 0.0;
-            currentUser = (User)Application["user"];
+            currentUser = (User)Session["user"];
             Cart kosz = new Cart(currentUser.Login);
             ListView1.DataSource = kosz.dt;
 
@@ -135,7 +135,7 @@ namespace Market365_3._0.Koszyk
 
 
             value = 0.0;
-            currentUser = (User)Application["user"];
+            currentUser = (User)Session["user"];
             Cart kosz = new Cart(currentUser.Login);
             ListView1.DataSource = kosz.dt;
 
@@ -171,7 +171,7 @@ namespace Market365_3._0.Koszyk
                 ListView1.DataBind();
 
                 value = 0.0;
-                currentUser = (User)Application["user"];
+                currentUser = (User)Session["user"];
                 Cart kosz = new Cart(currentUser.Login);
                 ListView1.DataSource = kosz.dt;
 

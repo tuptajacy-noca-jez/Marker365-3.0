@@ -8,7 +8,7 @@ using System.Web;
 
 namespace Market365_3._0
 {/// <summary>
-/// stores information about order
+/// Przechowuje informacje o zamówieniu
 /// </summary>
     public class Order
     {

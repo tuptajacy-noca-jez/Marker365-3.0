@@ -8,6 +8,9 @@ using System.Web;
 
 namespace Market365_3._0
 {
+    /// <summary>
+    /// Przechowuje informacje o koszyku
+    /// </summary>
     public class Cart
     {
         /// <summary>

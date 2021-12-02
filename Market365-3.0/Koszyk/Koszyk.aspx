@@ -35,7 +35,7 @@
                         </td>
                         <td class="input">
                             <asp:Label ID="nazwaProduktu" runat="server" Text='<%# Eval("name") %>' Font-Bold="true" /><br>
-                            <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") %>' />
+                            <asp:Label ID="cenaProduktu" runat="server" Text='<%# Eval("price") + " zł"%>' />
                         </td>
                         <td id="temp">
                             <asp:TextBox ID="iloscProduktu" Height="20px" Font-Size="20px" ReadOnly="true" runat="server" width="100px" Text='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' Visible="True" ></asp:TextBox>   
@@ -43,7 +43,7 @@
                             <asp:Imagebutton ID="plusProdukt" Height="20px" ImageUrl="~/images/plus.png" runat="server" AlternateText='<%# Eval("quantity")%>' ToolTip='<%# Eval("id") %>' OnClick="plusProdukt_Click"/>                           
                         </td>
                        <td>
-                            <asp:Label ID="cenaProduktuSuma" runat="server" Text='<%# Double.Parse(Eval("price").ToString())*Double.Parse(Eval("quantity").ToString()) %>'></asp:Label>
+                            <asp:Label ID="cenaProduktuSuma" runat="server" Text='<%# Double.Parse(Eval("price").ToString())*Double.Parse(Eval("quantity").ToString()) + " zł" %>'></asp:Label>
                         </td>
                         <td>
                             <asp:Button ID="usunProdukt" runat="server" Text="Usuń" CssClass="buttonred" ToolTip='<%# Eval("id") %>' OnClick="usunProdukt_Click"/>

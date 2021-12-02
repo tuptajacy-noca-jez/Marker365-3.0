@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Market365-3.0.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,7 +61,14 @@
       <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -79,7 +87,6 @@
   <ItemGroup>
     <Content Include="Administrator\Administrator.aspx" />
     <Content Include="Administrator\DodajProdukt\DodajProdukt.aspx" />
-    <Content Include="Administrator\Magazyn\Magazyn.aspx" />
     <Content Include="Administrator\ZamowienieKlientow\ZamowienieKlientow.aspx" />
     <Content Include="FinalizacjaZamowienia\FinalizacjaZamowienia.aspx" />
     <Content Include="Global.asax" />
@@ -89,9 +96,9 @@
     <Content Include="images\340x453.png" />
     <Content Include="images\50x50.png" />
     <Content Include="images\edit.PNG" />
-    <Content Include="images\minus.jpg" />
+    <Content Include="images\minus.png" />
     <Content Include="images\placeholder.png" />
-    <Content Include="images\plus.jpg" />
+    <Content Include="images\plus.png" />
     <Content Include="images\sklep.jpg" />
     <Content Include="images\thanks-man.jpg" />
     <Content Include="Koszyk\Koszyk.aspx" />
@@ -142,13 +149,6 @@
     <Compile Include="Administrator\DodajProdukt\DodajProdukt.aspx.designer.cs">
       <DependentUpon>DodajProdukt.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administrator\Magazyn\Magazyn.aspx.cs">
-      <DependentUpon>Magazyn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Administrator\Magazyn\Magazyn.aspx.designer.cs">
-      <DependentUpon>Magazyn.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Administrator\ZamowienieKlientow\ZamowienieKlientow.aspx.cs">
       <DependentUpon>ZamowienieKlientow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,6 +156,10 @@
     <Compile Include="Administrator\ZamowienieKlientow\ZamowienieKlientow.aspx.designer.cs">
       <DependentUpon>ZamowienieKlientow.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StronaGlowna\DrinkModel.cs" />
+    <Compile Include="StronaGlowna\DrinkModelResult.cs" />
+    <Compile Include="StronaGlowna\DrinkProcessor.cs" />
+    <Compile Include="StronaGlowna\Helper.cs" />
     <Compile Include="Cart.cs" />
     <Compile Include="FinalizacjaZamowienia\FinalizacjaZamowienia.aspx.cs">
       <DependentUpon>FinalizacjaZamowienia.aspx</DependentUpon>
@@ -255,6 +259,7 @@
     <Content Include="PageLayout.Master" />
     <Content Include="Properties\serviceDependencies.json" />
     <Content Include="Properties\serviceDependencies.local.json" />
+    <None Include="Properties\PublishProfiles\Market365 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

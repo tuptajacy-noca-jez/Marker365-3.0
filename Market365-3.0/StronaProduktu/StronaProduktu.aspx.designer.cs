@@ -31,6 +31,15 @@ namespace Market365_3._0.StronaProduktu {
         protected global::System.Web.UI.WebControls.ImageButton likeButtonV22;
 
         /// <summary>
+        /// Kontrolka productImage.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage productImage;
+
+        /// <summary>
         /// Kontrolka star1.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace Market365_3._0.StronaProduktu {
         protected global::System.Web.UI.WebControls.Label priceTag;
 
         /// <summary>
+        /// Kontrolka productDesc.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label productDesc;
+
+        /// <summary>
         /// Kontrolka amountTextBox.
         /// </summary>
         /// <remarks>
@@ -101,5 +119,32 @@ namespace Market365_3._0.StronaProduktu {
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button addToCart;
+
+        /// <summary>
+        /// Kontrolka deleteFromCart.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button deleteFromCart;
+
+        /// <summary>
+        /// Kontrolka returnToShop.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button returnToShop;
+
+        /// <summary>
+        /// Kontrolka toCart.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button toCart;
     }
 }

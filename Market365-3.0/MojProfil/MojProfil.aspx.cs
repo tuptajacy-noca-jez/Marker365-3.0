@@ -41,7 +41,7 @@ namespace Market365_3._0.MojProfil
 
             // string ZipCode = zipCode.Text;
             // zipCode.Attributes.Add("value", ZipCode);
-            currentUser = (User)Application["user"];
+            currentUser = (User)Session["user"];
             Label2.Text = "Witaj " + currentUser.Name;
             Label3.ForeColor = System.Drawing.Color.Black;
             Label3.Text = "";
@@ -107,7 +107,7 @@ namespace Market365_3._0.MojProfil
                             currentUser.Street = street.Text;
                             currentUser.PhoneNumber = phoneNumber.Text;
                             currentUser.Email = email.Text;
-                            Application["user"] = currentUser;
+                            Session["user"] = currentUser;
                             Label3.Text = "Zmiany zostały zapisane!";
                         }
                         else
@@ -131,7 +131,7 @@ namespace Market365_3._0.MojProfil
                                 currentUser.Street = street.Text;
                                 currentUser.PhoneNumber = phoneNumber.Text;
                                 currentUser.Email = email.Text;
-                                Application["user"] = currentUser;
+                                Session["user"] = currentUser;
                                 Label3.Text = "Zmiany zostały zapisane!";
                                 
 

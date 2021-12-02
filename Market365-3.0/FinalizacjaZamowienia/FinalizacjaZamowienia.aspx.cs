@@ -12,11 +12,12 @@ namespace Market365_3._0.Finalizacja_zamówienia {
         }
 
         protected void returnButton_Click(object sender, EventArgs e) {
-            Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");
+            Response.Redirect("~/SrtonaGlowna/SrtonaGlowna.aspx");
         }
 
         protected void orders_Click(object sender, EventArgs e) {
-            Response.Redirect("~/StatusZamowienia/StatusZamowienia.aspx");
+            Order order = (Order)Session["order"];
+            Response.Redirect("~/StatusZamowienia/StatusZamowienia.aspx/"+order.OrderId);
         }
     }
 }

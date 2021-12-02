@@ -46,6 +46,11 @@
                         <asp:TextBox ID="jednostka" runat="server" placeholder="Jednostka" CssClass="ceil" BorderStyle="Solid" Font-Size="X-Large" AutoPostBack="True" ToolTip="Kg/dg/g/szt..."></asp:TextBox>
                     </td>
                 </tr>
+            <tr>
+<td>
+ &nbsp;<span asp-validation-for="FileUpload.FormFile"></span><asp:FileUpload ID="FileUpload1" runat="server" />
+</td>
+                </tr>
                 <tr>
                     <td colspan="2">
                         <asp:Label ID="Label3" runat="server" Font-Size="X-Large"></asp:Label>

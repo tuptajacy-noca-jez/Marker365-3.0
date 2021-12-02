@@ -27,7 +27,7 @@
 
 .ContainterMain {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -42,7 +42,7 @@
     vertical-align: top;
     width: 35%;
     text-align: left;
-    height: 33px;
+    
     margin-left: 64px;
 }
 
@@ -97,7 +97,7 @@
     padding-left: 6pt;
     position: absolute;
     right: 12pt;
-    top: auto;
+    top: 12pt;
 }
     .logOutButton:hover {
         transform: scale(1.15);
@@ -121,7 +121,7 @@
     padding-left: 6pt;
     position: absolute;
     right: 12pt;
-    top: auto;
+    top: 12pt;
 }
 
     .logInButton:hover {
@@ -179,6 +179,8 @@
 
 #productNameBlock {
     margin: 0 0 0 60px;
+    padding-top: 3pt;
+    padding-bottom: 3pt;
 }
 
 .leftContentBlock {
@@ -209,10 +211,14 @@
 }
 
 #productDescription {
+    display:inline-block;
     font-family: "Open Sans",sans-serif;
     font-size: 20pt;
     font-weight: normal;
     text-align: left;
+    width: 400px;
+    height:160px;
+    border: solid 1px #6CCC46;
 }
 
 .amountTextBox {
@@ -238,6 +244,7 @@
     border-color: #6CCC46;
     border-radius: 15px;
     margin-right: 12pt;
+    margin-left: 12pt;
     padding-left: 6pt;
     padding-right: 6pt;
 }
@@ -246,9 +253,30 @@
         transform: scale(1.05);
     }
 
+.ButtonRed {
+    color: white;
+    width: auto;
+    height: 66px;
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(198 18 18);
+    border: 2px;
+    border-color: rgb(198 18 18);
+    border-radius: 15px;
+    margin-right: 12pt;
+    padding-left: 6pt;
+    padding-right: 6pt;
+}
+
+    .ButtonRed:hover {
+        transform: scale(1.05);
+    }
+
 #placeholderBootstrap {
     overflow: auto;
-    height: 380px;
+    height: 50%;
     margin-bottom: 6pt;
 }
 
@@ -349,20 +377,16 @@
 
 
 .likeImageButton {
-    
+    margin-left:6pt;
     width: 70px;
     height: 70px;
 }
 
 .unlikeImageButton {
-    background-image: url('~/resources/icons/hearEmpty.png');
-    width: 40px;
-    height: 40px;
+    margin-left: 6pt;
+    width: 70px;
+    height: 70px;
 }
-
-    .unlikeImageButton:hover {
-        background-image: url('~/resources/icons/hearfilled.png');
-    }
 
 
 .imagTest {
@@ -371,6 +395,61 @@
 }
 
 
+.Container {
+    margin-top:3pt;
+    display:block;
+}
 
+#orderHandle{
+    display:flex;
+    justify-content:left;
+    padding-left:40%;
+}
+=======
+.apiMain{
+    margin:0;
+    padding-top:200px;
+    width: 80%;
+    height: 1000px;
+    margin: auto;
+}
+.apiLeft{
+    width:15%;
+    height:400px;
+    float:left;
+    width:800px;
+
+}
+.apiRight{
+    text-align:center;
+    margin-left:15%;
+    height:400px;
+}
+
+.api2 {
+    font-family: "Open Sans",sans-serif;
+    font-size: 20px;
+    padding-bottom:10px;
+}
+.api3{
+    padding-bottom:15px;
+}
+
+
+
+.visibilityON{
+    visibility:visible;
+}
+
+.visibilityOff {
+    visibility: hidden;
+}
+
+.navigationButtons{
+    margin-top:30pt;
+    display:flex;
+    justify-content:right;
+    padding-right: 15%;
+}
 
 

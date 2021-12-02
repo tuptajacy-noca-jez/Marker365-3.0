@@ -22,7 +22,15 @@ namespace projekt
         protected void zaloguj_Click(object sender, EventArgs e)
         {
             if(login.Text=="admin" && password.Text=="TrudneHaslo123")
-            Response.Redirect("/Administrator/Administrator.aspx");
+            {
+                User currentUser = new User();
+                currentUser.Login = login.Text;
+                currentUser.Password = password.Text;
+                currentUser.IsActive = true;
+                Session["user"] = currentUser;
+                Response.Redirect("/Administrator/Administrator.aspx");
+            }
+            
             else
             Logowanie(); 
         }
@@ -99,7 +107,7 @@ namespace projekt
             }
             catch { }
 
-            Application["user"] = currentUser;
+            Session["user"] = currentUser;
         }
         
         protected void rejestracja_Click(object sender, EventArgs e)
