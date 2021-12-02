@@ -248,6 +248,10 @@ C:\Users\macie\OneDrive\Pulpit\365m\Market365-3.0\bin\Newtonsoft.Json.dll
 C:\Users\macie\OneDrive\Pulpit\365m\Market365-3.0\bin\System.Net.Http.Formatting.dll
 C:\Users\macie\OneDrive\Pulpit\365m\Market365-3.0\bin\Newtonsoft.Json.xml
 C:\Users\macie\OneDrive\Pulpit\365m\Market365-3.0\bin\System.Net.Http.Formatting.xml
+D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Newtonsoft.Json.dll
+D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\System.Net.Http.Formatting.dll
+D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Newtonsoft.Json.xml
+D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\System.Net.Http.Formatting.xml
 C:\Users\damja\Documents\GitHub\Marker365-3.0\Market365-3.0\bin\Market365-3.0.dll.config
 C:\Users\damja\Documents\GitHub\Marker365-3.0\Market365-3.0\bin\Market365-3.0.xml
 C:\Users\damja\Documents\GitHub\Marker365-3.0\Market365-3.0\bin\Market365-3.0.dll
@@ -301,8 +305,12 @@ C:\Users\damja\Documents\GitHub\Marker365-3.0\Market365-3.0\obj\Debug\Market365-
 C:\Users\damja\Documents\GitHub\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.csproj.CopyComplete
 C:\Users\damja\Documents\GitHub\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.dll
 C:\Users\damja\Documents\GitHub\Marker365-3.0\Market365-3.0\obj\Debug\Market365-3.0.pdb
+<<<<<<< HEAD
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.xml
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Newtonsoft.Json.dll
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\System.Net.Http.Formatting.dll
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Newtonsoft.Json.xml
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\System.Net.Http.Formatting.xml
+=======
+D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.xml
+>>>>>>> 5e05a69613b4d13a25693de9027196b2b28bdb0e
