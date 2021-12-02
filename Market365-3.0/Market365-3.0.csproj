@@ -120,6 +120,9 @@
     <Content Include="resources\icons\star.svg" />
     <Content Include="resources\icons\starRated.png" />
     <Content Include="resources\icons\starUnrated.png" />
+    <Content Include="resources\icons\tabler-icon-chevron-right.jpg" />
+    <Content Include="resources\icons\tabler-icon-chevron-right.svg" />
+    <Content Include="resources\icons\tabler-icon-plus.svg" />
     <Content Include="StatusZamowienia\StatusZamowienia.aspx" />
     <Content Include="Sklep\Sklep.aspx" />
     <Content Include="StronaGlowna\StronaGlowna.aspx" />
