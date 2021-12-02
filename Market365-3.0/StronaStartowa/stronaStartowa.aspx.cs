@@ -21,6 +21,9 @@ namespace projekt
 
         protected void zaloguj_Click(object sender, EventArgs e)
         {
+            if(login.Text=="admin" && password.Text=="TrudneHaslo123")
+            Response.Redirect("/Administrator/Administrator.aspx");
+            else
             Logowanie(); 
         }
         /// <summary>

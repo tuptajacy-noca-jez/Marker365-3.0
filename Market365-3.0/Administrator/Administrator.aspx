@@ -7,7 +7,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    -->
 <div class="bestdeals">
 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
             <LayoutTemplate>
@@ -45,10 +44,6 @@
 
                 </td>
 
-                <td>
-                    <asp:Button ID="magazyn" runat="server" Text="Magazyn" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="95%" OnClick="magazyn_Click" CssClass="button" BorderStyle="Solid" ToolTip="Przejrzyj magazyn" />
-
-                </td>
 
             </tr>
 
@@ -58,10 +53,6 @@
 
                 </td>
 
-                <td>
-                    <asp:Button ID="mojProfil" runat="server" Text="Mój profil" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="95%" OnClick="mojProfil_Click" CssClass="button" BorderStyle="Solid" ToolTip="Przejdź do ustawień swojego konta" />
-
-                </td>
 
             </tr>
 
