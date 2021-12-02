@@ -7,15 +7,41 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 
 namespace Market365_3._0 {
+    /// <summary>
+    /// Przechowuje informacje o produkcie
+    /// </summary>
     public class Produkt {
+        /// <summary>
+        /// id produktu
+        /// </summary>
         public Int32 id { get; set; }
+        /// <summary>
+        /// obraz produktu zapisany jako Base64
+        /// </summary>
         public string image { get; set; }
+        /// <summary>
+        /// słowna nazwa produktu
+        /// </summary>
         public string name { get; set; }
+        /// <summary>
+        /// cena produktu za kg/szt <see cref="unit"/>
+        /// </summary>
         public float price { get; set; }
+        /// <summary>
+        /// ilość porduktu - potrzebna w zamówieniach/koszyku
+        /// </summary>
         public float quantity { get; set; }
+        /// <summary>
+        /// jednostka [kg/szt]
+        /// </summary>
         public string unit { get; set; }
+        /// <summary>
+        /// ocena produktu
+        /// </summary>
         public float ocena { get; set; }
-
+        /// <summary>
+        /// flaga czy produkt jest w liście ulubionych (wymagane id użytkownika)
+        /// </summary>
         public bool favourite { get; set; }
 
 
@@ -36,28 +62,50 @@ namespace Market365_3._0 {
         public object[] values;
 
 
-
+        /// <summary>
+        /// Konstruktor bezargumentowy tworzy pustą klasę
+        /// </summary>
         public Produkt() { }
 
+        /// <summary>
+        /// Konstruktor z parametrem idProdukt tworzy instancję klasy oraz uzupełnia dane
+        /// </summary>
+        /// <param name="idProdukt">id produktu którego dane chcemy pobrać</param>
         public Produkt(int idProdukt) {
             this.idProdukt = idProdukt;
-
             fetchData(this.idProdukt);
         }
 
-
+        /// <summary>
+        /// Konstruktor z parametrem idProdukt oraz userId tworzy instancję klasy oraz uzupełnia dane o produkcie,
+        /// dodatkowo przechowuje informacje czy produkt jest na liście ulubionych użytkownika
+        /// </summary>
+        /// <param name="idProdukt">id produktu którego dane chcemy pobrać</param>
+        /// <param name="userId">id użytkownika dla którego chcemy sprawdzić czy produkt jest w liście ulubionych</param>
         public Produkt(int idProdukt, string userId) {
             this.idProdukt = idProdukt;
-
             fetchData(idProdukt, userId);
         }
 
+        /// <summary>
+        /// Konstruktor z parametrem idProdukt oraz quantity tworzy instancję klasy oraz uzupełnia dane o produkcie,
+        /// dodatkowo przechowuje informacje o ilości produktu
+        /// </summary>
+        /// <param name="idProdukt">id produktu którego dane chcemy pobrać</param>
+        /// <param name="quantity">ilość danego produktu</param>
         public Produkt(int idProdukt,double quantity) {
             this.idProdukt = idProdukt;
             this.ilosc = quantity;
             fetchData(this.idProdukt);
         }
 
+        /// <summary>
+        /// Konstruktor z parametrem idProdukt, quantity oraz totalValue tworzy instancję klasy oraz uzupełnia dane o produkcie,
+        /// dodatkowo przechowuje informacje o ilości produktu oraz łącznej wartości - pomocne do przechowywania danych o pozycji w koszyku/zamówieniu
+        /// </summary>
+        /// <param name="idProdukt">id produktu którego dane chcemy pobrać</param>
+        /// <param name="quantity">ilość danego produktu</param>
+        /// <param name="totalValue">całkowita wartość produktu (w koszyku/zamówieniu)</param>
         public Produkt(int idProdukt, double quantity, double totalValue) {
             this.idProdukt = idProdukt;
             this.ilosc = quantity;
@@ -65,7 +113,14 @@ namespace Market365_3._0 {
             fetchData(this.idProdukt);
         }
 
-
+        /// <summary>
+        /// Funkcja fetchData dla danego id produktu pobiera dane i zapisuje je w instancji klasy Produkt
+        /// </summary>
+        /// <param name="id"> Parametr id jest identyfikatorem produktu</param>
+        /// <returns>
+        /// Prawda - jeśli z powodzeniem zostaną pobrane i zapisane dane
+        /// Fałsz - jeśli nie uda się pobrać i zapisać danych
+        /// </returns>
         private bool fetchData(int id) {
 
             string Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
@@ -113,7 +168,16 @@ namespace Market365_3._0 {
             }
         }
 
-
+        /// <summary>
+        /// Funkcja fetchData z dwoma parametrami działa tak jak funkcja fetchData z jednym parametrem <see cref="fetchData(int)"/>,
+        /// funkcja z dwoma parametrami dodatkowo daje informacje czy produkt jest w liście ulubionych użytkownika
+        /// </summary>
+        /// <param name="id"> Parametr id jest identyfikatorem produktu</param>
+        /// <param name="usertID">Parametr usertID jest identyfikatorem użytkownika</param>
+        /// <returns>
+        /// Prawda - jeśli z powodzeniem zostaną pobrane i zapisane dane
+        /// Fałsz - jeśli nie uda się pobrać i zapisać danych
+        /// </returns>
         private bool fetchData(int id, string usertID) {
 
             string Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
