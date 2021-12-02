@@ -26,7 +26,7 @@ namespace Market365_3._0.Sklep
         /// <param name="e"></param>
         protected void AddButton_Click(object sender, EventArgs e)
         {
-            currUser = (User)Application["user"];
+            currUser = (User)Session["user"];
             if (currUser.IsActive == false)
             {
                 Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");
@@ -62,7 +62,7 @@ namespace Market365_3._0.Sklep
         /// <param name="e"></param>
         protected void doKoszyka_Click(object sender, EventArgs e)
         {
-            currUser = (User)Application["user"];
+            currUser = (User)Session["user"];
             if (currUser.IsActive == false)
             {
                 Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");

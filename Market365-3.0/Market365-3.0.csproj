@@ -96,9 +96,9 @@
     <Content Include="images\340x453.png" />
     <Content Include="images\50x50.png" />
     <Content Include="images\edit.PNG" />
-    <Content Include="images\minus.jpg" />
+    <Content Include="images\minus.png" />
     <Content Include="images\placeholder.png" />
-    <Content Include="images\plus.jpg" />
+    <Content Include="images\plus.png" />
     <Content Include="images\sklep.jpg" />
     <Content Include="images\thanks-man.jpg" />
     <Content Include="Koszyk\Koszyk.aspx" />
@@ -259,6 +259,7 @@
     <Content Include="PageLayout.Master" />
     <Content Include="Properties\serviceDependencies.json" />
     <Content Include="Properties\serviceDependencies.local.json" />
+    <None Include="Properties\PublishProfiles\Market365 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

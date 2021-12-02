@@ -32,7 +32,7 @@
                         <td class="input">
                             <asp:Label ID="nazwaZamowienia" runat="server" Text='<%# "Id zamówienia: " + Eval("Id")%>' Font-Bold="true" /><br/>
                             <asp:Label ID="opisZamowienia" runat="server" Text='<%# "Cena: " + Eval("value") + " zł"%>' /><br />
-                             <asp:Label ID="imie" runat="server" Text='<%# "Dane klienta: " + Eval("name") + Eval("surname")%>' Font-Bold="true" />
+                             <asp:Label ID="imie" runat="server" Text='<%# "Dane klienta: " + Eval("name") +" "+ Eval("surname")%>' Font-Bold="true" />
                         </td>
                         <td class="input">
                             <asp:Label ID="status" runat="server" Text='<%# "Status zamówienia: " + Eval("status")%>' Font-Bold="true" /><br/>

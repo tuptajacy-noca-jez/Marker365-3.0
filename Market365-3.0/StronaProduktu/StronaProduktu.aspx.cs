@@ -22,7 +22,7 @@ namespace Market365_3._0.StronaProduktu {
             UriProcessor uriProcessor = new UriProcessor(uri);
             string[] uriParameters = uriProcessor.UriDecoder();
             productID = int.Parse(uriParameters[0]);
-            User user = (User)Application["user"];
+            User user = (User)Session["user"];
 
             if (user.IsActive) {
                 deleteFromCart.CssClass = "ButtonRed visibilityOn";
@@ -99,7 +99,7 @@ namespace Market365_3._0.StronaProduktu {
                 productID = getProductNumber(uri.ToString());
                 Produkt produkt = new Produkt(productID);
 
-                User currUser = (User)Application["user"];
+                User currUser = (User)Session["user"];
                 if (currUser.IsActive == false) {
                     Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");
                 }
@@ -160,7 +160,7 @@ namespace Market365_3._0.StronaProduktu {
         
         public void like_click(object sender, EventArgs e) {
             try {
-                User user = (User)Application["user"];
+                User user = (User)Session["user"];
                 if (!user.IsActive) {
                     return;
                 }
@@ -246,12 +246,12 @@ namespace Market365_3._0.StronaProduktu {
         public void starButton_Click(object sender, EventArgs e) {
             ImageButton button = (ImageButton)sender;
             int rate = int.Parse(button.ID.ToString().Last().ToString());
-            User user = (User)Application["user"];
+            User user = (User)Session["user"];
             if (!user.IsActive) {
                 return;
             }
             try {
-                //User user = (User)Application["user"];
+                //User user = (User)Session["user"];
                 Uri uri = Request.Url;
                 UriProcessor uriProcessor = new UriProcessor(uri);
                 string[] uriParameters = uriProcessor.UriDecoder();
@@ -320,7 +320,7 @@ namespace Market365_3._0.StronaProduktu {
         protected void deleteFromCart_Click(object sender, EventArgs e) {
             try {
                 Button button = (Button)sender;
-                User currUser = (User)Application["user"];
+                User currUser = (User)Session["user"];
                 String Polaczenie;
                 Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
                 SqlConnection sql = new SqlConnection(Polaczenie);

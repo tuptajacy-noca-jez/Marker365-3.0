@@ -16,7 +16,7 @@ namespace Market365_3._0.Finalizacja_zamówienia {
         }
 
         protected void orders_Click(object sender, EventArgs e) {
-            Order order = (Order)Application["order"];
+            Order order = (Order)Session["order"];
             Response.Redirect("~/StatusZamowienia/StatusZamowienia.aspx/"+order.OrderId);
         }
     }

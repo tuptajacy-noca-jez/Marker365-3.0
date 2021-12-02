@@ -80,7 +80,7 @@ namespace projekt
                         }
                         catch { }
 
-                    Application["user"] = currentUser;
+                    Session["user"] = currentUser;
                     //tworzenie koszyka dla uzytkownika
                     /*sql.Open();
                     cmd = new SqlCommand("INSERT INTO [cart] VALUES (@Id)", sql);

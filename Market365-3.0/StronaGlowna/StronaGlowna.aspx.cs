@@ -31,7 +31,7 @@ namespace Market365_3._0.StronaGlowna
 
         protected void zamowienia_Click(object sender, EventArgs e)
         {
-            currUser = (User)Application["user"];
+            currUser = (User)Session["user"];
             if (currUser.IsActive == false)
             {
                 Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");
@@ -45,7 +45,7 @@ namespace Market365_3._0.StronaGlowna
 
         protected void koszyk_Click(object sender, EventArgs e)
         {
-            currUser = (User)Application["user"];
+            currUser = (User)Session["user"];
             if (currUser.IsActive == false)
             {
                 Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");
@@ -59,7 +59,7 @@ namespace Market365_3._0.StronaGlowna
 
         protected void mojProfil_Click(object sender, EventArgs e)
         {
-            currUser = (User)Application["user"];
+            currUser = (User)Session["user"];
             if (currUser.IsActive == false)
             {
                 Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");

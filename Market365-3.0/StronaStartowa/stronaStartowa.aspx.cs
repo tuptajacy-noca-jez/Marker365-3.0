@@ -27,7 +27,7 @@ namespace projekt
                 currentUser.Login = login.Text;
                 currentUser.Password = password.Text;
                 currentUser.IsActive = true;
-                Application["user"] = currentUser;
+                Session["user"] = currentUser;
                 Response.Redirect("/Administrator/Administrator.aspx");
             }
             
@@ -107,7 +107,7 @@ namespace projekt
             }
             catch { }
 
-            Application["user"] = currentUser;
+            Session["user"] = currentUser;
         }
         
         protected void rejestracja_Click(object sender, EventArgs e)

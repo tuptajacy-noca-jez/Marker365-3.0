@@ -12,21 +12,21 @@ namespace Market365_3._0
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            Application.Lock();
-            Application["user"] = new User();
-            Application["order"] = new Order();
-            Application["cart"] = new Cart();
-            Application["orderProductIds"] = new List<int>();
-            Application["orderProductquantity"] = new List<float>();
-            Application["totalProductValue"] = new List<double>();
-            Application["cartValue"] = 0.00;
-            Application["reloadFlag"] = 0;
-            Application.UnLock();
+            
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
+            //Session.Lock();
+            Session["user"] = new User();
+            Session["order"] = new Order();
+            Session["cart"] = new Cart();
+            Session["orderProductIds"] = new List<int>();
+            Session["orderProductquantity"] = new List<float>();
+            Session["totalProductValue"] = new List<double>();
+            Session["cartValue"] = 0.00;
+            Session["reloadFlag"] = 0;
+            //Session.UnLock();
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

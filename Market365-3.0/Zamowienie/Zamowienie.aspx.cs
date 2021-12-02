@@ -30,12 +30,12 @@ namespace Market365_3._0.Zamowienie
             streetValidator.Validate();
             houseNumberValidator.Validate();
             phoneNumberValidator.Validate();
-            currentUser = (User)Application["user"];
-            newOrder =  (Order) Application["order"];
-            ids = (List<Int32>) Application["orderProductIds"];
-            sum = (double)Application["cartValue"];
-            quantities = (List<double>)Application["orderProductquantity"];
-            total = (List<double>)Application["totalProductValue"];
+            currentUser = (User)Session["user"];
+            newOrder =  (Order) Session["order"];
+            ids = (List<Int32>) Session["orderProductIds"];
+            sum = (double)Session["cartValue"];
+            quantities = (List<double>)Session["orderProductquantity"];
+            total = (List<double>)Session["totalProductValue"];
 
             rabat = 1;
             
@@ -72,7 +72,7 @@ namespace Market365_3._0.Zamowienie
                 newOrder.PhoneNumber=phoneNumber.Text;
                 newOrder.Email=email.Text;
             
-                Application["order"] = newOrder;
+                Session["order"] = newOrder;
             AddOrderToDatabase();
         }
       
@@ -139,7 +139,7 @@ namespace Market365_3._0.Zamowienie
         if (streetValidator.IsValid == true && houseNumberValidator.IsValid == true && zipCodeValidator.IsValid == true && cityValidator.IsValid == true && phoneNumberValidator.IsValid == true && emailValidator.IsValid == true)
         {
                 CreateOrder();
-                Application["cart"] = null;
+                Session["cart"] = null;
                 UsunKoszyk();
             Response.Redirect("/FinalizacjaZamowienia/FinalizacjaZamowienia.aspx");
         }

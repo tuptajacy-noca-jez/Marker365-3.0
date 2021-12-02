@@ -16,7 +16,7 @@ namespace Market365_3._0.Administrator.ZamowienieKlientow
         String Polaczenie;
         protected void Page_Load(object sender, EventArgs e)
         {
-            currUser = (User)Application["user"];
+            currUser = (User)Session["user"];
             Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
             SqlConnection sql = new SqlConnection(Polaczenie);
             sql.Open();

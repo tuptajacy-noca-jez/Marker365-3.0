@@ -41,7 +41,7 @@ namespace Market365_3._0.Administrator.DodajProdukt
 
             // string ZipCode = zipCode.Text;
             // zipCode.Attributes.Add("value", ZipCode);
-            currentUser = (User)Application["user"];
+            currentUser = (User)Session["user"];
            //// Label2.Text = "Witaj " + currentUser.Name;
           ////  Label3.ForeColor = System.Drawing.Color.Black;
           //  Label3.Text = "";
