@@ -64,6 +64,7 @@ namespace Market365_3._0.StronaProduktu {
                         priceTag.Text = converedValues[3] + " zł/" + converedValues.Last();
                         productImage.Src = "data:image/jpg;base64," + converedValues[4];
                         productDesc.Text = converedValues[2];
+                        productTitle.InnerHtml = converedValues[1];
                         lightUpStarts();
                     }
                     catch (NullReferenceException ex) {

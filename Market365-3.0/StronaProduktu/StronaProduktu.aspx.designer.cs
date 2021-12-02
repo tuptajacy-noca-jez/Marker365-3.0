@@ -13,6 +13,15 @@ namespace Market365_3._0.StronaProduktu {
     public partial class StronaProduktu {
 
         /// <summary>
+        /// Kontrolka productTitle.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productTitle;
+
+        /// <summary>
         /// Kontrolka productNameLabel.
         /// </summary>
         /// <remarks>

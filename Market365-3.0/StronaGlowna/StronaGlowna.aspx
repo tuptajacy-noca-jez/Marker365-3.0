@@ -10,11 +10,8 @@
 <div class="bestdeals">
 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
             <LayoutTemplate>
-                <div class="produktDeals">
+                <div class="produktDealsContainer">
                 <table class="tbCenter" runat="server" id="tblProducts">
-                    <tr runat="server">
-                        <th runat="server"></th>
-                    </tr>
                     <tr runat="server" id="itemPlaceholder" />
                 </table>
                 </div>
