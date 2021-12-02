@@ -9,7 +9,7 @@ namespace Market365_3._0 {
     public partial class Site1 : System.Web.UI.MasterPage {
         User currentUser;
         protected void Page_Load(object sender, EventArgs e) {
-            currentUser = (User)Application["user"];
+            currentUser = (User)Session["user"];
             logOut.CssClass= "hiddenButton";
             logIn.CssClass = "hiddenButton";
 
@@ -33,7 +33,7 @@ namespace Market365_3._0 {
 
         protected void logOut_Click(object sender, EventArgs e) {
             logOut.CssClass = "hiddenButton";
-            Application["user"] = new User();           
+            Session["user"] = new User();           
 
             Response.Redirect("~/StronaStartowa/StronaStartowa.aspx");
         }

@@ -50,12 +50,12 @@ namespace Market365_3._0.Koszyk
                 totalProductValue.Add(item.price * item.quantity);
                 cartValue += item.price * item.quantity;
             }
-            Session.Lock();
+            //Session.Lock();
             Session["orderProductIds"] = ids;
             Session["orderProductquantity"] = quantities;
             Session["totalProductValue"] = totalProductValue;
             Session["cartValue"] = cartValue;
-            Session.UnLock();
+           // Session.UnLock();
 
             if (ids.Count != 0)
             {
