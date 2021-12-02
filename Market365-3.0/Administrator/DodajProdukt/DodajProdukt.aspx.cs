@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -40,8 +42,8 @@ namespace Market365_3._0.Administrator.DodajProdukt
             // string ZipCode = zipCode.Text;
             // zipCode.Attributes.Add("value", ZipCode);
             currentUser = (User)Application["user"];
-            Label2.Text = "Witaj " + currentUser.Name;
-            Label3.ForeColor = System.Drawing.Color.Black;
+           //// Label2.Text = "Witaj " + currentUser.Name;
+          ////  Label3.ForeColor = System.Drawing.Color.Black;
           //  Label3.Text = "";
            // if (zipCode.Text == "" && city.Text == "" && street.Text == "" && houseNumber.Text == "")
             //    ZaladujDane();
@@ -62,15 +64,38 @@ namespace Market365_3._0.Administrator.DodajProdukt
 
         protected void password_TextChanged(object sender, EventArgs e)
         {
-
+        
         }
 
         protected void zapisz_Click(object sender, EventArgs e)
         {
-            //passwordValidator.Validate();
+
+            byte[] imageArray = System.IO.File.ReadAllBytes(@"FileUpload.FormFile");
+            string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+
+
+            String Polaczenie = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            SqlConnection sql = new SqlConnection(Polaczenie);
+            sql.Open();
+            SqlCommand command = new SqlCommand("INSERT INTO [products] ([products].[name], [products].[description], [products].[price], [products].[unit], [products].[image])"+ "Values (@param1, @param2, @param3, @param4, @param5)", sql);
+            command.Parameters.Add("@param1", SqlDbType.VarChar, 50).Value = nazwa.Text;
+            command.Parameters.Add("@param2", SqlDbType.VarChar, 50).Value = opis.Text;
+            command.Parameters.Add("@param3", SqlDbType.Real).Value = Convert.ToDouble(cena.Text);
+            command.Parameters.Add("@param4", SqlDbType.VarChar, 50).Value = jednostka.Text;
+            command.Parameters.Add("@param5", SqlDbType.VarChar, 50).Value = base64ImageRepresentation; //To wez w Base64 czy sie dopytaj czy cokolwiek
+            SqlDataAdapter ada = new SqlDataAdapter();
+
+            ada.InsertCommand = command;
+            ada.InsertCommand.ExecuteNonQuery();
+            sql.Close();
+
            
 
 
+
+            Response.Redirect("~/Administrator/Administrato.aspx");
+
         }
     }
-}
+}       
+    
