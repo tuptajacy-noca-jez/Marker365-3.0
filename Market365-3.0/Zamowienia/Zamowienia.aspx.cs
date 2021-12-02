@@ -65,7 +65,5 @@ namespace Market365_3._0.Zamówienia
             string buttonId = button.AlternateText;
             Response.Redirect("~/StatusZamowienia/StatusZamowienia.aspx/"+ buttonId);
         }
-
-
     }
 }

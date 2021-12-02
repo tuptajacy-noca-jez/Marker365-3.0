@@ -80,6 +80,28 @@ namespace Market365_3._0 {
                 int l = sqlDataReader.FieldCount;
                 values = new dynamic[l];
                 int c = sqlDataReader.GetValues(values);
+                sqlDataReader.Close();
+
+
+
+                cmd = new SqlCommand(
+                        "SELECT avg(rate) FROM Ratings WHERE idproduct=@IdProduct;", sql);
+                cmd.Parameters.AddWithValue("@IdProduct", idProdukt);
+
+                sqlDataReader = cmd.ExecuteReader();
+                sqlDataReader.Read();
+
+                var avgRate = sqlDataReader.GetValue(0);
+               
+                
+                sqlDataReader.Close();
+                try {
+                    ocena = Convert.ToInt32(avgRate);
+                }
+                catch(Exception ex) {
+                    ocena = 0;
+                }
+                
 
                 sql.Close();
                 return true;
@@ -125,6 +147,51 @@ namespace Market365_3._0 {
                 else {
                     favourite = true;
                 }
+
+
+
+
+                cmd = new SqlCommand(
+                        "SELECT rate FROM Ratings WHERE userlogin=@IdCustomer AND idproduct=@IdProduct;", sql);
+                cmd.Parameters.AddWithValue("@IdCustomer", usertID);
+                cmd.Parameters.AddWithValue("@IdProduct", idProdukt);
+
+                sqlDataReader = cmd.ExecuteReader();
+                sqlDataReader.Read();
+
+                var rate = sqlDataReader.GetValue(0);
+                sqlDataReader.Close();
+
+                if (rate == null) {//dodaj produkt do ulubionych
+                    cmd = new SqlCommand(
+                         "SELECT avg(rate) FROM Ratings WHERE idproduct=@IdProduct;", sql);
+                    cmd.Parameters.AddWithValue("@IdProduct", idProdukt);
+
+                    sqlDataReader = cmd.ExecuteReader();
+                    sqlDataReader.Read();
+
+                    var avgRate = sqlDataReader.GetValue(0);
+                    try {
+                        ocena = Convert.ToInt32(avgRate);
+                    }
+                    catch (Exception ex) {
+                        ocena = 0;
+                    }
+                    sqlDataReader.Close();
+                }
+                else {
+                    ocena = (int)rate;
+                }
+
+
+
+
+
+
+
+
+
+
                 sql.Close();
                 return true;
             }
