@@ -69,6 +69,15 @@ namespace Market365_3._0.Administrator.DodajProdukt
         protected global::System.Web.UI.WebControls.TextBox jednostka;
 
         /// <summary>
+        /// Kontrolka FileUpload1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+
+        /// <summary>
         /// Kontrolka Label3.
         /// </summary>
         /// <remarks>

@@ -48,8 +48,7 @@
                 </tr>
             <tr>
 <td>
- <input asp-for="FileUpload.FormFile" type="file">
-            <span asp-validation-for="FileUpload.FormFile"></span>
+ &nbsp;<span asp-validation-for="FileUpload.FormFile"></span><asp:FileUpload ID="FileUpload1" runat="server" />
 </td>
                 </tr>
                 <tr>
