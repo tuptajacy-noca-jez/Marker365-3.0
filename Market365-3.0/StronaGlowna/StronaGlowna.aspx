@@ -36,16 +36,16 @@
      <div class =" apiMain">
     <div class="apiLeft">
         <div class="api3">
-            <asp:Button ID="Button1" runat="server" Text="Sklep" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="70%" OnClick="sklep_Click" CssClass="button" BorderStyle="Solid" ToolTip="Przeglądaj produkty w sklepie" />
+            <asp:Button ID="Button1" runat="server" Text="Sklep" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="70%" OnClick="sklep_Click" CssClass="button ButtonFix" BorderStyle="Solid" ToolTip="Przeglądaj produkty w sklepie" />
         </div>
        <div class="api3">
-               <asp:Button ID="Button2" runat="server" Text="Koszyk" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="70%" OnClick="koszyk_Click" CssClass="button" BorderStyle="Solid" ToolTip="Przejdź do swojego koszyka" />
+               <asp:Button ID="Button2" runat="server" Text="Koszyk" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="70%" OnClick="koszyk_Click" CssClass="button ButtonFix" BorderStyle="Solid" ToolTip="Przejdź do swojego koszyka" />
        </div>
         <div class="api3">
-             <asp:Button ID="Button3" runat="server" Text="Zamówienia" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="70%" OnClick="zamowienia_Click" CssClass="button" BorderStyle="Solid" ToolTip="Przeglądaj swoje zamówienia" />
+             <asp:Button ID="Button3" runat="server" Text="Zamówienia" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="70%" OnClick="zamowienia_Click" CssClass="button ButtonFix" BorderStyle="Solid" ToolTip="Przeglądaj swoje zamówienia" />
         </div>
         <div class="api3">
-              <asp:Button ID="Button4" runat="server" Text="Mój profil" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="70%" OnClick="mojProfil_Click" CssClass="button" BorderStyle="Solid" ToolTip="Przejdź do ustawień swojego konta" />
+              <asp:Button ID="Button4" runat="server" Text="Mój profil" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="90px" Width="70%" OnClick="mojProfil_Click" CssClass="button ButtonFix" BorderStyle="Solid" ToolTip="Przejdź do ustawień swojego konta" />
         </div>
     
 
