@@ -11,14 +11,37 @@ namespace Market365_3._0 {
     /// Przechowuje informacje o produkcie
     /// </summary>
     public class Produkt {
+        /// <summary>
+        /// id produktu
+        /// </summary>
         public Int32 id { get; set; }
+        /// <summary>
+        /// obraz produktu zapisany jako Base64
+        /// </summary>
         public string image { get; set; }
+        /// <summary>
+        /// słowna nazwa produktu
+        /// </summary>
         public string name { get; set; }
+        /// <summary>
+        /// cena produktu za kg/szt <see cref="unit"/>
+        /// </summary>
         public float price { get; set; }
+        /// <summary>
+        /// ilość porduktu - potrzebna w zamówieniach/koszyku
+        /// </summary>
         public float quantity { get; set; }
+        /// <summary>
+        /// jednostka [kg/szt]
+        /// </summary>
         public string unit { get; set; }
+        /// <summary>
+        /// ocena produktu
+        /// </summary>
         public float ocena { get; set; }
-
+        /// <summary>
+        /// flaga czy produkt jest w liście ulubionych (wymagane id użytkownika)
+        /// </summary>
         public bool favourite { get; set; }
 
 
