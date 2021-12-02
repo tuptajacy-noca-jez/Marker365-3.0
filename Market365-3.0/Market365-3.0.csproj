@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Market365-3.0.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,7 +61,14 @@
       <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -148,6 +156,10 @@
     <Compile Include="Administrator\ZamowienieKlientow\ZamowienieKlientow.aspx.designer.cs">
       <DependentUpon>ZamowienieKlientow.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StronaGlowna\DrinkModel.cs" />
+    <Compile Include="StronaGlowna\DrinkModelResult.cs" />
+    <Compile Include="StronaGlowna\DrinkProcessor.cs" />
+    <Compile Include="StronaGlowna\Helper.cs" />
     <Compile Include="Cart.cs" />
     <Compile Include="FinalizacjaZamowienia\FinalizacjaZamowienia.aspx.cs">
       <DependentUpon>FinalizacjaZamowienia.aspx</DependentUpon>

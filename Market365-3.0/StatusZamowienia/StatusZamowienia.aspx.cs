@@ -23,10 +23,7 @@ namespace Market365_3._0.StatusZamowienia {
         protected void Page_Load(object sender, EventArgs e) {
             Uri uri = Request.Url;
             idZamowienia = getOrderID(uri.ToString());
-            //idZamowienia = "test637737918145452143";
             order = new Order(idZamowienia);
-            //_ = order.ProductsId;
-            //_ = order.ProductsQuantity;
             try {
                 loadProducts();
                 ordersListViev.DataSource = dt;
