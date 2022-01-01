@@ -405,25 +405,25 @@
     justify-content:left;
     padding-left:40%;
 }
-=======
+
 .apiMain{
-    margin:0;
-    padding-top:200px;
+    display:block;
     width: 80%;
     height: 1000px;
     margin: auto;
 }
 .apiLeft{
-    width:15%;
+    display:inline-block;
     height:400px;
     float:left;
-    width:800px;
+    width:60%;
 
 }
-.apiRight{
-    text-align:center;
-    margin-left:15%;
-    height:400px;
+.apiRight {
+    width: 39%;
+    display: inline-block;
+    text-align: center;
+    height: 400px;
 }
 
 .api2 {

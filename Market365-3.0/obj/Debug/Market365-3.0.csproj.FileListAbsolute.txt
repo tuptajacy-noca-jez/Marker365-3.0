@@ -311,3 +311,8 @@ C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\S
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Newtonsoft.Json.xml
 C:\Users\48667\Source\Repos\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\System.Net.Http.Formatting.xml
 D:\Desktop\GIT\tuptajacy-noca-jez\Marker365-3.0\Market365-3.0\bin\Market365-3.0.xml
+D:\GIT\Marker365-3.0\Market365-3.0\bin\Market365-3.0.xml
+D:\GIT\Marker365-3.0\Market365-3.0\bin\Newtonsoft.Json.dll
+D:\GIT\Marker365-3.0\Market365-3.0\bin\System.Net.Http.Formatting.dll
+D:\GIT\Marker365-3.0\Market365-3.0\bin\Newtonsoft.Json.xml
+D:\GIT\Marker365-3.0\Market365-3.0\bin\System.Net.Http.Formatting.xml

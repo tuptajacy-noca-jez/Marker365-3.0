@@ -2,7 +2,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Nazwa Produktu</title>
+    <title id="productTitle" runat="server"></title>
 </asp:Content>
 
 
